@@ -1,4 +1,15 @@
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: color(white);
+  margin: 0;
+}
+
 [class*="container"] {
   @include mx-container;
 }

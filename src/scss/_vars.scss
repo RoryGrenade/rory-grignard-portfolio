@@ -1,9 +1,17 @@
 //Colors
-$c-black: #000000;
-$c-white: #FFFFFF;
-$c-grey: #CCCCCC;
-$c-orange: #e67c00;
-$c-pink: #da1b60;
+$color: (
+        grey: #4c4c4c,
+        orange: #e67c00,
+        white: #ffffff,
+        blueGrey: #7c7f8d,
+        black: #000000,
+        roseRed: #da1b60,
+        lightGrey: #cccccc
+);
+
+@function color($colorName) {
+  @return map-get($color, $colorName);
+}
 
 ///Gutters
 $gt-1: 20px;
@@ -20,7 +28,7 @@ $breakpoints: (
 );
 
 //Container
-$ctr-mw: 1140px;
+$ctr-max-width: 1140px;
 
 //Transitions
 $tr-base-duration: .4s;
@@ -28,9 +36,23 @@ $tr-base-timing: cubic-bezier(.75,.89,.92,.99);
 $tr-base: $tr-base-duration $tr-base-timing;
 
 //Fonts
-$ff-base:'Open Sans', sans-serif;
-$ff-code: 'Source Code Pro', monospace;
+$font: (
+        primary: #{'Open Sans', sans-serif},
+        secondary: #{'Source Code Pro', monospace}
+);
 
-$fw-normal: 400;
-$fw-semi-bold: 600;
-$fw-bold: 700;
+@function font($fontName) {
+  @return map-get($font, $fontName);
+}
+
+$weight: (
+        regular: 400,
+        semiBold: 600,
+        bold: 700
+);
+
+@function weight($weightName) {
+  @return map-get($weight, $weightName);
+}
+
+$fs-base: 16px;

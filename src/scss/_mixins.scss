@@ -17,7 +17,7 @@
 @mixin mx-container {
   padding: 0 $gt-1;
   margin: 0 auto;
-  max-width: $ctr-mw;
+  max-width: $ctr-max-width;
   @include mx-mq(md) {
     padding: 0 $gt-2;
   }
@@ -25,7 +25,7 @@
 
 //Gradients
 @mixin mx-text-gradient {
-  background-image: linear-gradient(to right, $c-orange, $c-pink);
+  background-image: linear-gradient(to right, color(orange), color(roseRed));
   background-color: initial;
   text-fill-color: transparent;
   text-shadow: none;
@@ -35,24 +35,24 @@
 
 @mixin mx-gradient-border-bottom-nav {
   position: relative;
-  background: linear-gradient(to right, $c-orange, $c-pink);
+  background: linear-gradient(to right, color(orange), color(roseRed));
   padding: 0 0 3px 0;
 }
 
 //DO I NEED THESE?
 @mixin gradientBorderBottomText {
   position: relative;
-  background: linear-gradient(to right, $c-orange, $c-pink);
+  background: linear-gradient(to right, color(orange), color(roseRed));
   padding: 0 0 1px 0;
 }
 
 @mixin gradientBox {
   width: auto;
   padding: 1px 0;
-  border-right: 1px solid $c-pink;
-  border-left: 1px solid $c-orange;
-  background-image: linear-gradient(90deg, $c-orange, $c-pink),
-  linear-gradient(90deg, $c-orange, $c-pink);
+  border-right: 1px solid color(roseRed);
+  border-left: 1px solid color(orange);
+  background-image: linear-gradient(90deg, color(orange), color(roseRed)),
+  linear-gradient(90deg, color(orange), color(roseRed));
   background-size: 100% 1px;
   background-position: 0 0, 0 100%;
   background-repeat: no-repeat;
@@ -64,10 +64,10 @@
   padding: 2px 0;
   border-top: none;
   border-bottom: none;
-  border-right: 2px solid $c-pink;
-  border-left: 2px solid $c-orange;
-  background-image: linear-gradient(90deg, $c-orange, $c-pink),
-  linear-gradient(90deg, $c-orange, $c-pink);
+  border-right: 2px solid color(roseRed);
+  border-left: 2px solid color(orange);
+  background-image: linear-gradient(90deg, color(orange), color(roseRed)),
+  linear-gradient(90deg, color(orange), color(roseRed));
   background-size: 100% 2px;
   background-position: 0 0, 0 100%;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@
 @mixin whiteBox {
   width: 90vw;
   padding: 5%;
-  border: 10px solid $c-white;
+  border: 10px solid color(white);
   margin: 0 auto;
 }
 
@@ -89,17 +89,17 @@
 }
 
 @mixin blackBackground {
-  background-color: $c-black;
+  background-color: color(black);
   h1,
   h2,
   h3,
   h4,
   p,
   label {
-    color: $c-white;
+    color: color(white);
     span {
-      color: $c-white;
-      background-color: $c-black;
+      color: color(white);
+      background-color: color(black);
     }
   }
 }
