@@ -1,7 +1,19 @@
+import React, {useEffect} from "react";
+import WebFont from "webfontloader";
 import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
 
 function App() {
+
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Open Sans:400,700', 'Source Code Pro:600']
+      }
+    })
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
