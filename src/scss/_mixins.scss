@@ -1,0 +1,105 @@
+@import "vars";
+
+//Media queries
+@mixin mx-mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+//Container
+@mixin mx-container {
+  padding: 0 $gt-1;
+  margin: 0 auto;
+  max-width: $ctr-mw;
+  @include mx-mq(md) {
+    padding: 0 $gt-2;
+  }
+}
+
+//Gradients
+@mixin mx-text-gradient {
+  background-image: linear-gradient(to right, $c-orange, $c-pink);
+  background-color: initial;
+  text-fill-color: transparent;
+  text-shadow: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin mx-gradient-border-bottom-nav {
+  position: relative;
+  background: linear-gradient(to right, $c-orange, $c-pink);
+  padding: 0 0 3px 0;
+}
+
+//DO I NEED THESE?
+@mixin gradientBorderBottomText {
+  position: relative;
+  background: linear-gradient(to right, $c-orange, $c-pink);
+  padding: 0 0 1px 0;
+}
+
+@mixin gradientBox {
+  width: auto;
+  padding: 1px 0;
+  border-right: 1px solid $c-pink;
+  border-left: 1px solid $c-orange;
+  background-image: linear-gradient(90deg, $c-orange, $c-pink),
+  linear-gradient(90deg, $c-orange, $c-pink);
+  background-size: 100% 1px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+@mixin gradientBox2 {
+  width: 100%;
+  padding: 2px 0;
+  border-top: none;
+  border-bottom: none;
+  border-right: 2px solid $c-pink;
+  border-left: 2px solid $c-orange;
+  background-image: linear-gradient(90deg, $c-orange, $c-pink),
+  linear-gradient(90deg, $c-orange, $c-pink);
+  background-size: 100% 2px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+@mixin whiteBox {
+  width: 90vw;
+  padding: 5%;
+  border: 10px solid $c-white;
+  margin: 0 auto;
+}
+
+@mixin backgroundImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin blackBackground {
+  background-color: $c-black;
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  label {
+    color: $c-white;
+    span {
+      color: $c-white;
+      background-color: $c-black;
+    }
+  }
+}

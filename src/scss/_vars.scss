@@ -1,10 +1,36 @@
+//Colors
+$c-black: #000000;
+$c-white: #FFFFFF;
+$c-grey: #CCCCCC;
+$c-orange: #e67c00;
+$c-pink: #da1b60;
 
-//Font
+///Gutters
+$gt-1: 20px;
+$gt-2: $gt-1 * 2;
+
+//Breakpoints
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+//Container
+$ctr-mw: 1140px;
+
+//Transitions
+$tr-base-duration: .4s;
+$tr-base-timing: cubic-bezier(.75,.89,.92,.99);
+$tr-base: $tr-base-duration $tr-base-timing;
+
+//Fonts
 $ff-base:'Open Sans', sans-serif;
 $ff-code: 'Source Code Pro', monospace;
 
-$fw-light: 300;
 $fw-normal: 400;
-$fw-medium: 500;
 $fw-semi-bold: 600;
 $fw-bold: 700;
