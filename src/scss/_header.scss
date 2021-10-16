@@ -1,15 +1,25 @@
 @import "vars";
 @import "mixins";
 @import "layout";
+@import "buttons";
 
 .header {
   background-color: color(white);
   border-bottom: 3px solid color(black);
 }
 
+.header__container {
+  display: flex;
+  align-items: initial;
+  justify-content: space-between;
+}
+
 .header__logo-button {
+  @extend %btn;
+  padding: $sp-1 0;
   transition: opacity $tr-base;
   &:hover {
+    cursor: pointer;
     opacity: .6;
   }
 }
@@ -19,6 +29,7 @@
   font-family: font(secondary);
   font-weight: weight(semiBold);
   font-size: 22px;
+  margin: 0;
   @include mx-mq(md) {
     font-size: 32px;
   }
@@ -31,11 +42,14 @@
 }
 
 .header__nav-list {
-
+  display: flex;
+  padding: 0;
+  margin: auto 0;
+  height: 100%;
 }
 
-.header__nav-button {
-  //list-style: none;
+.header__nav-item {
+  list-style: none;
   border-bottom: 2px solid color(black);
   @include mx-mq(md) {
     border-bottom: none;
@@ -46,17 +60,40 @@
   }
 }
 
-.header__nav-link {
+.header__nav-button {
+  @extend %btn;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: weight(bold);
   font-family: font(primary);
+  height: 100%;
   color: color(black);
   background-color: color(white);
   span {
-    padding-bottom: 12px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     i {
       font-style: normal;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    span {
+      i {
+        @include mx-text-gradient;
+      }
+    }
+  }
+  &.active {
+    @include mx-gradient-border-bottom-nav;
+    span {
+      background-color: color(white);
+      i {
+        @include mx-text-gradient;
+      }
     }
   }
 }

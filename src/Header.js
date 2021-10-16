@@ -10,17 +10,17 @@ function Header() {
                 </button>
                 <nav className="header__nav">
                     <ul className="header__nav-list">
-                        <li className="header__nav-button">
-                            <button className="header__nav-link"><span><i>Home</i></span></button>
+                        <li className="header__nav-item">
+                            <button className="header__nav-button active"><span><i>Home</i></span></button>
                         </li>
-                        <li className="header__nav-button">
-                            <button className="header__nav-link"><span><i>Skills</i></span></button>
+                        <li className="header__nav-item">
+                            <button className="header__nav-button"><span><i>Skills</i></span></button>
                         </li>
-                        <li className="header__nav-button">
-                            <button className="header__nav-link"><span><i>Showcase</i></span></button>
+                        <li className="header__nav-item">
+                            <button className="header__nav-button"><span><i>Showcase</i></span></button>
                         </li>
-                        <li className="header__nav-button">
-                            <button className="header__nav-link"><span><i>Contact</i></span></button>
+                        <li className="header__nav-item">
+                            <button className="header__nav-button"><span><i>Contact</i></span></button>
                         </li>
                     </ul>
                 </nav>

@@ -24,8 +24,10 @@
 }
 
 //Gradients
+$linear-gradient: linear-gradient(to right, color(orange), color(roseRed));
+
 @mixin mx-text-gradient {
-  background-image: linear-gradient(to right, color(orange), color(roseRed));
+  background-image: $linear-gradient;
   background-color: initial;
   text-fill-color: transparent;
   text-shadow: none;
@@ -35,14 +37,14 @@
 
 @mixin mx-gradient-border-bottom-nav {
   position: relative;
-  background: linear-gradient(to right, color(orange), color(roseRed));
+  background: $linear-gradient;
   padding: 0 0 3px 0;
 }
 
 //DO I NEED THESE?
 @mixin gradientBorderBottomText {
   position: relative;
-  background: linear-gradient(to right, color(orange), color(roseRed));
+  background: $linear-gradient;
   padding: 0 0 1px 0;
 }
 

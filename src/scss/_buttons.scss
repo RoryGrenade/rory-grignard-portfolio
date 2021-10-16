@@ -1,0 +1,10 @@
+%btn {
+  border: none;
+  background: transparent;
+  margin: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
