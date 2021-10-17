@@ -1,3 +1,4 @@
+@import "vars";
 
 *,
 *::before,
@@ -8,6 +9,13 @@
 body {
   background-color: color(white);
   margin: 0;
+}
+
+main {
+  padding: $hdr-height-m 0 0;
+  @include mx-mq(md) {
+    padding: $hdr-height-d 0 0;
+  }
 }
 
 [class*="container"] {

@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import WebFont from "webfontloader";
 import './scss/App.scss';
-import Header from "./Header";
-import ExampleContent from "./ExampleContent"
+import HeaderElement from "./HeaderElement";
+import MainElement from "./MainElement";
 
 function App() {
 
@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <ExampleContent />
+      <HeaderElement />
+      <MainElement />
     </div>
   );
 }

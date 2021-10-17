@@ -6,7 +6,7 @@ $color: (
         grey: #4c4c4c,
         blueGrey: #7c7f8d,
         orange: #e67c00,
-        roseRed: #da1b60,
+        pink: #da1b60,
         green: #0bda56,
         blue: #1b2fda,
 );
@@ -16,8 +16,9 @@ $color: (
 }
 
 ///Gutters
-$gt-1: 20px;
+$gt-1: 10px;
 $gt-2: $gt-1 * 2;
+$gt-3: $gt-2 * 2;
 
 //Spacers
 $sp-1: 12px;
@@ -61,3 +62,10 @@ $weight: (
 }
 
 $fs-base: 16px;
+
+//HeaderElement
+$hdr-height-m: 55px;
+$hdr-height-d: 67px;
+
+$hdr-font-size-m: 24px;
+$hdr-font-size-d: 16px;

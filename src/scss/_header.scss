@@ -4,14 +4,21 @@
 @import "buttons";
 
 .header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: color(white);
   border-bottom: 3px solid color(black);
 }
 
 .header__container {
   display: flex;
-  align-items: initial;
+  align-items: center;
   justify-content: space-between;
+  @include mx-mq(md) {
+    align-items: initial;
+  }
 }
 
 .header__logo-button {
@@ -53,9 +60,58 @@
   }
 }
 
-.header__nav {
+.header__burger {
+  @extend %btn;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  svg {
+    @include mx-text-gradient;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    &.-burger,
+    &.-close {
+      transition: clip-path $tr-base;
+    }
+    &.-burger {
+      color: color(black);
+    }
+    &.-close {
+      color: color(orange);
+      clip-path: inset(0 100% 0 0);
+    }
+    .-nav-visible & {
+      &.-burger {
+        clip-path: inset(0 100% 0 0);
+      }
+      &.-close {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+  }
   @include mx-mq(md) {
+    display: none;
+  }
+}
 
+.header__nav {
+  position: fixed;
+  top: $hdr-height-m;
+  left: 0;
+  height: calc(100% - 55px);
+  width: 100%;
+  background-color: color(white);
+  @include mx-mq(md) {
+    position: initial;
+    top: initial;
+    left: initial;
+    height: initial;
+    width: initial;
+    background-color: initial;
   }
 }
 
@@ -64,35 +120,43 @@
   padding: 0;
   margin: auto 0;
   height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  @include mx-mq(md) {
+    flex-direction: row;
+  }
 }
 
 .header__nav-item {
+  text-align: center;
   list-style: none;
-  border-bottom: 2px solid color(black);
+  margin: 0 0 $gt-1 0;
+  &:last-child {
+    margin: 0;
+  }
   @include mx-mq(md) {
-    border-bottom: none;
-    margin: 0 $gt-1 0 0;
-    &:last-child {
-      margin: 0;
-    }
+    text-align: initial;
+    margin: 0 $gt-2 0 0;
   }
 }
 
 .header__nav-button {
   @extend %btn;
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: $hdr-font-size-m;
+  line-height: 1;
   font-weight: weight(bold);
   font-family: font(primary);
   height: 100%;
+  width: 100%;
   color: color(black);
-  background-color: color(white);
+  padding: $gt-2 $gt-1;
   span {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    background-color: color(white);
     i {
       font-style: normal;
     }
@@ -106,12 +170,18 @@
     }
   }
   &.active {
-    @include mx-gradient-border-bottom-nav;
     span {
-      background-color: color(white);
       i {
         @include mx-text-gradient;
       }
+    }
+  }
+  @include mx-mq(md) {
+    width: initial;
+    font-size: $hdr-font-size-d;
+    padding: 0;
+    &.active {
+      @include mx-gradient-border-bottom-nav;
     }
   }
 }

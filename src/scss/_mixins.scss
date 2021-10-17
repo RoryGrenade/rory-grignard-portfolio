@@ -15,17 +15,18 @@
 
 //Container
 @mixin mx-container {
-  padding: 0 $gt-1;
+  padding: 0 $gt-2;
   margin: 0 auto;
   max-width: $ctr-max-width;
   @include mx-mq(md) {
-    padding: 0 $gt-2;
+    padding: 0 $gt-3;
   }
 }
 
 //Gradients
-$linear-gradient: linear-gradient(to right, color(orange), color(roseRed));
-$linear-gradient-alt: linear-gradient(to right, color(roseRed), color(orange));
+$linear-gradient: linear-gradient(to right, color(orange), color(pink));
+$linear-gradient-alt: linear-gradient(to right, color(green), color(blue));
+$linear-gradient-blk: linear-gradient(to right, color(pink), color(pink));
 
 @mixin mx-text-gradient {
   background-image: $linear-gradient;
@@ -35,8 +36,18 @@ $linear-gradient-alt: linear-gradient(to right, color(roseRed), color(orange));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 @mixin mx-text-gradient-alt {
   background-image: $linear-gradient-alt;
+  background-color: initial;
+  text-fill-color: transparent;
+  text-shadow: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin mx-text-gradient-blk {
+  background-image: $linear-gradient-blk;
   background-color: initial;
   text-fill-color: transparent;
   text-shadow: none;
@@ -60,10 +71,10 @@ $linear-gradient-alt: linear-gradient(to right, color(roseRed), color(orange));
 @mixin gradientBox {
   width: auto;
   padding: 1px 0;
-  border-right: 1px solid color(roseRed);
+  border-right: 1px solid color(pink);
   border-left: 1px solid color(orange);
-  background-image: linear-gradient(90deg, color(orange), color(roseRed)),
-  linear-gradient(90deg, color(orange), color(roseRed));
+  background-image: linear-gradient(90deg, color(orange), color(pink)),
+  linear-gradient(90deg, color(orange), color(pink));
   background-size: 100% 1px;
   background-position: 0 0, 0 100%;
   background-repeat: no-repeat;
@@ -75,10 +86,10 @@ $linear-gradient-alt: linear-gradient(to right, color(roseRed), color(orange));
   padding: 2px 0;
   border-top: none;
   border-bottom: none;
-  border-right: 2px solid color(roseRed);
+  border-right: 2px solid color(pink);
   border-left: 2px solid color(orange);
-  background-image: linear-gradient(90deg, color(orange), color(roseRed)),
-  linear-gradient(90deg, color(orange), color(roseRed));
+  background-image: linear-gradient(90deg, color(orange), color(pink)),
+  linear-gradient(90deg, color(orange), color(pink));
   background-size: 100% 2px;
   background-position: 0 0, 0 100%;
   background-repeat: no-repeat;
