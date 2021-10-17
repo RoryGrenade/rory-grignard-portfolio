@@ -75,21 +75,22 @@
     font-size: 24px;
     &.-burger,
     &.-close {
-      transition: clip-path $tr-base;
+      transition: opacity $tr-base;
     }
     &.-burger {
       color: color(black);
     }
     &.-close {
       color: color(orange);
-      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+      transition-delay: $tr-base-duration;
     }
-    .-nav-visible & {
+    .-nav-active & {
       &.-burger {
-        clip-path: inset(0 100% 0 0);
+        opacity: 0;
       }
       &.-close {
-        clip-path: inset(0 0 0 0);
+        opacity: 1;
       }
     }
   }
@@ -105,6 +106,13 @@
   height: calc(100% - 55px);
   width: 100%;
   background-color: color(white);
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: visibility $tr-base, transform $tr-base;
+  .-nav-active & {
+    visibility: visible;
+    transform: translateX(0);
+  }
   @include mx-mq(md) {
     position: initial;
     top: initial;

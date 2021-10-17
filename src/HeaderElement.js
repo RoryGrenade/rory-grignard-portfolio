@@ -10,7 +10,7 @@ function HeaderElement() {
                 <button className="header__logo-button">
                         <h1 className="header__logo-text">&#60;RoryGrignard /&#62;</h1>
                 </button>
-                <button className="header__burger">
+                <button className="header__burger" onClick={toggleMobileNav}>
                     <RiMenu3Fill className="header__burger-icon -burger" />
                     <RiCloseFill className="header__burger-icon -close" />
                 </button>
@@ -33,6 +33,11 @@ function HeaderElement() {
             </div>
         </header>
     )
+}
+
+function toggleMobileNav() {
+    const headerEl = document.querySelector('.header');
+    headerEl.classList.toggle('-nav-active')
 }
 
 export default HeaderElement;
