@@ -1,12 +1,14 @@
 //Colors
 $color: (
-        grey: #4c4c4c,
-        orange: #e67c00,
         white: #ffffff,
-        blueGrey: #7c7f8d,
         black: #000000,
+        lightGrey: #cccccc,
+        grey: #4c4c4c,
+        blueGrey: #7c7f8d,
+        orange: #e67c00,
         roseRed: #da1b60,
-        lightGrey: #cccccc
+        green: #0bda56,
+        blue: #1b2fda,
 );
 
 @function color($colorName) {
@@ -34,7 +36,7 @@ $breakpoints: (
 $ctr-max-width: 1140px;
 
 //Transitions
-$tr-base-duration: .4s;
+$tr-base-duration: 300ms;
 $tr-base-timing: cubic-bezier(.75,.89,.92,.99);
 $tr-base: $tr-base-duration $tr-base-timing;
 

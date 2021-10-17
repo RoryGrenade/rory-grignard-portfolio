@@ -25,9 +25,18 @@
 
 //Gradients
 $linear-gradient: linear-gradient(to right, color(orange), color(roseRed));
+$linear-gradient-alt: linear-gradient(to right, color(roseRed), color(orange));
 
 @mixin mx-text-gradient {
   background-image: $linear-gradient;
+  background-color: initial;
+  text-fill-color: transparent;
+  text-shadow: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin mx-text-gradient-alt {
+  background-image: $linear-gradient-alt;
   background-color: initial;
   text-fill-color: transparent;
   text-shadow: none;
