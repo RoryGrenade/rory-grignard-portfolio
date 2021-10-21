@@ -7,13 +7,15 @@ function HeaderElement() {
     return(
         <header className="header">
             <div className="header__container">
-                <button className="header__logo-button">
+                <div className="header__button-wrapper">
+                    <button className="header__logo-button">
                         <h1 className="header__logo-text">&#60;RoryGrignard /&#62;</h1>
-                </button>
-                <button className="header__burger" onClick={toggleMobileNav}>
-                    <RiMenu3Fill className="header__burger-icon -burger" />
-                    <RiCloseFill className="header__burger-icon -close" />
-                </button>
+                    </button>
+                    <button className="header__burger" onClick={toggleMobileNav}>
+                        <RiMenu3Fill className="header__burger-icon -burger" />
+                        <RiCloseFill className="header__burger-icon -close" />
+                    </button>
+                </div>
                 <nav className="header__nav">
                     <ul className="header__nav-list">
                         <li className="header__nav-item">

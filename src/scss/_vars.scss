@@ -69,3 +69,13 @@ $hdr-height-d: 67px;
 
 $hdr-font-size-m: 24px;
 $hdr-font-size-d: 16px;
+
+//Z index
+$zIndex: (
+  modal: 2,
+  default: 1
+);
+
+@function zIndex($index) {
+@return map-get($zIndex, $index);
+}

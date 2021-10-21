@@ -9,15 +9,40 @@
   top: 0;
   left: 0;
   background-color: color(white);
-  border-bottom: 3px solid color(black);
+  @include mx-mq(md) {
+    border-bottom: 3px solid color(black);
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
   @include mx-mq(md) {
     align-items: initial;
+    padding: 0 $gt-3;
+  }
+}
+
+.header__button-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: color(white);
+  padding: 0 20px;
+  border-bottom: 3px solid color(black);
+  z-index: zIndex(default);
+  @include mx-mq(md) {
+    display: initial;
+    width: initial;
+    align-items: initial;
+    justify-content: initial;
+    background-color: initial;
+    padding: initial;
+    border-bottom: 0;
+    z-index: initial;
   }
 }
 
@@ -78,7 +103,7 @@
       transition: opacity $tr-base;
     }
     &.-burger {
-      color: color(black);
+      color: color(pink);
     }
     &.-close {
       color: color(orange);
@@ -101,25 +126,28 @@
 
 .header__nav {
   position: fixed;
-  top: $hdr-height-m;
+  top: 0;
   left: 0;
-  height: calc(100% - 55px);
+  padding: 132px 0 80px;
   width: 100%;
-  background-color: color(white);
+  background-color: color(black);
   visibility: hidden;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: visibility $tr-base, transform $tr-base;
   .-nav-active & {
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
   }
   @include mx-mq(md) {
     position: initial;
     top: initial;
     left: initial;
-    height: initial;
+    padding: initial;
     width: initial;
     background-color: initial;
+    visibility: visible;
+    transform: initial;
+    transition: initial;
   }
 }
 
@@ -150,6 +178,7 @@
 
 .header__nav-button {
   @extend %btn;
+  display: flex;
   text-transform: uppercase;
   font-size: $hdr-font-size-m;
   line-height: 1;
@@ -157,26 +186,22 @@
   font-family: font(primary);
   height: 100%;
   width: 100%;
-  color: color(black);
-  padding: $gt-2 $gt-1;
+  color: color(white);
+  padding: $gt-1;
   span {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: color(white);
+    background-color: color(black);
     i {
       font-style: normal;
     }
   }
   &:hover {
     cursor: pointer;
-    span {
-      i {
-        @include mx-text-gradient;
-      }
-    }
   }
+  &:hover,
   &.active {
     span {
       i {
@@ -185,9 +210,13 @@
     }
   }
   @include mx-mq(md) {
+    color: color(black);
     width: initial;
     font-size: $hdr-font-size-d;
     padding: 0;
+    span {
+      background-color: color(white);
+    }
     &.active {
       @include mx-gradient-border-bottom-nav;
     }
