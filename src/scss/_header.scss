@@ -1,7 +1,4 @@
-@import "vars";
-@import "mixins";
-@import "layout";
-@import "buttons";
+@import "base";
 
 .header {
   width: 100vw;
@@ -9,6 +6,7 @@
   top: 0;
   left: 0;
   background-color: color(white);
+  z-index: zIndex(header);
   @include mx-mq(md) {
     border-bottom: 3px solid color(black);
   }
@@ -70,9 +68,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include mx-text-gradient-pink;
+    @include mx-text-gradient-orange;
     opacity: 0;
-    clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 100% 0 0);
     transition: opacity $tr-base, clip-path $tr-base;
   }
   &:hover {
@@ -191,7 +189,7 @@
   height: 100%;
   width: 100%;
   color: color(white);
-  padding: $gt-1;
+  padding: $gt-1 $gt-2;
   span {
     display: flex;
     align-items: center;

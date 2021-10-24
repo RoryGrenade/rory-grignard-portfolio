@@ -6,5 +6,49 @@
   &:focus,
   &:active {
     outline: none;
+    cursor: pointer;
+  }
+}
+
+.btn {
+  @extend %btn;
+  &.-btn-light,
+  &.-btn-dark {
+    padding: 0.5em 1.4em;
+    min-height: 44px;
+    font-weight: weight(semiBold);
+    border: 3px solid;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color $tr-base, border-color $tr-base, background-color $tr-base;
+    svg {
+      height: 16px;
+    }
+  }
+  &.-btn-light {
+    color: color(white);
+    border-color: color(white);
+    background-color: color(black);
+    &:hover,
+    &:hover i {
+      color: color(black);
+      border-color: color(black);
+      background-color: color(white);
+    }
+  }
+  &.-btn-dark {
+    color: color(black);
+    border-color: color(black);
+    background-color: color(white);
+    &:hover,
+    &:hover i {
+      color: color(white);
+      border-color: color(white);
+      background-color: color(black);
+    }
   }
 }
