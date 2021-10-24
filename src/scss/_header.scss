@@ -46,6 +46,7 @@
   }
 }
 
+//Logo
 .header__logo-button {
   @extend %btn;
   padding: $sp-1 0;
@@ -69,9 +70,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include mx-text-gradient-alt;
+    @include mx-text-gradient-pink;
     opacity: 0;
-    clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 0 0 100%);
     transition: opacity $tr-base, clip-path $tr-base;
   }
   &:hover {
@@ -85,6 +86,7 @@
   }
 }
 
+//Burger
 .header__burger {
   @extend %btn;
   padding: 0;
@@ -124,13 +126,13 @@
   }
 }
 
+//Nav
 .header__nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 132px 0 80px;
   width: 100%;
-  background-color: color(black);
+  height: calc(100% - 55px);
   visibility: hidden;
   transform: translateY(-100%);
   transition: visibility $tr-base, transform $tr-base;
@@ -142,9 +144,8 @@
     position: initial;
     top: initial;
     left: initial;
-    padding: initial;
     width: initial;
-    background-color: initial;
+    height: initial;
     visibility: visible;
     transform: initial;
     transition: initial;
@@ -153,13 +154,16 @@
 
 .header__nav-list {
   display: flex;
-  padding: 0;
+  padding: 132px 0 80px;
   margin: auto 0;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
+  background-color: color(black);
   @include mx-mq(md) {
+    height: 100%;
     flex-direction: row;
+    padding: 0;
+    background-color: initial;
   }
 }
 
@@ -221,4 +225,18 @@
       @include mx-gradient-border-bottom-nav;
     }
   }
+}
+
+//Drips
+.header__drip-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  @include mx-mq(md) {
+    display: none;
+  }
+}
+
+.header__drip {
+  width: 20px;
 }

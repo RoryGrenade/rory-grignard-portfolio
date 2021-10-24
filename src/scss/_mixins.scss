@@ -26,7 +26,7 @@
 //Gradients
 $linear-gradient: linear-gradient(to right, color(orange), color(pink));
 $linear-gradient-alt: linear-gradient(to right, color(green), color(blue));
-$linear-gradient-blk: linear-gradient(to right, color(pink), color(pink));
+$linear-gradient-pink: linear-gradient(to right, color(pink), color(pink));
 
 @mixin mx-text-gradient {
   background-image: $linear-gradient;
@@ -46,8 +46,8 @@ $linear-gradient-blk: linear-gradient(to right, color(pink), color(pink));
   -webkit-text-fill-color: transparent;
 }
 
-@mixin mx-text-gradient-blk {
-  background-image: $linear-gradient-blk;
+@mixin mx-text-gradient-pink {
+  background-image: $linear-gradient-pink;
   background-color: initial;
   text-fill-color: transparent;
   text-shadow: none;
