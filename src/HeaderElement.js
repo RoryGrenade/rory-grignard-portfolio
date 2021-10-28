@@ -2,10 +2,6 @@ import React from "react";
 import './scss/_header.scss';
 import { RiMenu3Fill } from "react-icons/ri";
 import { RiCloseFill } from "react-icons/ri";
-import { ReactComponent as Drip1 } from "./img/svg/drip-1.svg";
-import { ReactComponent as Drip2 } from "./img/svg/drip-2.svg";
-import { ReactComponent as Drip3 } from "./img/svg/drip-3.svg";
-import { ReactComponent as Drip4 } from "./img/svg/drip-4.svg";
 
 function HeaderElement() {
     return(
@@ -35,12 +31,6 @@ function HeaderElement() {
                             <button className={"header__nav-button"}><span><i>Contact</i></span></button>
                         </li>
                     </ul>
-                    <div className={"header__drip-wrapper"}>
-                        <Drip1 className={"header__drip"} />
-                        <Drip2 className={"header__drip"} />
-                        <Drip3 className={"header__drip"} />
-                        <Drip4 className={"header__drip"} />
-                    </div>
                 </nav>
             </div>
         </header>

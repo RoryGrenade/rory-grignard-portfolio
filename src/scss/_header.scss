@@ -68,7 +68,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include mx-text-gradient-orange;
+    @include mx-text-gradient-reverse;
     opacity: 0;
     clip-path: inset(0 100% 0 0);
     transition: opacity $tr-base, clip-path $tr-base;
@@ -100,22 +100,29 @@
     font-size: 24px;
     &.-burger,
     &.-close {
-      transition: opacity $tr-base;
+      //transition: opacity $tr-base, clip-path $tr-base;
+      transition: clip-path $tr-base;
     }
     &.-burger {
       color: color(pink);
+      clip-path: inset(0 0 0 0);
+      transition-delay: $tr-base-duration;
     }
     &.-close {
       color: color(orange);
-      opacity: 0;
-      transition-delay: $tr-base-duration;
+      //opacity: 0;
+      clip-path: inset(0 100%0 0);
     }
     .-nav-active & {
       &.-burger {
-        opacity: 0;
+        //opacity: 0;
+        transition-delay: 0ms;
+        clip-path: inset(0 0 0 100%);
       }
       &.-close {
-        opacity: 1;
+        //opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transition-delay: $tr-base-duration;
       }
     }
   }
@@ -127,16 +134,16 @@
 //Nav
 .header__nav {
   position: fixed;
-  top: 0;
+  top: 55px;
   left: 0;
   width: 100%;
   height: calc(100% - 55px);
   visibility: hidden;
-  transform: translateY(-100%);
-  transition: visibility $tr-base, transform $tr-base;
+  clip-path: inset(0 0 100% 0);
+  transition: visibility $tr-base, clip-path $tr-base;
   .-nav-active & {
     visibility: visible;
-    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
   }
   @include mx-mq(md) {
     position: initial;
@@ -145,20 +152,20 @@
     width: initial;
     height: initial;
     visibility: visible;
-    transform: initial;
+    clip-path: initial;
     transition: initial;
   }
 }
 
 .header__nav-list {
   display: flex;
-  padding: 132px 0 80px;
+  padding: 55px 0;
   margin: auto 0;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   background-color: color(black);
   @include mx-mq(md) {
-    height: 100%;
     flex-direction: row;
     padding: 0;
     background-color: initial;
@@ -189,7 +196,7 @@
   height: 100%;
   width: 100%;
   color: color(white);
-  padding: $gt-1 $gt-2;
+  padding: $gt-1 $gt-3;
   span {
     display: flex;
     align-items: center;
@@ -223,18 +230,4 @@
       @include mx-gradient-border-bottom-nav;
     }
   }
-}
-
-//Drips
-.header__drip-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  @include mx-mq(md) {
-    display: none;
-  }
-}
-
-.header__drip {
-  width: 20px;
 }

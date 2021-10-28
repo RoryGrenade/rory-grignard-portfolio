@@ -10,7 +10,7 @@ function ImageAndContent() {
         <section className={"image-and-content -theme-dark"}>
             <div className={"image-and-content__img-wrapper"}>
                 <picture className={"image-and-content__picture"}>
-                    <img className={"image-and-content__img"} src={backgroundOne} alt="Image of Rory" title={"Image of Rory"} />
+                    <img className={"image-and-content__img"} src={backgroundOne} alt="Rory in car" title={"Image of Rory"} />
                 </picture>
             </div>
             <div className={"image-and-content__content-wrapper"}>
@@ -18,7 +18,7 @@ function ImageAndContent() {
                 <p>Hi there, my name is Rory Grignard, I'm a front-end developer and I'm passionate about user experience design and user interface development. <br /><br />
                     My background includes development of engaging websites for fast paced agencies, as well as updating and maintaining an international ecommerce website. <br /><br />
                     When I'm not coding, I enjoy spending time with family and being out doors experiencing nature.</p>
-                <a className={"image-and-content__cv-btn btn -btn-light"} href={curriculumVitae} target="_blank">
+                <a className={"image-and-content__cv-btn btn -btn-light"} href={curriculumVitae} target="_blank" rel="noreferrer">
                     <FaEye /> View My CV!
                 </a>
                 <button className={"btn -btn-light"}>
