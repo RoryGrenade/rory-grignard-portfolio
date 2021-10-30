@@ -1,9 +1,9 @@
 import React from "react";
-import "./scss/_image-and-content.scss";
+import "../../scss/components/_image-and-content.scss";
 import { FaEye} from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import backgroundOne from "./img/backgrounds/bg1.jpg";
-import curriculumVitae from "./assets/curriculum-vitae-rory-grignard.pdf";
+import backgroundOne from "../../img/backgrounds/bg1.jpg";
+import curriculumVitae from "../../assets/curriculum-vitae-rory-grignard.pdf";
 
 function ImageAndContent() {
     return (

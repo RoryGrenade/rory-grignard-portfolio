@@ -1,11 +1,12 @@
-@import "base";
-@import "theme";
+@import "src/scss/App";
+@import "../core/theme";
 
 .image-and-content {
   display: flex;
   flex-direction: column;
   @include mx-mq(md) {
     flex-direction: row;
+    min-height: calc(100vh - 67px);
   }
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import './scss/_header.scss';
+import '../../scss/layout/_header.scss';
 import { RiMenu3Fill } from "react-icons/ri";
 import { RiCloseFill } from "react-icons/ri";
 
@@ -19,16 +19,16 @@ function HeaderElement() {
                 <nav className={"header__nav"}>
                     <ul className={"header__nav-list"}>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button active"}><span><i>Home</i></span></button>
+                            <button className={"header__nav-button active"} data-nav={"Home"}><span><i>Home</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"}><span><i>Skills</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Skills"}><span><i>Skills</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"}><span><i>Showcase</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Showcase"}><span><i>Showcase</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"}><span><i>Contact</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Contact"}><span><i>Contact</i></span></button>
                         </li>
                     </ul>
                 </nav>

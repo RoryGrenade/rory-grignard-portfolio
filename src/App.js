@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
 import WebFont from "webfontloader";
-import './scss/App.scss';
-import HeaderElement from "./HeaderElement";
-import MainElement from "./MainElement";
+import HeaderElement from "./js/layout/HeaderElement";
+import MainElement from "./js/layout/MainElement";
 
 function App() {
 

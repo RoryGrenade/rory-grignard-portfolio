@@ -1,4 +1,4 @@
-@import "base";
+@import "src/scss/App";
 
 .header {
   width: 100vw;
@@ -72,7 +72,7 @@
   @include mx-text-gradient-black;
   //opacity: 0;
   clip-path: inset(0 100% 0 0);
-  //transition: opacity $tr-base, clip-path $tr-base;
+  //transition: opacity $tr-core, clip-path $tr-core;
   transition: clip-path $tr-base;
   .header__logo-text:hover & {
     //opacity: 1;
