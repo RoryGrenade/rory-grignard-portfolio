@@ -9,7 +9,7 @@ function HeaderElement() {
             <div className={"header__container"}>
                 <div className={"header__button-wrapper"}>
                     <button className={"header__logo-button"}>
-                        <h1 className={"header__logo-text"}>&#60;RoryGrignard /&#62;</h1>
+                        <h1 className={"header__logo-text"}>&#60;RoryGrignard /&#62;<span className={"header__logo-text-clone"}>&#60;RoryGrignard /&#62;</span></h1>
                     </button>
                     <button className={"header__burger"} onClick={toggleMobileNav}>
                         <RiMenu3Fill className={"header__burger-icon -burger"} />
