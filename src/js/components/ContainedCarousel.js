@@ -5,17 +5,15 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import '../../scss/components/_contained-carousel.scss'
-import html5 from '../../img/logos/html5.png';
-import css3 from '../../img/logos/css3.png';
-import sass from '../../img/logos/sass.png';
-import javascript from '../../img/logos/javascript.png';
-import react from '../../img/logos/react.png';
+import { ReactComponent as HTML5Shield } from'../../img/skills-logos/html-5-shield.svg';
+import { ReactComponent as CSS3Shield } from'../../img/skills-logos/css-3-shield.svg';
+import { ReactComponent as JSShield } from'../../img/skills-logos/javascript-shield.svg';
 
 function ContainedCarousel() {
     return(
         <section className={"contained-carousel"}>
             <div className="container">
-                <h2>My Skillset</h2>
+                <h1>Frontend Web Development</h1>
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={0}
@@ -23,24 +21,12 @@ function ContainedCarousel() {
                     navigation
                 >
                     <SwiperSlide>
-                        <h3>Frontend Tech Stack</h3>
-                        <p>I develop fast loading, accessible and fully responsive websites using HTML5, CSS3, SCSS, React JSX and Javascript ES6. <br/>Whether you're on a smart phone, tablet, laptop or desktop computer, I deliver websites that are intuitive, engaging and cross browser compatible. <br/>Enjoyable user experiences are what I'm all about.</p>
+                        <h2>Fundamentals</h2>
+                        <p>As a frontend web developer with over five years experience, I have a good grasp of website coding fundamentals, namely W3C compliant and accessible HTML markup, scalable and maintainable CSS, and DRY, modular, well commented and backward compatible Javascript.</p>
                         <div className="contained-carousel__logo-wrapper">
-                            <div className="ratio-1x1 -cover">
-                                <img src={html5} alt="HTML5" title="HTML5"/>
-                            </div>
-                            <div className="ratio-1x1 -cover">
-                                <img src={css3} alt="CSS3" title="CSS3"/>
-                            </div>
-                            <div className="ratio-1x1 -cover">
-                                <img src={sass} alt="SASS" title="SASS"/>
-                            </div>
-                            <div className="ratio-1x1 -cover">
-                                <img src={javascript} alt="Javascript ES6" title="Javascript ES6"/>
-                            </div>
-                            <div className="ratio-1x1 -cover">
-                                <img src={react} alt="React" title="React"/>
-                            </div>
+                            <HTML5Shield className={"contained-carousel__svg"} />
+                            <CSS3Shield className={"contained-carousel__svg"} />
+                            <JSShield className={"contained-carousel__svg"} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>

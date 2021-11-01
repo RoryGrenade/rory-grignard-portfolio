@@ -37,6 +37,12 @@
     padding-bottom: $section-padding-amt-d;
   }
 }
+@mixin mx-section-padding-top {
+  padding-top: $section-padding-amt-m;
+  @include mx-mq(md) {
+    padding-top: $section-padding-amt-d;
+  }
+}
 
 //Gradients
 $linear-gradient: linear-gradient(to right, color(orange), color(pink));
