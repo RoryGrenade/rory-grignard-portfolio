@@ -18,12 +18,14 @@ function ImageAndContent() {
                 <p>Hi there, my name is Rory Grignard, I'm a front-end developer and I'm passionate about user experience design and user interface development. <br /><br />
                     My background includes development of engaging websites for fast paced agencies, as well as updating and maintaining an international ecommerce website. <br /><br />
                     When I'm not coding, I enjoy spending time with family and being out doors experiencing nature.</p>
-                <a className={"image-and-content__cv-btn btn -btn-light"} href={curriculumVitae} target="_blank" rel="noreferrer">
-                    <FaEye /> View My CV!
-                </a>
-                <button className={"btn -btn-light"}>
-                    <FaArrowDown />
-                </button>
+                <div className="image-and-content__btn-wrapper">
+                    <a className={"image-and-content__cv-btn btn -btn-light"} href={curriculumVitae} target="_blank" rel="noreferrer">
+                        <FaEye /> View My CV!
+                    </a>
+                    <button className={"btn -btn-light"}>
+                        <FaArrowDown />
+                    </button>
+                </div>
             </div>
         </section>
     )
