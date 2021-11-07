@@ -3,7 +3,7 @@ import React from "react";
 function ExampleContent() {
 
     return(
-        <section className="example-content">
+        <section className="example-content -theme-dark">
             <div className="container">
                 <h1>Hello World</h1>
                 <h2>Hello World</h2>

@@ -2,6 +2,10 @@
 @import "../core/mixins";
 @import "../utils/ratio";
 
+.contained-carousel {
+  @include mx-section-padding;
+}
+
 .contained-carousel__logo-wrapper {
   @include mx-section-padding-top;
   display: flex;
@@ -14,4 +18,13 @@
   max-width: 160px;
   flex: 1;
   padding: 0 $gt-2;
+}
+
+.contained-carousel__heading-primary,
+.contained-carousel__heading-secondary {
+  text-align: center;
+}
+
+.contained-carousel__heading-secondary {
+  @include mx-text-gradient;
 }

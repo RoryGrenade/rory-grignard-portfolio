@@ -45,16 +45,15 @@
   object-fit: cover;
 }
 
-.image-and-content__main-heading {
+.image-and-content__heading-primary {
   font-size: 2vw;
-  font-weight: weight(regular);
   line-height: 1.8vw;
-  text-transform: uppercase;
+  font-weight: weight(regular);
   margin-bottom: 7%;
   span {
+    display: block;
     font-size: 4vw;
     line-height: 6vw;
-    display: block;
     @include mx-gradient-border-bottom-text;
   }
   i {

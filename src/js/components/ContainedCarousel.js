@@ -13,7 +13,7 @@ function ContainedCarousel() {
     return(
         <section className={"contained-carousel"}>
             <div className="container">
-                <h1>Frontend Web Development</h1>
+                <h1 className={"contained-carousel__heading-primary"}>Skills</h1>
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={0}
@@ -21,7 +21,7 @@ function ContainedCarousel() {
                     navigation
                 >
                     <SwiperSlide>
-                        <h2>Fundamentals</h2>
+                        <h2 className={"contained-carousel__heading-secondary"}>Fundamentals</h2>
                         <p>As a frontend web developer with over five years experience, I have a good grasp of website coding fundamentals, namely W3C compliant and accessible HTML markup, scalable and maintainable CSS, and DRY, modular, well commented and backward compatible Javascript.</p>
                         <div className="contained-carousel__logo-wrapper">
                             <HTML5Shield className={"contained-carousel__svg"} />
