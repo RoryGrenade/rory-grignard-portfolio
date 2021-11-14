@@ -2,22 +2,18 @@
 @import "../core/mixins";
 @import "../utils/ratio";
 
-.contained-carousel {
-  @include mx-section-padding;
-}
-
 .contained-carousel__logo-wrapper {
   @include mx-section-padding-top;
   display: flex;
   justify-content: space-evenly;
-  margin: 0 -$gt-2;
+  margin: 0 -$gutter-2;
 }
 
 .contained-carousel__svg {
   width: calc(100% / 3);
   max-width: 160px;
   flex: 1;
-  padding: 0 $gt-2;
+  padding: 0 $gutter-2;
 }
 
 .contained-carousel__heading-primary,

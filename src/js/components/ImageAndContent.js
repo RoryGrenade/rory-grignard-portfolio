@@ -1,9 +1,9 @@
 import React from "react";
-import "../../scss/components/_image-and-content.scss";
 import { FaEye} from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
 import backgroundOne from "../../img/backgrounds/bg1.jpg";
 import curriculumVitae from "../../assets/curriculum-vitae-rory-grignard.pdf";
+import "../../scss/components/_image-and-content.scss";
 
 function ImageAndContent() {
     return (
@@ -14,8 +14,8 @@ function ImageAndContent() {
                 </picture>
             </div>
             <div className={"image-and-content__content-wrapper"}>
-                <h1 className={"image-and-content__heading-primary"}>Welcome to my <span><i>portfolio</i></span></h1>
-                <p>Hi there, my name is Rory Grignard, I'm a front-end developer and I'm passionate about user experience design and user interface development. <br /><br />
+                <h1 className={"image-and-content__heading"}>Welcome to my <span><i>portfolio</i></span></h1>
+                <p className={"image-and-content__copy"}>Hi there, my name is Rory Grignard, I'm a front-end developer and I'm passionate about user experience design and user interface development. <br /><br />
                     My background includes development of engaging websites for fast paced agencies, as well as updating and maintaining an international ecommerce website. <br /><br />
                     When I'm not coding, I enjoy spending time with family and being out doors experiencing nature.</p>
                 <div className="image-and-content__btn-wrapper">

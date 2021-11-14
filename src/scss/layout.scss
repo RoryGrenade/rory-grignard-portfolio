@@ -13,8 +13,15 @@ body {
 
 main {
   padding: $hdr-height-m 0 0;
-  @include mx-mq(md) {
+  @include mq(md) {
     padding: $hdr-height-d 0 0;
+  }
+}
+
+section,
+footer {
+  &:not(.image-and-content) {
+    @include mx-section-padding;
   }
 }
 

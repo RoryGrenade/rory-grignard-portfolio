@@ -8,7 +8,7 @@ $color: (
         orange: #e67c00,
         pink: #da1b60,
         green: #0bda56,
-        blue: #1b2fda,
+        blue: #099496,
 );
 
 @function color($colorName) {
@@ -16,13 +16,20 @@ $color: (
 }
 
 //Section padding
-$section-padding-amt-m: 40px;
-$section-padding-amt-d: 85px;
+$section-padding: (
+        mobile: 40px,
+        desktop: 80px
+);
+
+@function section-padding($padding) {
+  @return map-get($section-padding, $padding)
+}
 
 ///Gutters
-$gt-1: 10px;
-$gt-2: $gt-1 * 2;
-$gt-3: $gt-2 * 2;
+$gutter-1: 10px;
+$gutter-1-negative: 10px * -1;
+$gutter-2: $gutter-1 * 2;
+$gutter-3: $gutter-2 * 2;
 
 //Spacers
 $sp-1: 12px;
@@ -61,7 +68,7 @@ $weight: (
         bold: 700
 );
 
-@function weight($weightName) {
+@function font-weight($weightName) {
   @return map-get($weight, $weightName);
 }
 

@@ -1,4 +1,5 @@
-%btn {
+%btn,
+%btn-text {
   border: none;
   background: transparent;
   margin: 0;
@@ -10,13 +11,17 @@
   }
 }
 
+%btn-text {
+  text-decoration: none;
+}
+
 .btn {
   @extend %btn;
   &.-btn-light,
   &.-btn-dark {
     padding: 0.5em 1.4em;
     min-height: 44px;
-    font-weight: weight(semiBold);
+    font-weight: font-weight(semiBold);
     border: 3px solid;
     border-radius: 25px;
     display: inline-flex;
@@ -36,7 +41,7 @@
     &:hover,
     &:hover i {
       color: color(black);
-      border-color: color(black);
+      border-color: color(white);
       background-color: color(white);
     }
   }

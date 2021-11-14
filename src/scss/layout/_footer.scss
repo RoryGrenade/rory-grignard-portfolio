@@ -1,0 +1,60 @@
+@import "../core/vars";
+@import "../core/mixins";
+@import "../core/buttons";
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $gutter-1-negative;
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.footer__col {
+  flex: 1;
+  padding: 0 $gutter-1;
+  &:nth-child(2) {
+    margin: $gutter-2 0 0;
+  }
+  @include mq(md) {
+    margin: 0;
+  }
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__item {
+  margin: 0 0 $gutter-2;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer__btn {
+  @extend %btn-text;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: font-weight(regular);
+  color: color(white);
+}
+
+.footer__icon {
+  font-size: 25px;
+  color: color(pink);
+  margin: 0 $gutter-1 0 0;
+}
+
+.footer__copyright {
+  display: block;
+  margin: $gutter-2 0 0;
+  color: color(blueGrey);
+  @include mq(md) {
+    margin: section-padding(mobile) 0 0;
+  }
+}

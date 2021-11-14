@@ -13,19 +13,24 @@ h6,
 p,
 li,
 a,
+small,
 button {
   font-family: font(primary);
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: font-weight(regular);
+  margin: 0 0 section-padding(mobile);
+}
+
 p {
-  margin: 0 auto $gt-3;
+  margin: 0 auto $gutter-3;
 }

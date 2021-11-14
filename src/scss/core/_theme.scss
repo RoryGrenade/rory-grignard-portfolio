@@ -1,4 +1,5 @@
-section {
+section,
+footer {
   &.-theme-dark {
     background-color: color(black);
   }
@@ -12,7 +13,7 @@ h5,
 h6,
 p,
 li,
-button {
+%btn {
   .-theme-dark & {
     color: color(white);
   }

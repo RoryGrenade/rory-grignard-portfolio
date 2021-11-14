@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import WebFont from "webfontloader";
 import HeaderElement from "./js/layout/HeaderElement";
 import MainElement from "./js/layout/MainElement";
+import FooterElement from "./js/layout/FooterElement";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <HeaderElement />
       <MainElement />
+      <FooterElement />
     </div>
   );
 }

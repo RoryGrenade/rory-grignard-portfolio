@@ -1,7 +1,7 @@
 @import "vars";
 
 //Media queries
-@mixin mx-mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
   // If $mq-breakpoint is a key that exists in
   // $mq-breakpoints, get and use the value
   @if map-has-key($mq-breakpoints, $mq-breakpoint) {
@@ -18,29 +18,30 @@
   margin: 0 auto;
   max-width: $ctr-max-width;
   &:not(.header__container) {
-    padding: 0 $gt-2;
+    padding: 0 $gutter-2;
   }
-  @include mx-mq(md) {
-    padding: 0 $gt-3;
+  @include mq(md) {
+    padding: 0 $gutter-3;
     &.header__container {
-      padding: 0 $gt-3;
+      padding: 0 $gutter-3;
     }
   }
 }
 
 //Section padding
 @mixin mx-section-padding {
-  padding-top: $section-padding-amt-m;
-  padding-bottom: $section-padding-amt-m;
-  @include mx-mq(md) {
-    padding-top: $section-padding-amt-d;
-    padding-bottom: $section-padding-amt-d;
+  padding-top: section-padding(mobile);
+  padding-bottom: section-padding(mobile);
+  @include mq(md) {
+    padding-top: section-padding(desktop);
+    padding-bottom: section-padding(desktop);
   }
 }
+
 @mixin mx-section-padding-top {
-  padding-top: $section-padding-amt-m;
-  @include mx-mq(md) {
-    padding-top: $section-padding-amt-d;
+  padding-top: section-padding(mobile);
+  @include mq(md) {
+    padding-top: section-padding(desktop);
   }
 }
 
