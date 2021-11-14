@@ -18,7 +18,9 @@
     margin: $gutter-2 0 0;
   }
   @include mq(md) {
-    margin: 0;
+    &:nth-child(2) {
+      margin: 0;
+    }
   }
 }
 
