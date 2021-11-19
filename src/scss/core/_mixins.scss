@@ -100,12 +100,6 @@ $linear-gradient-btn: linear-gradient(to right, color(pink), color(orange), colo
   padding: 0 0 1px 0;
 }
 
-@mixin mx-linear-gradient-btn {
-  background: $linear-gradient-btn;
-  background-size: 200% 100%;
-  background-position: 100% 100%;
-}
-
 //DO I NEED THESE?
 @mixin gradientBox {
   width: auto;

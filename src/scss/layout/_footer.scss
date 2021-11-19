@@ -47,9 +47,66 @@
 }
 
 .footer__icon {
-  font-size: 25px;
-  color: color(pink);
+  width: 25px;
+  height: 25px;
+  background-color: color(pink);
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: color $tr-base, border-color $tr-base, background-color $tr-base;
   margin: 0 $gutter-1 0 0;
+  .-codepen & {
+    mask-image: url("../../img/footer/codepen.svg");
+  }
+  .-facebook & {
+    mask-image: url("../../img/footer/facebook.svg");
+  }
+  .-github & {
+    mask-image: url("../../img/footer/github.svg");
+  }
+  .-gmail & {
+    mask-image: url("../../img/footer/gmail.svg");
+  }
+  .-linkedin & {
+    mask-image: url("../../img/footer/linkedin.svg");
+  }
+  .-twitter & {
+    mask-image: url("../../img/footer/twitter.svg");
+  }
+  .-whatsapp & {
+    mask-image: url("../../img/footer/whatsapp.svg");
+  }
+  &:before {
+    content: '';
+    background-image: $linear-gradient-btn;
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .footer__btn:hover & {
+    &:before {
+      display: block;
+      animation: key-linear-gradient-btn 1s ease infinite;
+    }
+  }
+}
+
+@keyframes key-linear-gradient-btn {
+  0% {
+    //background-position: 1000% 100%;
+    background-position: 270% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .footer__copyright {
