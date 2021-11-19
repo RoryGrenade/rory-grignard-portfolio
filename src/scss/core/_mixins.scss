@@ -13,21 +13,6 @@
   }
 }
 
-//Container
-@mixin mx-container {
-  margin: 0 auto;
-  max-width: $ctr-max-width;
-  &:not(.header__container) {
-    padding: 0 $gutter-2;
-  }
-  @include mq(md) {
-    padding: 0 $gutter-3;
-    &.header__container {
-      padding: 0 $gutter-3;
-    }
-  }
-}
-
 //Section padding
 @mixin mx-section-padding {
   padding-top: section-padding(mobile);

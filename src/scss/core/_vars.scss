@@ -27,9 +27,10 @@ $section-padding: (
 
 ///Gutters
 $gutter-1: 10px;
-$gutter-1-negative: 10px * -1;
-$gutter-2: $gutter-1 * 2;
-$gutter-3: $gutter-2 * 2;
+$gutter-1-negative: 10px * -1; //-10px
+$gutter-2: $gutter-1 * 2; //20px
+$gutter-3: $gutter-1 * 3; //30px
+$gutter-4: $gutter-1 * 4; //40px
 
 //Spacers
 $sp-1: 12px;
