@@ -12,45 +12,55 @@ import { ReactComponent as JSShield } from'../../img/skills-logos/javascript-shi
 function ContainedCarousel() {
     return(
         <section className={"contained-carousel"}>
-            <div className="container">
-                <h1 className={"contained-carousel__heading-primary"}>Skills</h1>
+            <div className="contained-carousel__container">
+                <h1 className={"contained-carousel__title-primary"}>Frontend Web Development</h1>
                 <Swiper
+                    className={"contained-carousel__swiper"}
                     modules={[Navigation]}
                     spaceBetween={0}
                     slidesPerView={1}
+                    // loop={true}
+                    grabCursor={true}
                     navigation
                 >
-                    <SwiperSlide>
-                        <h2 className={"contained-carousel__heading-secondary"}>Fundamentals</h2>
-                        <p>As a frontend web developer with over five years experience, I have a good grasp of website coding fundamentals, namely W3C compliant and accessible HTML markup, scalable and maintainable CSS, and DRY, modular, well commented and backward compatible Javascript.</p>
-                        <div className="contained-carousel__logo-wrapper">
-                            <HTML5Shield className={"contained-carousel__svg"} />
-                            <CSS3Shield className={"contained-carousel__svg"} />
-                            <JSShield className={"contained-carousel__svg"} />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="row">
-                            <div className="col">
-                                <h3>Web Technologies</h3>
-                                <p>Lately I've been enjoying creating React apps, fun fact this website was created using Create React App.</p>
-                                <h4>CDN & Package Managers</h4>
-                                <p>I've used content delivery networks as well as package managers to add dependencies to projects.<br/>Both approaches have their benefits, however Yarn package manager is without a doubt my "go to" technology for managing project dependencies.</p>
-                                <h4>Version Control</h4>
-                                <p>I use git for version control, and have worked with remote Bitbucket repositories on small medium and large projects, on my own and as part of a team.</p>
-                                <h4>Libraries</h4>
-                                <p>I'm well versed using libraries, such as Bootstrap 3, 4, 5 and Greensock JS. These third party libraries enables rapid development of interactive websites that are scalable, and easy to maintain.</p>
-                                <h4>Analytics</h4>
-                                <p>I use Google Tag manager to deploy Google Analytics and other website information, adding to ease of website maintainability.</p>
+                    <SwiperSlide className={"contained-carousel__slide"}>
+                        <div className="contained-carousel__slide-row">
+                            <div className="contained-carousel__slide-col -typ">
+                                <h2 className={"contained-carousel__title-secondary"}>HTML5</h2>
+                                <p>I write W3C compliant, semantic HTML markup which is clear and easy to maintain.</p>
+                                <h3>A few benefits of semantic markup include:</h3>
+                                <ul>
+                                    <li><strong>Accessibility</strong>, using the correct HTML elements make a web page accessible for the considerable amount of users that rely on screen reader software to navigate the internet.</li>
+                                    <li><strong>SEO positioning</strong>, a page is indexed by Google if it has been visited by the Google crawler ("Googlebot"). When Googlebot crawls a webpage, it is analyzed for content and meaning, and stored in the Google index. Therefore semantic markup will help Google serve your webpage to the appropriate audience.</li>
+                                </ul>
+                            </div>
+                            <div className="contained-carousel__slide-col -logo">
+                                <HTML5Shield className={"contained-carousel__svg"} />
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/*<SwiperSlide>*/}
-
-                    {/*</SwiperSlide>*/}
-                    {/*<SwiperSlide>*/}
-
-                    {/*</SwiperSlide>*/}
+                    <SwiperSlide className={"contained-carousel__slide"}>
+                        <div className="contained-carousel__slide-row">
+                            <div className="contained-carousel__slide-col -typ">
+                                <h2 className={"contained-carousel__title-secondary"}>CSS3</h2>
+                                <p>Mobile first CSS, utilising the latest CSS layout modules to created immersive, fully responsive user experiences. <br/>Paired with the BEM methodology to ensure CSS that is scalable and easy to maintain (no nesting hell).</p>
+                            </div>
+                            <div className="contained-carousel__slide-col -logo">
+                                <CSS3Shield className={"contained-carousel__svg"} />
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className={"contained-carousel__slide"}>
+                        <div className="contained-carousel__slide-row">
+                            <div className="contained-carousel__slide-col -typ">
+                                <h2 className={"contained-carousel__title-secondary"}>JS</h2>
+                                <p>I create interactive and engaging components using DRY, modular ES6 Javascript. <br/>I use Babel transpiler to convert edge JavaScript to ES5 Javascript that is cross browser and backward compatible, even on older browsers.</p>
+                            </div>
+                            <div className="contained-carousel__slide-col -logo">
+                                <JSShield className={"contained-carousel__svg"} />
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </section>

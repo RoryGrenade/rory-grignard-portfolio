@@ -52,8 +52,8 @@
 }
 
 .footer__icon {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background-color: color(pink);
   position: relative;
   overflow: hidden;
@@ -98,7 +98,7 @@
   }
   .footer__btn:hover & {
     &:before {
-      animation: key-linear-gradient-btn 1s ease infinite;
+      animation: key-linear-gradient-btn 800ms ease infinite;
     }
   }
 }
