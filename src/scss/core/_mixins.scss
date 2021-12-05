@@ -79,12 +79,6 @@ $linear-gradient-btn: linear-gradient(to right, color(pink), color(orange), colo
   padding: 0 0 3px 0;
 }
 
-@mixin mx-gradient-border-bottom-text {
-  position: relative;
-  background: $linear-gradient;
-  padding: 0 0 1px 0;
-}
-
 //DO I NEED THESE?
 @mixin gradientBox {
   width: auto;

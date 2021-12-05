@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 html {
   font-size: 16px;
@@ -15,7 +16,17 @@ li,
 a,
 small,
 button {
-  font-family: font(primary);
+  font-family: font(base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-family: font(heading);
+  margin: 0 0 1em;
 }
 
 h1,
@@ -28,9 +39,16 @@ h4 {
   font-size: 24px;
   line-height: 1.5;
   font-weight: font-weight(regular);
-  margin: 0 0 section-padding(mobile);
 }
 
 p {
   margin: 0 auto $gutter-4 0;
+}
+
+hr {
+  width: 100%;
+  height: 4px;
+  background: $linear-gradient;
+  border: none;
+  margin:  0 0 section-padding(mobile);
 }

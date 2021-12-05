@@ -14,7 +14,8 @@ function ImageAndContent() {
                 </picture>
             </div>
             <div className={"image-and-content__content-wrapper"}>
-                <h1 className={"image-and-content__heading"}>Welcome to my <span><i>portfolio</i></span></h1>
+                <h1 className={"image-and-content__heading"}>Welcome to my <span>portfolio</span></h1>
+                <hr/>
                 <p className={"image-and-content__copy"}>Hi there, my name is Rory Grignard, I'm a front-end developer and I'm passionate about user experience design and user interface development. <br /><br />
                     My background includes development of engaging websites for fast paced agencies, as well as updating and maintaining an international ecommerce website. <br /><br />
                     When I'm not coding, I enjoy spending time with family and being out doors experiencing nature.</p>

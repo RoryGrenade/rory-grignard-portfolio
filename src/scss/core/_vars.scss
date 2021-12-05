@@ -56,8 +56,9 @@ $tr-base: $tr-base-duration $tr-base-timing;
 
 //Fonts
 $font: (
-        primary: #{'Open Sans', sans-serif},
-        secondary: #{'Source Code Pro', monospace}
+        base: #{'Open Sans', sans-serif},
+        heading: #{'Outfit', sans-serif},
+        code: #{'Source Code Pro', monospace}
 );
 
 @function font($fontName) {
