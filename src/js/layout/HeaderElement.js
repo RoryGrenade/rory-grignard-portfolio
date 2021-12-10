@@ -19,16 +19,22 @@ function HeaderElement() {
                 <nav className={"header__nav"}>
                     <ul className={"header__nav-list"}>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button active"} data-nav={"Home"}><span><i>Home</i></span></button>
+                            <button className={"header__nav-button active"} data-nav={"Hello"}><span><i>Hello</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"} data-nav={"Skills"}><span><i>Skills</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Code"}><span><i>Code</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"} data-nav={"Showcase"}><span><i>Showcase</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Stack"}><span><i>Stack</i></span></button>
                         </li>
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"} data-nav={"Contact"}><span><i>Contact</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"UI/UX"}><span><i>UI/UX</i></span></button>
+                        </li>
+                        <li className={"header__nav-item"}>
+                            <button className={"header__nav-button"} data-nav={"UI/UX"}><span><i>CMS</i></span></button>
+                        </li>
+                        <li className={"header__nav-item"}>
+                            <button className={"header__nav-button"} data-nav={"Contact"}><span><i>Connect</i></span></button>
                         </li>
                     </ul>
                 </nav>

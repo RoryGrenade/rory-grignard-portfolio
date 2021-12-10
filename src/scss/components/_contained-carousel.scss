@@ -8,9 +8,34 @@
 
 .contained-carousel__title-primary {
   @include mx-text-gradient;
+  text-align: center;
   margin: 0 0 section-padding(mobile);
   @include mq(md) {
     margin: 0 0 section-padding(desktop);
+  }
+}
+
+@keyframes animated-carousel-button-hover-prev {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animated-carousel-button-hover-next {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 
@@ -53,14 +78,23 @@
       margin: auto 0;
       transition: transform $tr-base;
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+      &:hover {
+        animation-duration: .5s;
+        animation-delay: 0;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+    }
     .swiper-button-prev {
       &:hover {
-        transform: translateX(-10px);
+        animation-name: animated-carousel-button-hover-prev;
       }
     }
     .swiper-button-next {
       &:hover {
-        transform: translateX(10px);
+        animation-name: animated-carousel-button-hover-next;
       }
     }
   }
@@ -110,10 +144,6 @@
     width: 150px;
     max-width: initial;
   }
-}
-
-.contained-carousel__title-primary {
-  text-align: center;
 }
 
 .contained-carousel__title-secondary {

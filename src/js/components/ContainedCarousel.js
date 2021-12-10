@@ -27,12 +27,7 @@ function ContainedCarousel() {
                         <div className="contained-carousel__slide-row">
                             <div className="contained-carousel__slide-col -typ">
                                 <h2 className={"contained-carousel__title-secondary"}>HTML5</h2>
-                                <p>I write W3C compliant, semantic HTML markup which is clear and easy to maintain.</p>
-                                <h3>A few benefits of semantic markup include:</h3>
-                                <ul>
-                                    <li><strong>Accessibility</strong>, using the correct HTML elements make a web page accessible for the considerable amount of users that rely on screen reader software to navigate the internet.</li>
-                                    <li><strong>SEO positioning</strong>, a page is indexed by Google if it has been visited by the Google crawler ("Googlebot"). When Googlebot crawls a webpage, it is analyzed for content and meaning, and stored in the Google index. Therefore semantic markup will help Google serve your webpage to the appropriate audience.</li>
-                                </ul>
+                                <p>I write W3C compliant, semantic HTML markup which is optimised for search engine indexing, accessible to people using assitive technologies and is easy to maintain and scale for fellow developers. <br/><br/>I'm also familiar with SilverStripe template syntax, JSX, and have some experiece with Shopify Liquid.</p>
                             </div>
                             <div className="contained-carousel__slide-col -logo">
                                 <HTML5Shield className={"contained-carousel__svg"} />
@@ -43,7 +38,7 @@ function ContainedCarousel() {
                         <div className="contained-carousel__slide-row">
                             <div className="contained-carousel__slide-col -typ">
                                 <h2 className={"contained-carousel__title-secondary"}>CSS3</h2>
-                                <p>Mobile first CSS, utilising the latest CSS layout modules to created immersive, fully responsive user experiences. <br/>Paired with the BEM methodology to ensure CSS that is scalable and easy to maintain (no nesting hell).</p>
+                                <p>Combined with mobile first CSS, utilising the latest CSS layout modules to created immersive, fully responsive user experiences. <br/><br/>I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions.</p>
                             </div>
                             <div className="contained-carousel__slide-col -logo">
                                 <CSS3Shield className={"contained-carousel__svg"} />
@@ -54,7 +49,7 @@ function ContainedCarousel() {
                         <div className="contained-carousel__slide-row">
                             <div className="contained-carousel__slide-col -typ">
                                 <h2 className={"contained-carousel__title-secondary"}>JS</h2>
-                                <p>I create interactive and engaging components using DRY, modular ES6 Javascript. <br/>I use Babel transpiler to convert edge JavaScript to ES5 Javascript that is cross browser and backward compatible, even on older browsers.</p>
+                                <p>Lastly a sprinckle of DRY, modular ES6 Javascript to create interactive and engaging UI components. <br/><br/>I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.</p>
                             </div>
                             <div className="contained-carousel__slide-col -logo">
                                 <JSShield className={"contained-carousel__svg"} />
