@@ -30,11 +30,11 @@ function HeaderElement() {
                         <li className={"header__nav-item"}>
                             <button className={"header__nav-button"} data-nav={"UI/UX"}><span><i>UI/UX</i></span></button>
                         </li>
+                        {/*<li className={"header__nav-item"}>*/}
+                        {/*    <button className={"header__nav-button"} data-nav={"UI/UX"}><span><i>CMS</i></span></button>*/}
+                        {/*</li>*/}
                         <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"} data-nav={"UI/UX"}><span><i>CMS</i></span></button>
-                        </li>
-                        <li className={"header__nav-item"}>
-                            <button className={"header__nav-button"} data-nav={"Contact"}><span><i>Connect</i></span></button>
+                            <button className={"header__nav-button"} data-nav={"Contact"}><span><i>Contact</i></span></button>
                         </li>
                     </ul>
                 </nav>

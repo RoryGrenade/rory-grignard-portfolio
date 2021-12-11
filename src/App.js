@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Open Sans:400,700', 'Outfit:600,700', 'Source Code Pro:600']
+        families: ['Open Sans:400,500,600,700', 'Source Code Pro:600']
       }
     })
   }, []);

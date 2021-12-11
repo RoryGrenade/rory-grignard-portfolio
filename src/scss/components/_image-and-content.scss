@@ -47,19 +47,18 @@
 
 .image-and-content__heading {
   line-height: 1;
-  font-weight: font-weight(regular);
+  font-family: font(base);
+  font-weight: font-weight(semibold);
   margin: 0 0 $gutter-1;
   span {
     display: block;
     font-size: 2em;
-    font-weight: font-weight(bold);
   }
 }
 
 .image-and-content__copy {
-  max-width: 750px;
-  margin: 0 auto section-padding(mobile) 0
-;
+  max-width: 600px;
+  margin: 0 auto section-padding(mobile) 0;
 }
 
 .btn.image-and-content__cv-btn {

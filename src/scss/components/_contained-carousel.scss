@@ -8,7 +8,6 @@
 
 .contained-carousel__title-primary {
   @include mx-text-gradient;
-  text-align: center;
   margin: 0 0 section-padding(mobile);
   @include mq(md) {
     margin: 0 0 section-padding(desktop);
@@ -50,24 +49,22 @@
     border-radius: 50%;
     color: color(black);
     &:after {
-      content: '';
+      font-family: font(code);
+      line-height: 1;
       width: 40px;
       height: 40px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
     }
   }
   .swiper-button-prev {
     left: -15px;
     &:after {
-      background-image: url("../../img/swiper/pointer-left-outline.svg");
+      content: '<';
     }
   }
   .swiper-button-next {
     right: -15px;
     &:after {
-      background-image: url("../../img/swiper/pointer-right-outline.svg");
+      content: '/>';
     }
   }
   @include mq(md) {

@@ -57,7 +57,6 @@ $tr-base: $tr-base-duration $tr-base-timing;
 //Fonts
 $font: (
         base: #{'Open Sans', sans-serif},
-        heading: #{'Outfit', sans-serif},
         code: #{'Source Code Pro', monospace}
 );
 
@@ -67,8 +66,9 @@ $font: (
 
 $weight: (
         regular: 400,
-        semiBold: 600,
-        bold: 700
+        medium: 500,
+        semibold: 600,
+        bold: 700,
 );
 
 @function font-weight($weightName) {

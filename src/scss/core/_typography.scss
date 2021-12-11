@@ -5,18 +5,13 @@ html {
   font-size: 16px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 li,
 a,
 small,
 button {
   font-family: font(base);
+  font-weight: font-weight(regular);
 }
 
 h1,
@@ -25,14 +20,10 @@ h3,
 h4,
 h5,
 h6, {
-  font-family: font(heading);
-  margin: 0 0 1em;
-}
-
-h1,
-h2,
-h3 {
+  font-family: font(code);
+  font-weight: font-weight(semibold);
   text-transform: uppercase;
+  margin: 0 0 1em;
 }
 
 h1 {

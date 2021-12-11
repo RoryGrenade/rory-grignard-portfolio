@@ -56,10 +56,11 @@
 .header__logo-text {
   @include mx-text-gradient;
   position: relative;
-  font-family: font(heading);
-  font-weight: font-weight(semiBold);
+  font-family: font(code);
+  font-weight: font-weight(regular);
   font-size: 22px;
   text-transform: initial;
+  padding: 3px 0;
   margin: 0;
   @include mq(md) {
     font-size: 32px;
@@ -183,9 +184,9 @@
   display: flex;
   text-transform: uppercase;
   font-size: $hdr-font-size-m;
+  font-family: font(base);
   line-height: 1;
   font-weight: font-weight(bold);
-  font-family: font(base);
   height: 100%;
   width: 100%;
   color: color(white);
