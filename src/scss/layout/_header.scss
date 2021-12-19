@@ -76,7 +76,7 @@
       left: 0;
       z-index: zIndex(default);
       visibility: hidden;
-      clip-path: inset(0% 0% 100% 0%);
+      clip-path: inset(100% 0% 0% 0%);
       @include mq(md) {
         display: block;
       }
@@ -205,6 +205,7 @@
         text-transform: uppercase;
         color: color(white);
         transition: visibility $tr-base, clip-path $tr-base;
+        padding: 2px 0;
         @include mq(md) {
           font-size: 16px;
           line-height: (19 / 16);
