@@ -6,7 +6,7 @@
   flex-direction: column;
   @include mq(md) {
     flex-direction: row;
-    min-height: calc(100vh - 67px);
+    min-height: calc(100vh - 59px);
   }
 }
 

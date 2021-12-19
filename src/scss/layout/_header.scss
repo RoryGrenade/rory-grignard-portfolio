@@ -9,219 +9,236 @@
   z-index: zIndex(header);
   @include mq(md) {
     border-bottom: 3px solid color(black);
+    padding: 12px 0;
   }
-}
-
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  @include mq(md) {
-    align-items: initial;
-    padding: 0 $gutter-4;
-  }
-}
-
-.header__button-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  background-color: color(white);
-  padding: 0 20px;
-  border-bottom: 3px solid color(black);
-  z-index: zIndex(default);
-  @include mq(md) {
-    display: initial;
-    width: initial;
-    align-items: initial;
-    justify-content: initial;
-    background-color: initial;
-    padding: initial;
-    border-bottom: 0;
-    z-index: initial;
-  }
-}
-
-//Logo
-.header__logo-button {
-  @extend %btn;
-  padding: $sp-1 0;
-    &:hover {
-    cursor: pointer;
-  }
-}
-
-.header__logo-text {
-  @include mx-text-gradient;
-  position: relative;
-  font-family: font(code);
-  font-weight: font-weight(regular);
-  font-size: 22px;
-  text-transform: initial;
-  padding: 3px 0;
-  margin: 0;
-  @include mq(md) {
-    font-size: 32px;
-  }
-}
-
-.header__logo-text-clone {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include mx-text-gradient-pink;
-  //opacity: 0;
-  clip-path: inset(0 100% 0 0);
-  //transition: opacity $tr-core, clip-path $tr-core;
-  transition: clip-path $tr-base;
-  .header__logo-button:hover & {
-    //opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-//Burger
-.header__burger {
-  @extend %btn;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  svg {
-    @include mx-text-gradient;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    &.-burger,
-    &.-close {
-      transition: clip-path $tr-base;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    @include mq(md) {
+      align-items: initial;
+      padding: 0 $gutter-4;
     }
-    &.-burger {
-      color: color(pink);
-      clip-path: inset(0 0 0 0);
-      transition-delay: $tr-base-duration;
+  }
+  //Logo btn
+  &__logo-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: color(white);
+    padding: 6px 20px;
+    border-bottom: 3px solid color(black);
+    z-index: zIndex(default);
+    @include mq(md) {
+      display: initial;
+      width: initial;
+      align-items: initial;
+      justify-content: initial;
+      background-color: initial;
+      padding: initial;
+      border-bottom: 0;
+      z-index: initial;
     }
-    &.-close {
-      color: color(orange);
-      clip-path: inset(0 100%0 0);
-    }
-    .-nav-active & {
-      &.-burger {
-        transition-delay: 0ms;
-        clip-path: inset(0 0 0 100%);
+  }
+  &__logo-btn {
+    @extend %btn;
+    padding: 0;
+    position: relative;
+    &-text,
+    &:after {
+      font-family: font(code);
+      font-weight: font-weight(regular);
+      font-size: 22px;
+      line-height: (25 / 22);
+      text-transform: initial;
+      padding: 0;
+      margin: 0;
+      transition: visibility $tr-base, clip-path $tr-base;
+      @include mq(md) {
+        font-size: 32px;
+        margin: -4px 0 0;
       }
-      &.-close {
+    }
+    &-text {
+      @include mx-text-gradient;
+      position: relative;
+    }
+    &:after {
+      content: '<RoryGrignard />';
+      display: none;
+      color: color(black);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: zIndex(default);
+      visibility: hidden;
+      clip-path: inset(0% 0% 100% 0%);
+      @include mq(md) {
+        display: block;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      &-text {
+        visibility: hidden;
+        clip-path: inset(0% 0% 100% 0%);
+      }
+      &:after {
+        visibility: visible;
+        clip-path: inset(0% 0% 0% 0%);
+      }
+    }
+  }
+  //Burger btn
+  &__burger-btn {
+    @extend %btn;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    &-icon {
+      @include mx-text-gradient;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      &.--burger,
+      &.--close {
+        transition: clip-path $tr-base;
+      }
+      &.--burger {
+        color: color(pink);
         clip-path: inset(0 0 0 0);
         transition-delay: $tr-base-duration;
       }
-    }
-  }
-  @include mq(md) {
-    display: none;
-  }
-}
-
-//Nav
-.header__nav {
-  position: fixed;
-  top: 55px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 55px);
-  visibility: hidden;
-  clip-path: inset(0 0 100% 0);
-  transition: visibility $tr-base, clip-path $tr-base;
-  .-nav-active & {
-    visibility: visible;
-    clip-path: inset(0 0 0 0);
-  }
-  @include mq(md) {
-    position: initial;
-    top: initial;
-    left: initial;
-    width: initial;
-    height: initial;
-    visibility: visible;
-    clip-path: initial;
-    transition: initial;
-  }
-}
-
-.header__nav-list {
-  display: flex;
-  padding: 55px 0;
-  margin: auto 0;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  background-color: color(black);
-  @include mq(md) {
-    flex-direction: row;
-    padding: 0;
-    background-color: initial;
-  }
-}
-
-.header__nav-item {
-  text-align: center;
-  list-style: none;
-  margin: 0 0 $gutter-1 0;
-  &:last-child {
-    margin: 0;
-  }
-  @include mq(md) {
-    text-align: initial;
-    margin: 0 $gutter-2 0 0;
-  }
-}
-
-.header__nav-button {
-  @extend %btn;
-  display: flex;
-  text-transform: uppercase;
-  font-size: $hdr-font-size-m;
-  font-family: font(base);
-  line-height: 1;
-  font-weight: font-weight(bold);
-  height: 100%;
-  width: 100%;
-  color: color(white);
-  padding: $gutter-1 $gutter-4;
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-color: color(black);
-    i {
-      font-style: normal;
-    }
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  &:hover,
-  &.active {
-    span {
-      i {
-        @include mx-text-gradient;
+      &.--close {
+        color: color(black);
+        clip-path: inset(0 100%0 0);
+      }
+      .--mobile-nav-visible & {
+        &.--burger {
+          transition-delay: 0ms;
+          clip-path: inset(0 0 0 100%);
+        }
+        &.--close {
+          clip-path: inset(0 0 0 0);
+          transition-delay: $tr-base-duration;
+        }
       }
     }
-  }
-  @include mq(md) {
-    color: color(black);
-    width: initial;
-    font-size: $hdr-font-size-d;
-    padding: 0;
-    span {
-      background-color: color(white);
+    @include mq(md) {
+      display: none;
     }
-    &.active {
-      @include mx-gradient-border-bottom-nav;
+  }
+  //Nav
+  &__nav {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 55px);
+    visibility: hidden;
+    clip-path: inset(0 0 100% 0);
+    transition: visibility $tr-base, clip-path $tr-base;
+    .--mobile-nav-visible & {
+      visibility: visible;
+      clip-path: inset(0 0 0 0);
+    }
+    @include mq(md) {
+      position: initial;
+      top: initial;
+      left: initial;
+      width: initial;
+      height: initial;
+      visibility: visible;
+      clip-path: initial;
+      transition: initial;
+    }
+    &-list{
+      display: flex;
+      padding: 55px 0;
+      margin: auto 0;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      background-color: color(black);
+      @include mq(md) {
+        flex-direction: row;
+        padding: 0;
+        background-color: initial;
+      }
+    }
+    &-item {
+      list-style: none;
+      display: flex;
+      margin: 0 0 $gutter-1 0;
+      &:last-child {
+        margin: 0;
+      }
+      @include mq(md) {
+        margin: 0 $gutter-2 0 0;
+      }
+    }
+    &-btn {
+      @extend %btn;
+      width: 100%;
+      padding: $gutter-1 $gutter-4;
+      position: relative;
+      @include mq(md) {
+        width: initial;
+        padding: 0;
+      }
+      &-text,
+      &-clone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: font(base);
+        font-size: 24px;
+        line-height: (27 / 24);
+        font-weight: font-weight(bold);
+        text-transform: uppercase;
+        color: color(white);
+        transition: visibility $tr-base, clip-path $tr-base;
+        @include mq(md) {
+          font-size: 16px;
+          line-height: (19 / 16);
+          color: color(black);
+        }
+      }
+      &-text {
+        visibility: visible;
+        clip-path: inset(0% 0% 0% 0%);
+        .header__nav-btn:hover & {
+          visibility: hidden;
+          clip-path: inset(0% 0% 100% 0%);
+        }
+      }
+      &-clone {
+        background-image: $linear-gradient;
+        background-color: initial;
+        text-fill-color: transparent;
+        text-shadow: none;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: zIndex(default);
+        visibility: hidden;
+        clip-path: inset(100% 0% 0% 0%);
+        .header__nav-btn:hover & {
+          visibility: visible;
+          clip-path: inset(0% 0% 0% 0%);
+        }
+      }
     }
   }
 }

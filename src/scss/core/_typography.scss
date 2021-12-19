@@ -27,8 +27,16 @@ h6, {
 }
 
 h1 {
-  font-size: 40px;
-  line-height: (43 / 40);
+  font-size: 20px;
+  line-height: (23 / 20);
+  @include mq(md) {
+    font-size: 30px;
+    line-height: (33 / 30);
+  }
+  @include mq(lg) {
+    font-size: 40px;
+    line-height: (43 / 40);
+  }
 }
 
 h4 {
