@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderElementData from "../../data/HeaderElementData.json"
 import '../../scss/layout/_header.scss';
 import { RiMenu3Fill } from "react-icons/ri";
 import { RiCloseFill } from "react-icons/ri";
@@ -10,11 +11,12 @@ function HeaderElement() {
         headerEl.classList.toggle('--mobile-nav-visible')
     }
 
-    const navSections = ['Hello', 'Code', 'Stack', 'UI/UX', 'Contact']
-    const navButtons = []
+    const navSections = HeaderElementData.NavSections
+
+    const navItems = []
 
     for (const navSection of navSections) {
-        navButtons.push(
+        navItems.push(
             <li className="header__nav-item">
                 <button className={"header__nav-btn"} data-nav={navSection}>
                     <span className={"header__nav-btn-text "}>{navSection}</span>
@@ -40,7 +42,7 @@ function HeaderElement() {
                 </div>
                 <nav className={"header__nav"}>
                     <ul className={"header__nav-list"}>
-                        {navButtons}
+                        {navItems}
                     </ul>
                 </nav>
             </div>

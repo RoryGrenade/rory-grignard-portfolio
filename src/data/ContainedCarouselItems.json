@@ -1,0 +1,48 @@
+{
+  "WebDevelopment": {
+    "Title": "Web Development",
+    "Items": {
+      "HTML5": {
+        "Title": "HTML5",
+        "Description": "I write W3C compliant, semantic HTML markup which is optimised for search engine indexing, accessible to people using assitive technologies and is easy to maintain and scale for fellow developers. I'm also familiar with SilverStripe template syntax, JSX, and have some experiece with Shopify Liquid."
+      },
+      "CSS3": {
+        "Title": "CSS3",
+        "Description": "Combined with mobile first CSS, utilising the latest CSS layout modules to create immersive, fully responsive user experiences. <br/><br/>I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions."
+      },
+      "JavascriptES6": {
+        "Title": "Javascript ES6",
+        "Description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. <br/><br/>I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript."
+      }
+    }
+  },
+  "WebTechnologies": {
+    "Title": "Web Technologies",
+    "Items": {
+      "React": {
+        "Title": "React",
+        "Description": "Lorem"
+      },
+      "Bootstrap": {
+        "Title": "Bootstrap",
+        "Description": "Lorem"
+      },
+      "GSAP3": {
+        "Title": "GSAP 3",
+        "Description": "Lorem"
+      },
+      "SASS": {
+        "Title": "SASS",
+        "Description": "Lorem"
+      },
+      "Yarn": {
+        "Title": "Yarn Package Manager",
+        "Description": "Lorem"
+      },
+      "GIT": {
+        "Title": "GIT Version Control",
+        "Description": "Lorem"
+      }
+    }
+  }
+}

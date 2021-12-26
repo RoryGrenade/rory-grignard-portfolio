@@ -1,7 +1,7 @@
 import React from "react";
 import { FaEye} from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import backgroundOne from "../../img/backgrounds/bg1.jpg";
+import backgroundOne from "../../img/image-and-conent/bg1.jpg";
 import curriculumVitae from "../../assets/curriculum-vitae-rory-grignard.pdf";
 import "../../scss/components/_image-and-content.scss";
 
