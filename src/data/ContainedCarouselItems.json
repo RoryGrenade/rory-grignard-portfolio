@@ -1,47 +1,56 @@
 {
-  "WebDevelopment": {
-    "Title": "Web Development",
-    "Items": {
+  "webDevelopment": {
+    "title": "Coding languages",
+    "items": {
       "HTML5": {
-        "Title": "HTML5",
-        "Description": "I write W3C compliant, semantic HTML markup which is optimised for search engine indexing, accessible to people using assitive technologies and is easy to maintain and scale for fellow developers. I'm also familiar with SilverStripe template syntax, JSX, and have some experiece with Shopify Liquid."
+        "title": "HTML5",
+        "description": "I write W3C compliant, semantic HTML markup which is optimised for search engine indexing, accessible to people using assitive technologies and is easy to maintain and scale for fellow developers. I'm also familiar with SilverStripe template syntax, JSX, and have some experiece with Shopify Liquid.",
+        "image": "./img/contained-carousel/html-5-shield.svg"
       },
       "CSS3": {
-        "Title": "CSS3",
-        "Description": "Combined with mobile first CSS, utilising the latest CSS layout modules to create immersive, fully responsive user experiences. <br/><br/>I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions."
+        "title": "CSS3",
+        "description": "Combined with mobile first CSS, utilising the latest CSS layout modules to create immersive, fully responsive user experiences. <br/><br/>I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions.",
+        "image": "./img/contained-carousel/css-3-shield.svg"
       },
-      "JavascriptES6": {
-        "Title": "Javascript ES6",
-        "Description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. <br/><br/>I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript."
+      "javascript": {
+        "title": "Javascript ES6",
+        "description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. <br/><br/>I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
+        "image": "./img/contained-carousel/javascript-shield.svg"
       }
     }
   },
-  "WebTechnologies": {
-    "Title": "Web Technologies",
-    "Items": {
-      "React": {
-        "Title": "React",
-        "Description": "Lorem"
+  "webTechnologies": {
+    "title": "Favourite Web Technologies",
+    "items": {
+      "react": {
+        "title": "React",
+        "description": "I build interactive UIs using React functional components and JSX to create templates with variables for dynamic content.",
+        "image": "./img/contained-carousel/react-logo.svg"
       },
-      "Bootstrap": {
-        "Title": "Bootstrap",
-        "Description": "Lorem"
+      "bootstrap": {
+        "title": "Bootstrap",
+        "description": "Using Bootstrap as a Library is ideal for rapid development of rock solid websites, now more than ever with the Sass customisation options in Bootstrap 5.",
+        "image": "./img/contained-carousel/bootstrap-5-logo.svg"
       },
-      "GSAP3": {
-        "Title": "GSAP 3",
-        "Description": "Lorem"
+      "gsap": {
+        "title": "GSAP 3",
+        "description": "Animations (when done appropriately) are an excellent way to enhance your application/website's user journey. I use GreenSock Animation Platform (GSAP) a powerful JavaScript animation library to create highly customisable animations, with timelines for more complex animation sequences. GSAP is also extremely light weight and is cross browser compatible (Chrome, Firefox, and IE 11+).",
+        "image": "./img/contained-carousel/gsap-greensock-logo.svg"
       },
-      "SASS": {
-        "Title": "SASS",
-        "Description": "Lorem"
+      "sass": {
+        "title": "SASS",
+        "description": "My CSS processor of choice is SASS, it awesome being able to nest media queries so that default and responsive styles can be read within the same selector. SASS mixins and extends make writing efficient and reusable styles a breeze.",
+        "image": "./img/contained-carousel/sass-logo.svg"
       },
-      "Yarn": {
-        "Title": "Yarn Package Manager",
-        "Description": "Lorem"
+      "yarn": {
+        "title": "Yarn Package Manager",
+        "description": "I use Yarn to quickly, securely and reliably manage project dependencies via the package.json file. There's no need to reinvent the wheel when you can simply 'yarn add' tried and tested code that does exactly what you need (example: gsap) straight into your project in a matter of seconds. An added benefit of having the package.json file is that fellow developers that are working on the same repo will have the same package versions making the project reproducible and future proof.",
+        "image": "./img/contained-carousel/yarn-package-manager-logo.svg"
       },
-      "GIT": {
-        "Title": "GIT Version Control",
-        "Description": "Lorem"
+      "git": {
+        "title": "GIT Version Control",
+        "description": "GIT is an essential part of my workflow, it makes collaborating with fellow developers easy, it's also great for adding new features, by creating a new branch, the new feature can be developed, tested and reviewed without affecting the main branches source code. I enjoy using Git Tower and GitKraken for enhanced visibility of my code changes which allows me to quickly and easily review my code before staging and committing, or even amending a previous commit where appropriate.",
+        "image": "./img/contained-carousel/git-logo-and-text.svg"
       }
     }
   }
