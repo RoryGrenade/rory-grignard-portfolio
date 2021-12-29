@@ -6,10 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import '../../scss/components/_contained-carousel.scss'
-import { ReactComponent as HTML5Shield } from '../../img/contained-carousel/html-5-shield.svg';
-import { ReactComponent as CSS3Shield } from '../../img/contained-carousel/css-3-shield.svg';
-import { ReactComponent as JSShield } from '../../img/contained-carousel/javascript-shield.svg';
-import {render} from "@testing-library/react";
 
 function ContainedCarousel() {
 
@@ -18,11 +14,11 @@ function ContainedCarousel() {
     return(
         <>
             {containedCarouselItems.map(item => {
-                const containedCarouselItemItems = Object.values(item.Items)
+                const containedCarouselItemItems = Object.values(item.items)
 
                 return <section className={"contained-carousel"}>
                     <div className="contained-carousel__container">
-                        <h1 className={"contained-carousel__title-primary"}>{item.Title}</h1>
+                        <h1 className={"contained-carousel__title-primary"}>{item.title}</h1>
                         <Swiper
                             className={"contained-carousel__swiper"}
                             modules={[Navigation]}
@@ -36,11 +32,11 @@ function ContainedCarousel() {
                                 return <SwiperSlide className={"contained-carousel__slide"}>
                                     <div className="contained-carousel__slide-row">
                                     <div className="contained-carousel__slide-col -typ">
-                                    <h2 className={"contained-carousel__title-secondary"}>{itemItem.Title}</h2>
-                                    <p>{itemItem.Description}</p>
+                                    <h2 className={"contained-carousel__title-secondary"}>{itemItem.title}</h2>
+                                    <p>{itemItem.description}</p>
                                     </div>
                                         <div className="contained-carousel__slide-col -logo">
-                                            <HTML5Shield className={"contained-carousel__svg"} />
+                                            <img className={"contained-carousel__svg"} srcSet={itemItem.image} alt={itemItem.title} />
                                         </div>
                                     </div>
                                 </SwiperSlide>
