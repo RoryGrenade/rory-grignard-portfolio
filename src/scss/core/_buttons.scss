@@ -17,8 +17,8 @@
 
 .btn {
   @extend %btn;
-  &.-btn-light,
-  &.-btn-dark {
+  &.--btn-light,
+  &.--btn-dark {
     padding: 0.5em 1.4em;
     min-height: 44px;
     font-weight: font-weight(semibold);
@@ -34,7 +34,7 @@
       height: 16px;
     }
   }
-  &.-btn-light {
+  &.--btn-light {
     color: color(white);
     border-color: color(white);
     background-color: color(black);
@@ -45,7 +45,7 @@
       background-color: color(white);
     }
   }
-  &.-btn-dark {
+  &.--btn-dark {
     color: color(black);
     border-color: color(black);
     background-color: color(white);

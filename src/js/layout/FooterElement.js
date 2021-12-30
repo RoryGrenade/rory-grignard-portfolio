@@ -7,7 +7,7 @@ function FooterElement() {
             <div className={"footer__container"}>
                 <div className={"footer__row"}>
                     <div className={"footer__col"}>
-                        <h2 className={"footer__title"}>Connect</h2>
+                        <h3 className={"footer__title"}>Connect</h3>
                         <ul className={"footer__list"}>
                             <li className={"footer__item"}>
                                 <a className={"footer__btn --linkedin"} href="https://www.linkedin.com/in/rory-grignard-b3207b66/" target="_blank" rel="noreferrer">
@@ -36,7 +36,7 @@ function FooterElement() {
                         </ul>
                     </div>
                     <div className={"footer__col"}>
-                        <h2 className={"footer__title"}>Share</h2>
+                        <h3 className={"footer__title"}>Share</h3>
                         <ul className={"footer__list"}>
                             <li className={"footer__item"}>
                                 <button className={"footer__btn --linkedin"}>

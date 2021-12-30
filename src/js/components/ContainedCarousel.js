@@ -19,7 +19,7 @@ function ContainedCarousel() {
 
                 return <section className={"contained-carousel"}>
                     <div className="contained-carousel__container">
-                        <h1 className={"contained-carousel__title-primary"}>{item.title}</h1>
+                        <h2 className={"contained-carousel__title-primary"}>{item.title}</h2>
                         <Swiper
                             className={"contained-carousel__swiper"}
                             modules={[Navigation, EffectFade]}
@@ -33,7 +33,7 @@ function ContainedCarousel() {
                                 return <SwiperSlide className={"contained-carousel__slide"}>
                                     <div className="contained-carousel__slide-row">
                                     <div className="contained-carousel__slide-col -typ">
-                                    <h1 className={"contained-carousel__title-secondary"}>{itemItem.title}</h1>
+                                    <h3 className={"contained-carousel__title-secondary"}>{itemItem.title}</h3>
                                     <p>{itemItem.description}</p>
                                     </div>
                                         <div className="contained-carousel__slide-col -logo">

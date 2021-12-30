@@ -10,10 +10,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  .-cover & {
+  .--cover & {
     object-fit: cover;
   }
-  .-contain & {
+  .--contain & {
     object-fit: contain;
   }
 }
