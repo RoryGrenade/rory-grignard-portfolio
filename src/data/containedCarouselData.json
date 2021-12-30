@@ -1,6 +1,6 @@
 {
   "webDevelopment": {
-    "title": "Coding languages",
+    "title": "Coding Languages",
     "items": {
       "HTML5": {
         "title": "HTML5",
@@ -10,20 +10,20 @@
       },
       "CSS3": {
         "title": "CSS3",
-        "description": "Combined with mobile first CSS, utilising the latest CSS layout modules to create immersive, fully responsive user experiences. <br/><br/>I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions.",
+        "description": "Combined with mobile first CSS, utilising the latest CSS layout modules to create immersive, fully responsive user experiences. I use the BEM methodology to ensure that there are never any CSS selector conflicts, which makes for incredibly robust styling solutions.",
         "imageTitle": "CSS3 shield",
         "imagePath": "./img/contained-carousel/css-3-shield.svg"
       },
       "javascript": {
         "title": "Javascript ES6",
-        "description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. <br/><br/>I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
+        "description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
         "imageTitle": "javascript shield",
         "imagePath": "./img/contained-carousel/javascript-shield.svg"
       }
     }
   },
   "techStack": {
-    "title": "Tech stack",
+    "title": "Tech Stack",
     "items": {
       "react": {
         "title": "React",
@@ -64,7 +64,7 @@
     }
   },
   "userExperience": {
-    "title": "Tech stack",
+    "title": "User Experience",
     "items": {
       "react": {
         "title": "Whatever",

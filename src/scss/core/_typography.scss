@@ -1,17 +1,10 @@
 @import "vars";
 @import "mixins";
 
-html {
-  font-size: 16px;
-}
-
-p,
-li,
-a,
-small,
-button {
+body {
   font-family: font(base);
   font-weight: font-weight(regular);
+  font-size: 16px;
 }
 
 h1,
@@ -20,33 +13,21 @@ h3,
 h4,
 h5,
 h6, {
-  font-family: font(code);
   font-weight: font-weight(semibold);
   text-transform: uppercase;
   margin: 0 0 1em;
 }
 
-h1 {
-  font-size: 20px;
-  line-height: (23 / 20);
-  @include mq(md) {
-    font-size: 30px;
-    line-height: (33 / 30);
-  }
-  @include mq(lg) {
-    font-size: 40px;
-    line-height: (43 / 40);
-  }
-}
-
-h4 {
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: font-weight(regular);
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-family: font(code);
 }
 
 p {
-  margin: 0 auto $gutter-4 0;
+  margin: 0 0 1em;
 }
 
 hr {
@@ -54,5 +35,5 @@ hr {
   height: 4px;
   background: $linear-gradient;
   border: none;
-  margin:  0 0 section-padding(mobile);
+  margin: 0 0 section-padding(mobile);
 }

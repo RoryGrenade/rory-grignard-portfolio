@@ -1,9 +1,9 @@
 @import "src/scss/App";
-@import "../core/theme";
 
 .image-and-content {
   display: flex;
   flex-direction: column;
+  background-color: color(black);
   @include mq(md) {
     flex-direction: row;
     min-height: calc(100vh - 59px);
@@ -49,6 +49,7 @@
   line-height: 1;
   font-family: font(base);
   font-weight: font-weight(semibold);
+  color: color(white);
   margin: 0 0 $gutter-1;
   span {
     display: block;
@@ -57,6 +58,7 @@
 }
 
 .image-and-content__copy {
+  color: color(white);
   max-width: 600px;
   margin: 0 auto section-padding(mobile) 0;
 }

@@ -2,126 +2,115 @@
 @import "../core/mixins";
 @import "../utils/ratio";
 
-.contained-carousel__container {
-  overflow: hidden;
-}
-
-.contained-carousel__title-primary {
-  @include mx-text-gradient;
-  margin: 0 0 section-padding(mobile);
-  @include mq(md) {
-    margin: 0 0 section-padding(desktop);
+.contained-carousel {
+  &:nth-child(odd) {
+    color: color(white);
+    background-color: color(black);
   }
-}
-
-@keyframes animated-carousel-button-hover {
-  0% {
-    transform: scale(1);
+  &__container {
+    overflow: hidden;
   }
-  50% {
-    transform: scale(.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.contained-carousel__swiper {
-  overflow: visible;
-  .swiper-button-prev,
-  .swiper-button-next {
-    top: initial;
-    bottom: 18px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    color: color(black);
+  &__title-primary {
+    display: inline-block;
+    margin: 0 0 section-padding(mobile);
     &:after {
-      font-family: font(code);
-      line-height: 1;
-      width: 40px;
-      height: 40px;
+      content: '';
+      display: block;
+      height: 4px;
+      background: $linear-gradient;
+      margin: $gutter-1 0 0;
+    }
+    @include mq(md) {
+      margin: 0 0 section-padding(desktop);
     }
   }
-  .swiper-button-prev {
-    left: -15px;
-    &:after {
-      content: '<';
-    }
-  }
-  .swiper-button-next {
-    right: -15px;
-    &:after {
-      content: '/>';
-    }
-  }
-  @include mq(md) {
+  &__swiper {
+    overflow: visible;
     .swiper-button-prev,
     .swiper-button-next {
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
-      transition: transform $tr-base;
+      top: initial;
+      bottom: 18px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      color: color(black);
+      .contained-carousel:nth-child(odd) & {
+        color: color(white);
+      }
+      &:after {
+        font-family: font(code);
+        line-height: 1;
+        width: 40px;
+        height: 40px;
+      }
+      @include mq(md) {
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+      }
     }
-    .swiper-button-prev,
+    .swiper-button-prev {
+      left: -15px;
+      &:after {
+        content: '<';
+      }
+    }
     .swiper-button-next {
-      &:hover {
-        animation-name: animated-carousel-button-hover;
-        animation-duration: .4s;
-        animation-delay: 0;
-        animation-timing-function: ease;
-        animation-iteration-count: 1;
+      right: -15px;
+      &:after {
+        content: '/>';
       }
     }
   }
-}
-
-.contained-carousel__slide {
-  height: auto;
-  &-row {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  &-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 $gutter-2;
-    &.-logo {
-      align-items: center;
-      margin: auto 0 0;
+  &__slide {
+    height: auto;
+    background-color: color(white);
+    .contained-carousel:nth-child(odd) & {
+      background-color: color(black);
     }
-  }
-  @include mq(md) {
     &-row {
-     flex-direction: row;
-      margin: 0 $gutter-1-negative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     &-col {
-      width: 50%;
-      &.-typ {
-        padding: 0 $gutter-1 0 $gutter-10;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 $gutter-2;
       &.-logo {
-        padding: 0 $gutter-10 0 $gutter-1;
-        margin: initial;
+        align-items: center;
+        margin: auto 0 0;
+      }
+    }
+    @include mq(md) {
+      &-row {
+        flex-direction: row;
+        margin: 0 $gutter-1-negative;
+      }
+      &-col {
+        width: 50%;
+        &.-typ {
+          padding: 0 $gutter-1 0 $gutter-10;
+        }
+        &.-logo {
+          padding: 0 $gutter-10 0 $gutter-1;
+          margin: initial;
+        }
       }
     }
   }
-}
-
-.contained-carousel__svg {
-  width: 100%;
-  max-width: 100px;
-  flex: 1;
-  padding: 0 $gutter-1;
-  @include mq(md) {
-    width: 150px;
-    max-width: initial;
+  &__title-secondary {
+    @include mx-text-gradient;
   }
-}
-
-.contained-carousel__title-secondary {
-
+  &__img {
+    width: 100%;
+    max-width: 100px;
+    flex: 1;
+    padding: 0 $gutter-1;
+    @include mq(md) {
+      width: 150px;
+      max-width: initial;
+    }
+  }
 }

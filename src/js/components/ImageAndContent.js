@@ -7,7 +7,7 @@ import "../../scss/components/_image-and-content.scss";
 
 function ImageAndContent() {
     return (
-        <section className={"image-and-content -theme-dark"}>
+        <section className={"image-and-content"}>
             <div className={"image-and-content__img-wrapper"}>
                 <picture className={"image-and-content__picture"}>
                     <img className={"image-and-content__img"} src={backgroundOne} alt="Rory in car" title={"Image of Rory"} />

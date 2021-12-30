@@ -2,103 +2,107 @@
 @import "../core/mixins";
 @import "../core/buttons";
 
-.footer__container {
-
-
-}
-
-.footer__row {
-  display: flex;
-  flex-direction: column;
-  margin: 0 $gutter-1-negative;
-  @include mq(md) {
-    flex-direction: row;
+.footer {
+  background-color: color(black);
+  &__row {
+    display: flex;
+    flex-direction: column;
+    margin: 0 $gutter-1-negative;
+    @include mq(md) {
+      flex-direction: row;
+    }
   }
-}
-
-.footer__col {
-  flex: 1;
-  padding: 0 $gutter-1;
-  &:nth-child(2) {
-    margin: $gutter-2 0 0;
-  }
-  @include mq(md) {
+  &__col {
+    flex: 1;
+    padding: 0 $gutter-1;
     &:nth-child(2) {
+      margin: $gutter-2 0 0;
+    }
+    @include mq(md) {
+      &:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }
+  &__title {
+    color: color(white);
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    margin: 0 0 $gutter-3;
+    &:last-child {
       margin: 0;
     }
   }
-}
-
-.footer__list {
-  list-style: none;
-  padding: 0;
-}
-
-.footer__item {
-  margin: 0 0 $gutter-3;
-  &:last-child {
-    margin: 0;
+  &__btn {
+    @extend %btn-text;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: font-weight(regular);
+    color: color(white);
   }
-}
-
-.footer__btn {
-  @extend %btn-text;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  line-height: 2;
-  font-weight: font-weight(regular);
-  color: color(white);
-}
-
-.footer__icon {
-  width: 30px;
-  height: 30px;
-  background-color: color(pink);
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  transition: color $tr-base, border-color $tr-base, background-color $tr-base;
-  margin: 0 $gutter-2 0 0;
-  .-codepen & {
-    mask-image: url("../../img/footer/codepen.svg");
-  }
-  .-facebook & {
-    mask-image: url("../../img/footer/facebook.svg");
-  }
-  .-github & {
-    mask-image: url("../../img/footer/github.svg");
-  }
-  .-gmail & {
-    mask-image: url("../../img/footer/gmail.svg");
-  }
-  .-linkedin & {
-    mask-image: url("../../img/footer/linkedin.svg");
-  }
-  .-twitter & {
-    mask-image: url("../../img/footer/twitter.svg");
-  }
-  .-whatsapp & {
-    mask-image: url("../../img/footer/whatsapp.svg");
-  }
-  &:before {
-    content: '';
-    display: block;
-    background-image: $linear-gradient-btn;
-    background-size: 200% 100%;
-    background-position: 100% 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .footer__btn:hover & {
+  &__icon {
+    width: 30px;
+    height: 30px;
+    background-color: color(pink);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: color $tr-base, border-color $tr-base, background-color $tr-base;
+    margin: 0 $gutter-2 0 0;
+    .--codepen & {
+      mask-image: url("../../img/footer/codepen.svg");
+    }
+    .--facebook & {
+      mask-image: url("../../img/footer/facebook.svg");
+    }
+    .--github & {
+      mask-image: url("../../img/footer/github.svg");
+    }
+    .--gmail & {
+      mask-image: url("../../img/footer/gmail.svg");
+    }
+    .--linkedin & {
+      mask-image: url("../../img/footer/linkedin.svg");
+    }
+    .--twitter & {
+      mask-image: url("../../img/footer/twitter.svg");
+    }
+    .--whatsapp & {
+      mask-image: url("../../img/footer/whatsapp.svg");
+    }
     &:before {
-      animation: key-linear-gradient-btn 800ms ease infinite;
+      content: '';
+      display: block;
+      background-image: $linear-gradient-btn;
+      background-size: 200% 100%;
+      background-position: 100% 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .footer__btn:hover & {
+      &:before {
+        animation: key-linear-gradient-btn 800ms ease infinite;
+      }
+    }
+  }
+  &__copyright {
+    display: block;
+    margin: $gutter-2 0 0;
+    color: color(blueGrey);
+    @include mq(md) {
+      margin: section-padding(mobile) 0 0;
     }
   }
 }
@@ -110,14 +114,5 @@
   }
   100% {
     background-position: 100% 100%;
-  }
-}
-
-.footer__copyright {
-  display: block;
-  margin: $gutter-2 0 0;
-  color: color(blueGrey);
-  @include mq(md) {
-    margin: section-padding(mobile) 0 0;
   }
 }

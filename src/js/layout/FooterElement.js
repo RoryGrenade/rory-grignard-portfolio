@@ -3,68 +3,68 @@ import "../../scss/layout/_footer.scss"
 
 function FooterElement() {
     return (
-        <footer className={"Footer -theme-dark"}>
+        <footer className={"footer"}>
             <div className={"footer__container"}>
                 <div className={"footer__row"}>
                     <div className={"footer__col"}>
-                        <h4>Connect</h4>
+                        <h2 className={"footer__title"}>Connect</h2>
                         <ul className={"footer__list"}>
                             <li className={"footer__item"}>
-                                <a className={"footer__btn -linkedin"} href="https://www.linkedin.com/in/rory-grignard-b3207b66/" target="_blank" rel="noreferrer">
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <a className={"footer__btn --linkedin"} href="https://www.linkedin.com/in/rory-grignard-b3207b66/" target="_blank" rel="noreferrer">
+                                    <div className={"footer__icon -animated-hover"}/>
                                     LinkedIn
                                 </a>
                             </li>
                             <li className={"footer__item"}>
-                                <a className={"footer__btn -twitter"} href="https://twitter.com/RoryGrenade" target="_blank" rel="noreferrer">
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <a className={"footer__btn --twitter"} href="https://twitter.com/RoryGrenade" target="_blank" rel="noreferrer">
+                                    <div className={"footer__icon -animated-hover"}/>
                                     Twitter
                                 </a>
                             </li>
                             <li className={"footer__item"}>
-                                <a className={"footer__btn -codepen"} href="https://codepen.io/RoryGrenade" target="_blank" rel="noreferrer">
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <a className={"footer__btn --codepen"} href="https://codepen.io/RoryGrenade" target="_blank" rel="noreferrer">
+                                    <div className={"footer__icon -animated-hover"}/>
                                     Codepen
                                 </a>
                             </li>
                             <li className={"footer__item"}>
-                                <a className={"footer__btn -github"} href="https://github.com/RoryGrenade" target="_blank" rel="noreferrer">
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <a className={"footer__btn --github"} href="https://github.com/RoryGrenade" target="_blank" rel="noreferrer">
+                                    <div className={"footer__icon -animated-hover"}/>
                                     GitHub
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div className={"footer__col"}>
-                        <h4>Share</h4>
+                        <h2 className={"footer__title"}>Share</h2>
                         <ul className={"footer__list"}>
                             <li className={"footer__item"}>
-                                <button className={"footer__btn -linkedin"}>
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <button className={"footer__btn --linkedin"}>
+                                    <div className={"footer__icon -animated-hover"}/>
                                     LinkedIn
                                 </button>
                             </li>
                             <li className={"footer__item"}>
-                                <button className={"footer__btn -gmail"}>
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <button className={"footer__btn --gmail"}>
+                                    <div className={"footer__icon -animated-hover"}/>
                                     Gmail
                                 </button>
                             </li>
                             <li className={"footer__item"}>
-                                <button className={"footer__btn -whatsapp"}>
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <button className={"footer__btn --whatsapp"}>
+                                    <div className={"footer__icon -animated-hover"}/>
                                     WhatsApp
                                 </button>
                             </li>
                             <li className={"footer__item"}>
-                                <button className={"footer__btn -facebook"}>
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <button className={"footer__btn --facebook"}>
+                                    <div className={"footer__icon -animated-hover"}/>
                                     Facebook
                                 </button>
                             </li>
                             <li className={"footer__item"}>
-                                <button className={"footer__btn -twitter"}>
-                                    <div className={"footer__icon -animated-hover"}></div>
+                                <button className={"footer__btn --twitter"}>
+                                    <div className={"footer__icon -animated-hover"}/>
                                     Twitter
                                 </button>
                             </li>
@@ -73,7 +73,7 @@ function FooterElement() {
                 </div>
                 <div className={"footer__row"}>
                     <div className={"footer__col"}>
-                        <small className={"footer__copyright"}>Copyright &copy; Rory Grignard <span className={"dynamicYear"}></span>.</small>
+                        <small className={"footer__copyright"}>Copyright &copy; Rory Grignard <span className={"dynamicYear"}/>.</small>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import React from "react";
 function ExampleContent() {
 
     return(
-        <section className="example-content -theme-dark">
+        <section className="example-content">
             <div className="container">
                 <h1>Hello World</h1>
                 <h2>Hello World</h2>
@@ -24,7 +24,6 @@ function ExampleContent() {
                     <li>Hello World</li>
                     <li>Hello World</li>
                 </ol>
-                <button className="btn">View my CV</button>{' '}
             </div>
         </section>
     )
