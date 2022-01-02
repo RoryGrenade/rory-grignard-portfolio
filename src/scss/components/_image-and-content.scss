@@ -16,7 +16,7 @@
   }
   &__content-wrapper {
     @include mx-section-padding;
-    max-width: 570px;
+    max-width: $ctr-max-width-halved;
     padding-right: $gutter-4;
     padding-left: $gutter-4;
     display: flex;
@@ -46,14 +46,14 @@
   }
   &__title {
     @extend %ex-gradient-underline-text;
-    font-size: 6em;
+    font-size: 5em;
     line-height: 1;
     margin: 0 0 section-padding(mobile);
     &:after {
       margin: 9px auto 0;
     }
     &-overline {
-      font-size: 0.5em;
+      font-size: 0.4em;
       display: block;
       margin: 0 auto 2px;
     }

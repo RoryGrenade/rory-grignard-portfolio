@@ -1,8 +1,8 @@
 import React from "react";
 import containedCarouselData from '../../data/containedCarouselData.json'
-import { Navigation, EffectFade } from 'swiper'
 //Using direct file imports for swiper as Create React App doesn't support pure ESM packages yet - using Swiper (7.2.0+).
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js'
+import { Navigation, EffectFade } from 'swiper'
 import 'swiper/swiper.scss'
 import 'swiper/modules/navigation/navigation.scss'
 import 'swiper/modules/effect-fade/effect-fade.scss'
@@ -20,7 +20,7 @@ function ContainedCarousel() {
                 return <section className={"contained-carousel"} key={index}>
                     <div className="contained-carousel__container">
                         <div className={"contained-carousel__title-wrapper"}>
-                            <h2 className={"contained-carousel__title-primary"}>{item.title}</h2>
+                            <h2 className={"contained-carousel__title"}>{item.title}</h2>
                         </div>
                         <Swiper
                             className={"contained-carousel__swiper"}
@@ -33,13 +33,15 @@ function ContainedCarousel() {
                         >
                             {containedCarouselItemItems.map((itemItem, index) => {
                                 return <SwiperSlide className={"contained-carousel__slide"} key={index}>
-                                    <div className="contained-carousel__slide-row">
-                                    <div className="contained-carousel__slide-col --typ">
-                                    <h3 className={"contained-carousel__title-secondary"}>{itemItem.title}</h3>
+                                    <div className="contained-carousel__grid">
+                                    <div className="contained-carousel__grid-item --typ">
+                                    <h3 className={"contained-carousel__grid-item-title"}>{itemItem.title}</h3>
                                     <p>{itemItem.description}</p>
                                     </div>
-                                        <div className="contained-carousel__slide-col --logo">
-                                            <img className={"contained-carousel__img"} srcSet={itemItem.imagePath} alt={itemItem.imageTitle} />
+                                        <div className="contained-carousel__grid-item --logo">
+                                            <picture className={"ratio-16x9 --contain"}>
+                                                <img className={"contained-carousel__grid-item-img"} srcSet={itemItem.imagePath} alt={itemItem.imageTitle} />
+                                            </picture>
                                         </div>
                                     </div>
                                 </SwiperSlide>

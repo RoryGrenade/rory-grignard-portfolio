@@ -15,8 +15,8 @@
         "imagePath": "./img/contained-carousel/css-3-shield.svg"
       },
       "javascript": {
-        "title": "Javascript ES6",
-        "description": "Lastly a sprinkle of DRY, modular ES6 Javascript to create interactive and engaging UI components. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
+        "title": "Javascript",
+        "description": "Lastly a sprinkle of DRY, modular Javascript (ES6) to create interactive and engaging UI components. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
         "imageTitle": "javascript shield",
         "imagePath": "./img/contained-carousel/javascript-shield.svg"
       }
@@ -38,7 +38,7 @@
         "imagePath": "./img/contained-carousel/bootstrap-5-logo.svg"
       },
       "gsap": {
-        "title": "GSAP 3",
+        "title": "GSAP",
         "description": "Animations (when done appropriately) are an excellent way to enhance your application/website's user journey. I use GreenSock Animation Platform (GSAP) a powerful JavaScript animation library to create highly customisable animations, with timelines for more complex animation sequences. GSAP is also extremely light weight and is cross browser compatible (Chrome, Firefox, and IE 11+).",
         "imageTitle": "Greensock logo",
         "imagePath": "./img/contained-carousel/gsap-greensock-logo.svg"
@@ -50,16 +50,16 @@
         "imagePath": "./img/contained-carousel/sass-logo.svg"
       },
       "yarn": {
-        "title": "Yarn Package Manager",
-        "description": "I use Yarn to quickly, securely and reliably manage project dependencies via the package.json file. There's no need to reinvent the wheel when you can simply 'yarn add' tried and tested code that does exactly what you need (example: gsap) straight into your project in a matter of seconds. An added benefit of having the package.json file is that fellow developers that are working on the same repo will have the same package versions making the project reproducible and future proof.",
+        "title": "Yarn",
+        "description": "I use Yarn Package Manager to quickly, securely and reliably manage project dependencies via the package.json file. There's no need to reinvent the wheel when you can simply 'yarn add' tried and tested code that does exactly what you need (example: gsap) straight into your project in a matter of seconds. An added benefit of having the package.json file is that fellow developers that are working on the same repo will have the same package versions making the project reproducible and future proof.",
         "imageTitle": "Yarn logo",
-        "imagePath": "./img/contained-carousel/yarn-package-manager-logo.svg"
+        "imagePath": "./img/contained-carousel/yarn-logo.svg"
       },
       "git": {
-        "title": "GIT Version Control",
-        "description": "GIT is an essential part of my workflow, it makes collaborating with fellow developers easy, it's also great for adding new features, by creating a new branch, the new feature can be developed, tested and reviewed without affecting the main branches source code. I enjoy using Git Tower and GitKraken for enhanced visibility of my code changes which allows me to quickly and easily review my code before staging and committing, or even amending a previous commit where appropriate.",
+        "title": "GIT",
+        "description": "GIT Version Control is an essential part of my workflow, it makes collaborating with fellow developers easy, it's also great for adding new features, by creating a new branch, the new feature can be developed, tested and reviewed without affecting the main branches source code. I enjoy using Git Tower and GitKraken for enhanced visibility of my code changes which allows me to quickly and easily review my code before staging and committing, or even amending a previous commit where appropriate.",
         "imageTitle": "GIT logo",
-        "imagePath": "./img/contained-carousel/git-logo-and-text.svg"
+        "imagePath": "./img/contained-carousel/git-logo.svg"
       }
     }
   },

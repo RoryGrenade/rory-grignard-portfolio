@@ -47,7 +47,8 @@ $breakpoints: (
 );
 
 //Container
-$ctr-max-width: 1140px;
+$ctr-max-width: 1200px;
+$ctr-max-width-halved: $ctr-max-width / 2;
 
 //Transitions
 $tr-base-duration: 300ms;
