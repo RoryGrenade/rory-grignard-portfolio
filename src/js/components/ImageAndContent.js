@@ -9,9 +9,10 @@ import "../../scss/components/_image-and-content.scss";
 function ImageAndContent() {
 
     const data = Object.values(imageAndContentData)
-    const title = data[0]
-    const content = data[1]
-    const buttonText = data[2]
+    const overlineText = data[0]
+    const titleText = data[1]
+    const content = data[2]
+    const buttonText = data[3]
 
     return (
         <section className={"image-and-content"}>
@@ -21,7 +22,7 @@ function ImageAndContent() {
                 </picture>
             </div>
             <div className={"image-and-content__content-wrapper"}>
-                <h1 className={"image-and-content__title"}>{title}</h1>
+                <h1 className={"image-and-content__title"}><span className={"image-and-content__title-overline"}>{overlineText} </span>{titleText}</h1>
                 <p className={"image-and-content__content"}>{content}</p>
                 <div className="image-and-content__btn-wrapper">
                     <a className={"image-and-content__cv-btn btn --btn-light"} href={curriculumVitae} target="_blank" rel="noreferrer">

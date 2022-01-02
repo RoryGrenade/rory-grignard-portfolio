@@ -12,15 +12,28 @@ h2,
 h3,
 h4,
 h5,
+h6,
+p {
+  margin: 0 0 1em;
+}
+
+h3,
+h4,
+h5,
 h6, {
   font-family: font(code);
+  font-weight: font-weight(medium);
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
   font-weight: font-weight(semibold);
-  //text-transform: uppercase;
-  margin: 0 0 1em;
 }
 
 h1 {
   font-size: 3em;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -50,4 +63,14 @@ hr {
   background: $linear-gradient;
   border: none;
   margin: 0 0 section-padding(mobile);
+}
+
+//Typ extends
+%ex-gradient-underline-text {
+  &:after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: $linear-gradient;
+  }
 }

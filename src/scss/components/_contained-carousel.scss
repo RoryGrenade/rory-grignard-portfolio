@@ -1,5 +1,4 @@
-@import "../core/vars";
-@import "../core/mixins";
+@import "src/scss/App";
 @import "../utils/ratio";
 
 .contained-carousel {
@@ -10,18 +9,19 @@
   &__container {
     overflow: hidden;
   }
-  &__title-primary {
-    display: inline-block;
+  &__title-wrapper {
+    text-align: center;
     margin: 0 0 section-padding(mobile);
-    &:after {
-      content: '';
-      display: block;
-      height: 4px;
-      background: $linear-gradient;
-      margin: $gutter-1 0 0;
-    }
     @include mq(md) {
       margin: 0 0 section-padding(desktop);
+    }
+  }
+  &__title-primary {
+    @extend %ex-gradient-underline-text;
+    display: inline-block;
+    margin: 0 auto;
+    &:after {
+      margin: 4px auto 0;
     }
   }
   &__swiper {
@@ -38,10 +38,9 @@
         color: color(white);
       }
       &:after {
+        @include mx-text-gradient;
         font-family: font(code);
         line-height: 1;
-        width: 40px;
-        height: 40px;
       }
       @include mq(md) {
         top: 0;
@@ -50,13 +49,11 @@
       }
     }
     .swiper-button-prev {
-      left: -15px;
       &:after {
         content: '<';
       }
     }
     .swiper-button-next {
-      right: -15px;
       &:after {
         content: '/>';
       }
@@ -78,8 +75,9 @@
       flex-direction: column;
       justify-content: center;
       padding: 0 $gutter-2;
-      &.-logo {
+      &.--logo {
         align-items: center;
+        justify-content: center;
         margin: auto 0 0;
       }
     }
@@ -90,18 +88,12 @@
       }
       &-col {
         width: 50%;
-        &.-typ {
-          padding: 0 $gutter-1 0 $gutter-10;
-        }
-        &.-logo {
-          padding: 0 $gutter-10 0 $gutter-1;
-          margin: initial;
-        }
       }
     }
   }
   &__title-secondary {
     @include mx-text-gradient;
+    align-self: flex-start;
   }
   &__img {
     width: 100%;

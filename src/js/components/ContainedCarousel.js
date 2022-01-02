@@ -14,12 +14,14 @@ function ContainedCarousel() {
 
     return(
         <>
-            {containedCarouselItems.map(item => {
+            {containedCarouselItems.map((item, index) => {
                 const containedCarouselItemItems = Object.values(item.items)
 
-                return <section className={"contained-carousel"}>
+                return <section className={"contained-carousel"} key={index}>
                     <div className="contained-carousel__container">
-                        <h2 className={"contained-carousel__title-primary"}>{item.title}</h2>
+                        <div className={"contained-carousel__title-wrapper"}>
+                            <h2 className={"contained-carousel__title-primary"}>{item.title}</h2>
+                        </div>
                         <Swiper
                             className={"contained-carousel__swiper"}
                             modules={[Navigation, EffectFade]}
@@ -29,14 +31,14 @@ function ContainedCarousel() {
                             navigation
                             effect={'fade'}
                         >
-                            {containedCarouselItemItems.map(itemItem => {
-                                return <SwiperSlide className={"contained-carousel__slide"}>
+                            {containedCarouselItemItems.map((itemItem, index) => {
+                                return <SwiperSlide className={"contained-carousel__slide"} key={index}>
                                     <div className="contained-carousel__slide-row">
-                                    <div className="contained-carousel__slide-col -typ">
+                                    <div className="contained-carousel__slide-col --typ">
                                     <h3 className={"contained-carousel__title-secondary"}>{itemItem.title}</h3>
                                     <p>{itemItem.description}</p>
                                     </div>
-                                        <div className="contained-carousel__slide-col -logo">
+                                        <div className="contained-carousel__slide-col --logo">
                                             <img className={"contained-carousel__img"} srcSet={itemItem.imagePath} alt={itemItem.imageTitle} />
                                         </div>
                                     </div>

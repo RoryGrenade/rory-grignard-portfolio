@@ -15,16 +15,16 @@ function HeaderElement() {
 
     const navItems = []
 
-    for (const navSection of navSections) {
+    navSections.forEach((navSection, index) => {
         navItems.push(
-            <li className="header__nav-item">
+            <li className="header__nav-item" key={index}>
                 <button className={"header__nav-btn"} data-nav={navSection}>
                     <span className={"header__nav-btn-text"}>{navSection}</span>
                     <span className={"header__nav-btn-clone"}>{navSection}</span>
                 </button>
             </li>
         )
-    }
+    })
 
     //Remember to add --active class
 
