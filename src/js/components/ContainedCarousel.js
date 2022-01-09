@@ -21,6 +21,7 @@ function ContainedCarousel() {
                     <div className="contained-carousel__container">
                         <div className={"contained-carousel__title-wrapper"}>
                             <h2 className={"contained-carousel__title"}>{item.title}</h2>
+                            <p className={"contained-carousel__intro"}>{item.intro}</p>
                         </div>
                         <Swiper
                             className={"contained-carousel__swiper"}

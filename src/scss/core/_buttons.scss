@@ -35,14 +35,14 @@
     }
   }
   &.--btn-light {
-    color: color(white);
-    border-color: color(white);
+    color: color(blueGrey);
+    border-color: color(blueGrey);
     background-color: color(black);
     &:hover,
     &:hover i {
-      color: color(black);
+      color: color(white);
       border-color: color(white);
-      background-color: color(white);
+      background-color: color(black);
     }
   }
   &.--btn-dark {

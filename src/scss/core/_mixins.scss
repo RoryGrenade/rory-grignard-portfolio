@@ -30,6 +30,13 @@
   }
 }
 
+@mixin mx-section-margin-bottom {
+  margin-bottom: section-padding(mobile);
+  @include mq(md) {
+    margin-bottom: section-padding(desktop);
+  }
+}
+
 //Gradients
 $linear-gradient: linear-gradient(to right, color(orange), color(pink));
 $linear-gradient-alt: linear-gradient(to right, color(green), color(blue));
