@@ -37,7 +37,7 @@
   }
   &__btn {
     @extend %btn-text;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: 18px;
     line-height: 2;
@@ -54,7 +54,6 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
-    transition: color $tr-base, border-color $tr-base, background-color $tr-base;
     margin: 0 $gutter-2 0 0;
     .--codepen & {
       mask-image: url("../../img/footer/codepen.svg");
@@ -91,7 +90,7 @@
     }
     .footer__btn:hover & {
       &:before {
-        animation: key-linear-gradient-btn 800ms ease infinite;
+        animation: key-linear-gradient-btn 600ms linear infinite;
       }
     }
   }
@@ -108,7 +107,7 @@
 @keyframes key-linear-gradient-btn {
   0% {
     //background-position: 1000% 100%;
-    background-position: 270% 100%;
+    background-position: 200% 100%;
   }
   100% {
     background-position: 100% 100%;

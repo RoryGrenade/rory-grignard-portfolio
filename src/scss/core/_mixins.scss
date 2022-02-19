@@ -44,6 +44,17 @@ $linear-gradient-black: linear-gradient(to right, color(black), color(black));
 $linear-gradient-pink: linear-gradient(to right, color(pink), color(pink));
 $linear-gradient-reverse: linear-gradient(to right, color(pink), color(orange));
 $linear-gradient-btn: linear-gradient(to right, color(pink), color(orange), color(pink));
+$linear-gradient-btn: linear-gradient(
+                to right,
+                color(orange),
+                color(orange) 25%,
+                color(pink) 25%,
+                color(pink) 50%,
+                color(orange) 50%,
+                color(orange) 75%,
+                color(pink) 75%,
+                color(pink) 100%,
+);
 
 @mixin mx-text-gradient {
   background-image: $linear-gradient;
