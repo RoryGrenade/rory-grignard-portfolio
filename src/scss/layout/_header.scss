@@ -183,6 +183,9 @@
       @include mq(md) {
         margin: 0 $gutter-2 0 0;
       }
+      @include mq(lg) {
+        margin: 0 $gutter-4 0 0;
+      }
     }
     &-btn {
       @extend %btn;
