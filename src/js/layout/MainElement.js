@@ -1,8 +1,7 @@
 import React from "react";
-import ImageAndContent from "../components/ImageAndContent";
-import ContainedCarousel from "../components/ContainedCarousel"
-import ConnectForm from "../components/ConnectForm";
-// import ExampleContent from "../components/ExampleContent"
+import ImageAndContent from "../components/main/ImageAndContent";
+import ContainedCarousel from "../components/main/ContainedCarousel"
+import ConnectForm from "../components/main/ConnectForm";
 
 function MainElement() {
     return(

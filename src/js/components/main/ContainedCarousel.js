@@ -1,12 +1,12 @@
 import React from "react";
-import containedCarouselData from '../../data/containedCarouselData.json'
+import containedCarouselData from '../../../data/contained-carousel-data.json'
 //Using direct file imports for swiper as Create React App doesn't support pure ESM packages yet - using Swiper (7.2.0+).
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js'
 import { Navigation, EffectFade } from 'swiper'
 import 'swiper/swiper.scss'
 import 'swiper/modules/navigation/navigation.scss'
 import 'swiper/modules/effect-fade/effect-fade.scss'
-import '../../scss/components/_contained-carousel.scss'
+import '../../../scss/components/main/_contained-carousel.scss'
 
 function ContainedCarousel() {
 
