@@ -17,7 +17,6 @@ function Navigation() {
         navItems.push(
             <li className="navigation__item" key={index}>
                 <button className={"navigation__btn"} onClick={() => {
-                    updateActiveNav(navSection, index)
                     scrollToNav(navSection)
                 }} data-active={setActiveNav(navSection)}>
                     <span className={"navigation__btn-text"}>{navSection}</span>
@@ -36,21 +35,16 @@ function Navigation() {
         }
     }
 
-    //Update active nav
-    function updateActiveNav(navSection, index) {
-        console.log(navItems[index].props.children.props)
-        // if (navSection) {
-        //     XXXX.dataset.active = "true"
-        // } else {
-        //     XXXX.dataset.active = "false"
-        // }
-    }
-
     //ScrollTo
+    const mainSections = Array.from(document.querySelectorAll('main section'))
+    mainSections.forEach(function(section, index) {
+        section.setAttribute('data-section', navSections[index])
+    })
+
     function scrollToNav(navSection) {
         const navTarget = document.querySelector("[data-section='" + navSection + "']")
         gsap.to(window, {
-            duration: .5,
+            duration: .4,
             ease: "none",
             scrollTo: {
                 y: navTarget,
@@ -58,7 +52,7 @@ function Navigation() {
             }
         })
     }
-    
+
     return (
         <nav className={"navigation"}>
             <ul className={"navigation__list"}>
