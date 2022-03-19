@@ -1,7 +1,6 @@
-import React from "react";
 import "../../scss/layout/_footer.scss"
 
-function FooterElement() {
+export default function FooterElement() {
     return (
         <footer className={"footer"}>
             <div className={"footer__container"}>
@@ -47,7 +46,7 @@ function FooterElement() {
                             <li className={"footer__item"}>
                                 <button className={"footer__btn --gmail"}>
                                     <div className={"footer__icon -animated-hover"}/>
-                                    Gmail
+                                    Email
                                 </button>
                             </li>
                             <li className={"footer__item"}>
@@ -80,5 +79,3 @@ function FooterElement() {
         </footer>
     )
 }
-
-export default FooterElement;

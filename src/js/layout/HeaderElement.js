@@ -1,9 +1,8 @@
-import React from "react"
-import BrandText from "../components/header/BrandText"
-import Navigation from "../components/header/Navigation"
-import '../../scss/layout/_header.scss'
+import BrandText from "./BrandText"
+import Navigation from "./Navigation"
+import "../../scss/layout/_header.scss"
 
-function HeaderElement() {
+export default function HeaderElement() {
     return(
         <header className={"header"}>
             <div className={"header__container"}>
@@ -13,5 +12,3 @@ function HeaderElement() {
         </header>
     )
 }
-
-export default HeaderElement

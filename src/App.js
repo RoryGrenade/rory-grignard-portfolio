@@ -1,11 +1,13 @@
 import React, {useEffect} from "react"
 import WebFont from "webfontloader"
 import HeaderElement from "./js/layout/HeaderElement"
-import MainElement from "./js/layout/MainElement"
 import FooterElement from "./js/layout/FooterElement"
+import Coding from "./js/routes/Coding"
+import Design from "./js/routes/Design"
+import Contact from "./js/routes/Contact"
+import { Route, Routes } from "react-router-dom"
 
-function App() {
-
+export default function App() {
   useEffect(() => {
     WebFont.load({
       google: {
@@ -15,12 +17,16 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <HeaderElement />
-      <MainElement />
-      <FooterElement />
-    </div>
+      <div className="App">
+          <HeaderElement />
+          <main className="main">
+              <Routes>
+                  <Route index element={<Coding />} />
+                  <Route path={"design"} element={<Design />} />
+                  <Route path={"contact"} element={<Contact />} />
+              </Routes>
+          </main>
+          <FooterElement />
+      </div>
   )
 }
-
-export default App

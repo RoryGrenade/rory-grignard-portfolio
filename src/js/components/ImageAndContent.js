@@ -1,12 +1,12 @@
 import React from "react";
-import imageAndContentData from '../../../data/image-and-content-data.json'
+import imageAndContentData from '../../data/image-and-content-data.json'
 import { FaEye} from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import backgroundOne from "../../../img/image-and-conent/bg1.jpg";
-import curriculumVitae from "../../../assets/curriculum-vitae-rory-grignard.pdf";
-import "../../../scss/components/main/_image-and-content.scss";
+import helloBackground from "../../img/image-and-conent/helloBackground.jpg";
+import curriculumVitae from "../../assets/curriculum-vitae-rory-grignard.pdf";
+import "../../scss/components/_image-and-content.scss";
 
-function ImageAndContent() {
+function Hello() {
 
     const data = Object.values(imageAndContentData)
     const overlineText = data[0]
@@ -18,7 +18,7 @@ function ImageAndContent() {
         <section className={"image-and-content"}>
             <div className={"image-and-content__img-wrapper"}>
                 <picture className={"image-and-content__picture"}>
-                    <img className={"image-and-content__img"} src={backgroundOne} alt="Rory in car" title={"Image of Rory"} />
+                    <img className={"image-and-content__img"} src={helloBackground} alt="Rory Grignard saying hello" title={"Image of Rory"} />
                 </picture>
             </div>
             <div className={"image-and-content__content-wrapper"}>
@@ -37,4 +37,4 @@ function ImageAndContent() {
     )
 }
 
-export default ImageAndContent;
+export default Hello;
