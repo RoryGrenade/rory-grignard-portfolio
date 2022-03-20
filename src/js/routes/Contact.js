@@ -1,7 +1,9 @@
+import Hero from "../components/Hero";
+
 export default function Contact() {
     return (
-        <section className={"connect-form"}>
-            <h1>Connect</h1>
-        </section>
+        <>
+            <Hero id={2} />
+        </>
     )
 }

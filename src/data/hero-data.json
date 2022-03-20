@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "imageSrc": "img/hero/coding-background.jpg",
+    "imageSrc": "img/hero/background-1.jpg",
     "imageAltText": "Rory sitting in car",
     "overlineText": "Hello",
     "titleText": "World!",
@@ -9,18 +9,18 @@
   },
   {
     "id": 1,
-    "imageSrc": "img/hero/coding-background.jpg",
-    "imageAltText": "Coding",
+    "imageSrc": "img/hero/background-2.jpg",
+    "imageAltText": "Big wave",
     "overlineText": "Fun facts",
     "titleText": "About me",
     "bodyText": "When I'm deep in the zone sat in front of the computer, I like long walks on the beach - seriously I do!"
   },
   {
     "id": 2,
-    "imageSrc": "img/hero/coding-background.jpg",
-    "imageAltText": "Coding",
-    "overlineText": "Coding",
-    "titleText": "Coding!",
-    "bodyText": "Coding"
+    "imageSrc": "img/hero/background-3.jpg",
+    "imageAltText": "View of the city",
+    "overlineText": "Make",
+    "titleText": "Contact",
+    "bodyText": "I'm always looking to expand my professional network, so feel free to connect with me on any of the social networks listed below, or fire off a message using the form, looking forward to heaing from you!."
   }
 ]
