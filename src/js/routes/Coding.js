@@ -1,9 +1,9 @@
-import ImageAndContent from "../components/ImageAndContent";
+import Hero from "../components/Hero";
 
 export default function Coding() {
     return(
         <>
-            <ImageAndContent id={0} />
+            <Hero id={0} />
         </>
     )
 }

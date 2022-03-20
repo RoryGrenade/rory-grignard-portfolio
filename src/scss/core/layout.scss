@@ -20,7 +20,7 @@ main {
 
 section,
 footer {
-  &:not(.image-and-content) {
+  &:not(.hero) {
     @include mx-section-padding;
   }
 }

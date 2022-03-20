@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "backgroundImage": "img/image-and-content/coding-background.jpg",
+    "backgroundImage": "img/hero/coding-background.jpg",
     "imageText": "Rory sitting in car",
     "overlineText": "Hello",
     "titleText": "World!",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "backgroundImage": "img/image-and-content/coding-background.jpg",
+    "backgroundImage": "img/hero/coding-background.jpg",
     "imageText": "Coding",
     "overlineText": "Coding",
     "titleText": "Coding!",
