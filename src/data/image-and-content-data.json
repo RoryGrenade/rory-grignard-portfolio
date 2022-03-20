@@ -1,6 +1,18 @@
-{
-  "overlineText": "Hello",
-  "titleText": "World!",
-  "content": "My name's Rory, I'm a frontend developer and I'm passionate about user experience and user interface development. My background includes development of fast loading fully responsive, mobile first websites for award winning agencies, as well as updating and maintaining an international ecommerce website. This is my portfolio, a creative playground for me, and hopefully a source of inspiration and enjoyment for you.",
-  "buttonText": "Download my CV"
-}
+[
+  {
+    "id": 1,
+    "backgroundImage": "img/image-and-content/coding-background.jpg",
+    "imageText": "Rory sitting in car",
+    "overlineText": "Hello",
+    "titleText": "World!",
+    "bodyText": "My name's Rory, I'm a frontend developer and I'm passionate about user experience and user interface development. My background includes development of fast loading fully responsive, mobile first websites for award winning agencies, as well as updating and maintaining an international ecommerce website. This is my portfolio, a creative playground for me, and hopefully a source of inspiration and enjoyment for you."
+  },
+  {
+    "id": 2,
+    "backgroundImage": "img/image-and-content/coding-background.jpg",
+    "imageText": "Coding",
+    "overlineText": "Coding",
+    "titleText": "Coding!",
+    "bodyText": "Coding"
+  }
+]

@@ -1,7 +1,9 @@
+import ImageAndContent from "../components/ImageAndContent";
+
 export default function Coding() {
     return(
-        <section className="coding">
-            <h1>Coding</h1>
-        </section>
+        <>
+            <ImageAndContent id={0} />
+        </>
     )
 }

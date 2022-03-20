@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import { RiMenu3Fill } from "react-icons/ri"
 import { RiCloseFill } from "react-icons/ri"
+import curriculumVitae from "../../assets/curriculum-vitae-rory-grignard.pdf";
 import "../../scss/layout/_header.scss"
 
 export default function HeaderElement() {
@@ -40,6 +41,12 @@ export default function HeaderElement() {
                                 <span className={"header__nav-link-text"}>Contact</span>
                                 <span className={"header__nav-link-clone"}>Contact</span>
                             </NavLink>
+                        </li>
+                        <li className="header__nav-item">
+                            <a className={"header__nav-link"} href={curriculumVitae} target="_blank" rel="noreferrer">
+                                <span className={"header__nav-link-text"}>CV</span>
+                                <span className={"header__nav-link-clone"}>CV</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
