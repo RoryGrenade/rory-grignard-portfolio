@@ -1,11 +1,11 @@
 import React, { useEffect } from "react"
 import WebFont from "webfontloader"
-import HeaderElement from "./js/layout/HeaderElement"
-import FooterElement from "./js/layout/FooterElement"
-import Coding from "./js/routes/Coding"
-import Design from "./js/routes/Design"
-import Contact from "./js/routes/Contact"
 import { Route, Routes } from "react-router-dom"
+import HeaderElement from "./js/layout/HeaderElement"
+import Skills from "./js/routes/Skills"
+import About from "./js/routes/About"
+import Contact from "./js/routes/Contact"
+import FooterElement from "./js/layout/FooterElement"
 
 export default function App() {
   useEffect(() => {
@@ -21,8 +21,8 @@ export default function App() {
           <HeaderElement />
           <main className="main">
               <Routes>
-                  <Route index element={<Coding />} />
-                  <Route path={"design"} element={<Design />} />
+                  <Route index element={<Skills />} />
+                  <Route path={"about"} element={<About />} />
                   <Route path={"contact"} element={<Contact />} />
               </Routes>
           </main>

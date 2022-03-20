@@ -69,15 +69,9 @@
   },
   {
     "id": 2,
-    "title": "UI/UX Design",
-    "intro": "I've always been a Creative Suite loyalist, I did some fun stuff with Flash and Fireworks before they where discontinued - might have a few SWF files on some DVD discs somewhere.. So it won't surprise you that my picks for best design apps for frontend developers are all made by Adobe Inc.",
+    "title": "Design",
+    "intro": "I've always been a Creative Suite loyalist. So it won't surprise you that my picks for best design apps for frontend developers are all made by Adobe Inc.",
     "slides": [
-      {
-        "title": "Adobe XD",
-        "description": "My UI prototyping app of choice goes to Adobe XD. It has a simplistic layout with easy to use tools. CC Library integration is another major benefit especially if you use other Adobe CC products. You can grab the full Bootstrap 5 UI kit from the CC Library with two clicks in seconds. There are other UI design apps that do a great job, honorable mentions go to Figma and Sketch.",
-        "imageTitle": "Adobe XD logo",
-        "imagePath": "img/carousel/adobe-xd-cc-icon.svg"
-      },
       {
         "title": "Adobe Photoshop",
         "description": "Unsurprisingly Photoshop is my go to photo editor, it ha customisable workspaces and drag and drop toolbars which makes accessing the plethora of Photoshop's tools a breeze. With Photoshop the only limit to your raster graphics is your imagination.",
@@ -89,6 +83,12 @@
         "description": "As you might know by now, it's a good idea to use SVG files for images whenever possible due to their small file size amd infinite scalability. Not only that, SVGs can be animated using CSS or by using a Javascript animation library like GSAP for animations with additional complexities. My vector graphics editor of choice is Illustrator, the incremental updates that have been added to Illustrator over the years have made creating web with Illustrator a joy. Honorable mention, Coral Draw is pretty awesome too, good to see that Adobe still has a healthy dose of competition.",
         "imageTitle": "Adobe Illustrator logo",
         "imagePath": "img/carousel/adobe-illustrator-cc-icon.svg"
+      },
+      {
+        "title": "Adobe XD",
+        "description": "My UI prototyping app of choice goes to Adobe XD. It has a simplistic layout with easy to use tools. CC Library integration is another major benefit especially if you use other Adobe CC products. You can grab the full Bootstrap 5 UI kit from the CC Library with two clicks in seconds. There are other UI design apps that do a great job, honorable mentions go to Figma and Sketch.",
+        "imageTitle": "Adobe XD logo",
+        "imagePath": "img/carousel/adobe-xd-cc-icon.svg"
       }
     ]
   }
