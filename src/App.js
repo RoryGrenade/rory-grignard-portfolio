@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import WebFont from "webfontloader"
 import HeaderElement from "./js/layout/HeaderElement"
 import FooterElement from "./js/layout/FooterElement"

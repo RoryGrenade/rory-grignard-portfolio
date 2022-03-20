@@ -21,4 +21,233 @@
       padding: 0 $gutter-4;
     }
   }
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: color(white);
+    padding: 6px 20px;
+    border-bottom: 3px solid color(black);
+    z-index: zIndex(default);
+    @include mq(md) {
+      display: initial;
+      width: initial;
+      align-items: initial;
+      justify-content: initial;
+      background-color: initial;
+      padding: initial;
+      border-bottom: 0;
+      z-index: initial;
+    }
+  }
+  //Logo link
+  &__logo-link {
+    display: flex;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    &-text,
+    &:after {
+      font-family: font(code);
+      font-weight: font-weight(regular);
+      font-size: 22px;
+      line-height: (25 / 22);
+      text-transform: initial;
+      padding: 0;
+      margin: 0;
+      transition: visibility $tr-base, clip-path $tr-base;
+      @include mq(md) {
+        font-size: 32px;
+        margin: -4px 0 0;
+      }
+    }
+    &-text {
+      @include mx-text-gradient;
+      position: relative;
+    }
+    &:after {
+      content: '<RoryGrignard />';
+      display: none;
+      color: color(black);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: zIndex(default);
+      visibility: hidden;
+      clip-path: inset(100% 0% 0% 0%);
+      @include mq(md) {
+        display: block;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      &-text {
+        visibility: hidden;
+        clip-path: inset(0% 0% 100% 0%);
+      }
+      &:after {
+        visibility: visible;
+        clip-path: inset(0% 0% 0% 0%);
+      }
+    }
+  }
+  //Burger btn
+  &__burger-btn {
+    @extend %btn;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    &-icon {
+      @include mx-text-gradient;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      &.--burger,
+      &.--close {
+        transition: clip-path $tr-base;
+      }
+      &.--burger {
+        color: color(pink);
+        clip-path: inset(0 0 0 0);
+        transition-delay: $tr-base-duration;
+      }
+      &.--close {
+        color: color(black);
+        clip-path: inset(0 100%0 0);
+      }
+      .--mobile-nav-visible & {
+        &.--burger {
+          transition-delay: 0ms;
+          clip-path: inset(0 0 0 100%);
+        }
+        &.--close {
+          clip-path: inset(0 0 0 0);
+          transition-delay: $tr-base-duration;
+        }
+      }
+    }
+    @include mq(md) {
+      display: none;
+    }
+  }
+  //Nav
+  &__nav {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 55px);
+    visibility: hidden;
+    clip-path: inset(0 0 100% 0);
+    transition: visibility $tr-base, clip-path $tr-base;
+    .--mobile-nav-visible & {
+      visibility: visible;
+      clip-path: inset(0 0 0 0);
+    }
+    @include mq(md) {
+      position: initial;
+      top: initial;
+      left: initial;
+      width: initial;
+      height: initial;
+      visibility: visible;
+      clip-path: initial;
+      transition: initial;
+    }
+    &-list{
+      display: flex;
+      padding: 55px 0;
+      margin: auto 0;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      background-color: color(black);
+      @include mq(md) {
+        flex-direction: row;
+        padding: 0;
+        background-color: initial;
+      }
+    }
+    &-item {
+      list-style: none;
+      display: flex;
+      margin: 0 0 $gutter-1 0;
+      &:last-child {
+        margin: 0;
+      }
+      @include mq(md) {
+        margin: 0 $gutter-2 0 0;
+      }
+      @include mq(lg) {
+        margin: 0 $gutter-4 0 0;
+      }
+    }
+    &-link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: $gutter-1 $gutter-4;
+      position: relative;
+      text-decoration: none;
+      @include mq(md) {
+        width: initial;
+        padding: 0;
+      }
+      &-text,
+      &-clone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: font(base);
+        font-size: 24px;
+        line-height: (27 / 24);
+        font-weight: font-weight(bold);
+        text-transform: uppercase;
+        color: color(white);
+        padding: 2px 0;
+        @include mq(md) {
+          font-size: 16px;
+          line-height: (19 / 16);
+          color: color(black);
+          transition: visibility $tr-base, clip-path $tr-base;
+        }
+      }
+      &-text {
+        visibility: visible;
+        clip-path: inset(0% 0% 0% 0%);
+        .header__nav-link.active &,
+        .header__nav-link:hover & {
+          visibility: hidden;
+          clip-path: inset(0% 0% 100% 0%);
+        }
+      }
+      &-clone {
+        background-image: $linear-gradient;
+        background-color: initial;
+        text-fill-color: transparent;
+        text-shadow: none;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: zIndex(default);
+        visibility: hidden;
+        clip-path: inset(100% 0% 0% 0%);
+        .header__nav-link.active &,
+        .header__nav-link:hover & {
+          visibility: visible;
+          clip-path: inset(0% 0% 0% 0%);
+        }
+      }
+    }
+  }
 }
