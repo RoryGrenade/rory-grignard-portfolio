@@ -1,7 +1,7 @@
 @import "../App";
 @import "../utils/ratio";
 
-.contained-carousel {
+.carousel {
   &:nth-child(odd) {
     color: color(white);
     background-color: color(black);
@@ -57,14 +57,11 @@
       }
     }
   }
-  &__slide {
-
-  }
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
     background-color: color(white);
-    .contained-carousel:nth-child(odd) & {
+    .carousel:nth-child(odd) & {
       background-color: color(black);
     }
     @include mq(md) {

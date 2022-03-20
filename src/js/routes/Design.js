@@ -1,7 +1,11 @@
+import Hero from "../components/Hero";
+import Carousel from "../components/Carousel";
+
 export default function Design() {
     return(
-        <section className={"contained-carousel"}>
-            <h1>Design</h1>
-        </section>
+        <>
+            <Hero id={1} />
+            <Carousel id={2} />
+        </>
     )
 }

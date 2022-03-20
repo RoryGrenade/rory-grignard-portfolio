@@ -1,92 +1,95 @@
-{
-  "webDevelopment": {
+[
+  {
+    "id": 0,
     "title": "Coding Languages",
     "intro": "There are three core coding languages that are an essential part of a web developer's arsenal: HTML, CSS, and JavaScript. Each of these languages have their own unique syntax's and uses. They're equally important and it's important to know when to use one over the other.",
-    "items": {
-      "HTML5": {
+    "slides": [
+      {
         "title": "HTML5",
         "description": "I write W3C compliant, semantic HTML markup that is optimised for search engine indexing, accessible to people using assistive technologies like screen readers, and is easy to maintain and scale for fellow developers. I'm also familiar with SilverStripe template syntax, JSX, and have experience with Shopify Liquid.",
         "imageTitle": "HTML5 shield",
-        "imagePath": "./img/contained-carousel/html-5-shield.svg"
+        "imagePath": "img/carousel/html-5-shield.svg"
       },
-      "CSS3": {
+      {
         "title": "CSS3",
         "description": "I take a mobile first approach to CSS, utilising the latest CSS layout modules such as grid and flex to create immersive, fully responsive user experiences. Coupled with the BEM (block element modifier) methodology to ensure that there are never any CSS selector conflicts, which makes for scalable, easy to maintain style sheets.",
         "imageTitle": "CSS3 shield",
-        "imagePath": "./img/contained-carousel/css-3-shield.svg"
+        "imagePath": "img/carousel/css-3-shield.svg"
       },
-      "javascript": {
+      {
         "title": "Javascript",
         "description": "I write modular Javascript ES6 to create interactive and engaging user interfaces. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
         "imageTitle": "javascript shield",
-        "imagePath": "./img/contained-carousel/javascript-shield.svg"
+        "imagePath": "img/carousel/javascript-shield.svg"
       }
-    }
+    ]
   },
-  "techStack": {
+  {
+    "id": 1,
     "title": "Tech Stack",
     "intro": "There's no need to reinvent the wheel. Thanks to Node, we can add tried and tested code straight into our projects, which can decrease development time significantly, which is awesome because the time saved can be used for fine tuning the UX so that the end user has the best experience possible. Here are a few of my favourite web technologies.",
-    "items": {
-      "react": {
+    "slides": [
+      {
         "title": "React",
         "description": "I build interactive UIs using React functional components and JSX to create templates with variables for dynamic content.",
         "imageTitle": "React logo",
-        "imagePath": "./img/contained-carousel/react-logo.svg"
+        "imagePath": "img/carousel/react-logo.svg"
       },
-      "bootstrap": {
+      {
         "title": "Bootstrap",
         "description": "Using Bootstrap as a Library is ideal for rapid development of rock solid websites, now more than ever with the Sass customisation options in Bootstrap 5.",
         "imageTitle": "Bootstrap 5 logo",
-        "imagePath": "./img/contained-carousel/bootstrap-5-logo.svg"
+        "imagePath": "img/carousel/bootstrap-5-logo.svg"
       },
-      "gsap": {
+      {
         "title": "GSAP",
         "description": "Animations (when done appropriately) are an excellent way to enhance your application/website's user journey. I use GreenSock Animation Platform (GSAP) a powerful JavaScript animation library to create highly customisable animations, with timelines for more complex animation sequences. GSAP is also extremely light weight and is cross browser compatible (Chrome, Firefox, and IE 11+).",
         "imageTitle": "Greensock logo",
-        "imagePath": "./img/contained-carousel/gsap-greensock-logo.svg"
+        "imagePath": "img/carousel/gsap-greensock-logo.svg"
       },
-      "sass": {
+      {
         "title": "SASS",
         "description": "My CSS processor of choice is SASS, it awesome being able to nest media queries so that default and responsive styles can be read within the same selector. SASS mixins and extends make writing efficient and reusable styles a breeze.",
         "imageTitle": "SASS logo",
-        "imagePath": "./img/contained-carousel/sass-logo.svg"
+        "imagePath": "img/carousel/sass-logo.svg"
       },
-      "yarn": {
+      {
         "title": "Yarn",
         "description": "I use Yarn Package Manager to quickly, securely and reliably manage project dependencies via the package.json file. There's no need to reinvent the wheel when you can simply 'yarn add' tried and tested code that does exactly what you need (example: gsap) straight into your project in a matter of seconds. An added benefit of having the package.json file is that fellow developers that are working on the same repo will have the same package versions making the project reproducible and future proof.",
         "imageTitle": "Yarn logo",
-        "imagePath": "./img/contained-carousel/yarn-logo.svg"
+        "imagePath": "img/carousel/yarn-logo.svg"
       },
-      "git": {
+      {
         "title": "GIT",
         "description": "GIT Version Control is an essential part of my workflow, it makes collaborating with fellow developers easy, it's also great for adding new features, by creating a new branch, the new feature can be developed, tested and reviewed without affecting the main branches source code. I enjoy using Git Tower and GitKraken for enhanced visibility of my code changes which allows me to quickly and easily review my code before staging and committing, or even amending a previous commit where appropriate.",
         "imageTitle": "GIT logo",
-        "imagePath": "./img/contained-carousel/git-logo.svg"
+        "imagePath": "img/carousel/git-logo.svg"
       }
-    }
+    ]
   },
-  "userExperience": {
+  {
+    "id": 2,
     "title": "UI/UX Design",
     "intro": "I've always been a Creative Suite loyalist, I did some fun stuff with Flash and Fireworks before they where discontinued - might have a few SWF files on some DVD discs somewhere.. So it won't surprise you that my picks for best design apps for frontend developers are all made by Adobe Inc.",
-    "items": {
-      "xd": {
+    "slides": [
+      {
         "title": "Adobe XD",
         "description": "My UI prototyping app of choice goes to Adobe XD. It has a simplistic layout with easy to use tools. CC Library integration is another major benefit especially if you use other Adobe CC products. You can grab the full Bootstrap 5 UI kit from the CC Library with two clicks in seconds. There are other UI design apps that do a great job, honorable mentions go to Figma and Sketch.",
         "imageTitle": "Adobe XD logo",
-        "imagePath": "./img/contained-carousel/adobe-xd-cc-icon.svg"
+        "imagePath": "img/carousel/adobe-xd-cc-icon.svg"
       },
-      "photoshop": {
+      {
         "title": "Adobe Photoshop",
         "description": "Unsurprisingly Photoshop is my go to photo editor, it ha customisable workspaces and drag and drop toolbars which makes accessing the plethora of Photoshop's tools a breeze. With Photoshop the only limit to your raster graphics is your imagination.",
         "imageTitle": "Adobe Photoshop logo",
-        "imagePath": "./img/contained-carousel/adobe-photoshop-cc-icon.svg"
+        "imagePath": "img/carousel/adobe-photoshop-cc-icon.svg"
       },
-      "illustrator": {
+      {
         "title": "Adobe Illustrator",
         "description": "As you might know by now, it's a good idea to use SVG files for images whenever possible due to their small file size amd infinite scalability. Not only that, SVGs can be animated using CSS or by using a Javascript animation library like GSAP for animations with additional complexities. My vector graphics editor of choice is Illustrator, the incremental updates that have been added to Illustrator over the years have made creating web with Illustrator a joy. Honorable mention, Coral Draw is pretty awesome too, good to see that Adobe still has a healthy dose of competition.",
         "imageTitle": "Adobe Illustrator logo",
-        "imagePath": "./img/contained-carousel/adobe-illustrator-cc-icon.svg"
+        "imagePath": "img/carousel/adobe-illustrator-cc-icon.svg"
       }
-    }
+    ]
   }
-}
+]

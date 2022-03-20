@@ -8,8 +8,8 @@ export default function Hero(props) {
             <div className={"hero__img-wrapper"}>
                 <picture className={"hero__picture"}>
                     <img className={"hero__img"}
-                         src={heroData[props.id].backgroundImage}
-                         alt={heroData[props.id].imageText}
+                         src={heroData[props.id].imageSrc}
+                         alt={heroData[props.id].imageAltText}
                          key={heroData[props.id].id}
                     />
                 </picture>
