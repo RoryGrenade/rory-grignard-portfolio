@@ -9,54 +9,54 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Hero(props) {
     const el = useRef(null)
-    const q = gsap.utils.selector(el)
     const tl = useRef()
 
     useEffect(() => {
+        const q = gsap.utils.selector(el)
         tl.current = gsap.timeline({ defaults: {ease: "none", duration: 1} })
-            .fromTo(".hero__img-wrapper", {
+            .fromTo(q(".hero__img-wrapper"), {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 duration: 3
             })
-            .fromTo(".hero__title", {
+            .fromTo(q(".hero__title"), {
                 clipPath: "inset(100% 0% 0% 0%)"
             }, {
                 clipPath: "inset(0% 0% 0% 0%)"
             }, 0)
-            .fromTo(".hero__content", {
+            .fromTo(q(".hero__content"), {
                 autoAlpha: 0,
             }, {
                 autoAlpha: 1,
             }, ">-0.5")
-            .fromTo(".hero__btn", {
+            .fromTo(q(".hero__btn"), {
                 autoAlpha: 0,
             }, {
                 autoAlpha: 1
             }, ">-0.5")
     }, [])
 
-    function useWindowSize() {
-        const [size, setSize] = useState([window.innerHeight, window.innerWidth])
+    function useViewportWidth() {
+        const [width, setWidth] = useState(window.innerWidth)
         useEffect(() => {
             const handleResize = () => {
-                setSize([window.innerHeight, window.innerWidth])
+                setWidth(window.innerWidth)
             }
             window.addEventListener("resize", handleResize)
             return () => {
                 window.removeEventListener("resize", handleResize)
             }
         }, [])
-        return size
+        return width
     }
 
-    const [height, width] = useWindowSize()
+    const viewportWidth = useViewportWidth()
 
     function scrollToNextSection() {
         const scrollToDuration = el.current.offsetHeight / 1000
         const nextSection = el.current.nextElementSibling
-        let scrollToOffset = ([width] >= 768) ? 59 : 55
+        let scrollToOffset = (viewportWidth >= 768) ? 59 : 55
         gsap.to(window, {duration: scrollToDuration, scrollTo: {y: nextSection, offsetY: scrollToOffset}})
     }
 
