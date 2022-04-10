@@ -18,7 +18,8 @@
 .btn {
   @extend %btn;
   &.--btn-light,
-  &.--btn-dark {
+  &.--btn-dark,
+  &.--btn-trans-bdr {
     padding: 0.5em 1.4em;
     min-height: 44px;
     font-weight: font-weight(semibold);
@@ -37,23 +38,27 @@
   &.--btn-light {
     color: color(white);
     border-color: color(white);
-    background-color: color(black);
     &:hover,
     &:hover i {
       color: color(pink);
       border-color: color(pink);
-      background-color: color(black);
-    }
+     }
   }
   &.--btn-dark {
     color: color(black);
     border-color: color(black);
-    background-color: color(white);
     &:hover,
     &:hover i {
-      color: color(white);
-      border-color: color(white);
-      background-color: color(black);
+      color: color(pink);
+      border-color: color(pink);
+    }
+  }
+  &.--btn-trans-bdr {
+    color: color(blueGrey);
+    border-color: transparent;
+    &:hover,
+    &:hover i {
+      color: color(black);
     }
   }
 }
