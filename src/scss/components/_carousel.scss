@@ -57,8 +57,12 @@
       }
     }
   }
+  &__slide {
+    height: auto;
+  }
   &__grid {
     display: grid;
+    height: 100%;
     grid-template-columns: 1fr;
     background-color: color(white);
     .carousel:nth-child(odd) & {

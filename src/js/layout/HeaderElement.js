@@ -30,12 +30,12 @@ export default function HeaderElement() {
                                 <span className={"header__nav-link-clone"}>Skills</span>
                             </NavLink>
                         </li>
-                        <li className="header__nav-item">
-                            <NavLink className={"header__nav-link"} to={"/about"} onClick={() => toggleMobileNav(!mobileNavVisible)}>
-                                <span className={"header__nav-link-text"}>About</span>
-                                <span className={"header__nav-link-clone"}>About</span>
-                            </NavLink>
-                        </li>
+                        {/*<li className="header__nav-item">*/}
+                        {/*    <NavLink className={"header__nav-link"} to={"/about"} onClick={() => toggleMobileNav(!mobileNavVisible)}>*/}
+                        {/*        <span className={"header__nav-link-text"}>About</span>*/}
+                        {/*        <span className={"header__nav-link-clone"}>About</span>*/}
+                        {/*    </NavLink>*/}
+                        {/*</li>*/}
                         <li className="header__nav-item">
                             <NavLink className={"header__nav-link"} to={"/contact"} onClick={() => toggleMobileNav(!mobileNavVisible)}>
                                 <span className={"header__nav-link-text"}>Contact</span>

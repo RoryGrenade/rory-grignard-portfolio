@@ -46,9 +46,15 @@
   }
   &__title {
     @extend %ex-gradient-underline-text;
-    font-size: 5em;
+    font-size: 14vw;
     line-height: 1;
     margin: 0 0 section-padding(mobile);
+    @include mq(md) {
+      font-size: 8vw;
+    }
+    @include mq(xl) {
+      font-size: 5em;
+    }
     &:after {
       margin: 9px auto 0;
     }
