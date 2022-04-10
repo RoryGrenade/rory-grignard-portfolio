@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { FaArrowDown } from "react-icons/fa"
@@ -9,11 +9,16 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Hero(props) {
     const el = useRef(null)
-    const tl = useRef()
+    const tl = useRef(null)
 
     useEffect(() => {
         const q = gsap.utils.selector(el)
-        tl.current = gsap.timeline({ defaults: {ease: "none", duration: 1} })
+        tl.current = gsap.timeline({
+            defaults: {
+                ease: "none",
+                duration: 1
+            }
+        })
             .fromTo(q(".hero__img-wrapper"), {
                 autoAlpha: 0
             }, {

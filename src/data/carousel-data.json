@@ -5,6 +5,12 @@
     "intro": "There are three core coding languages that are an essential part of a web developer's arsenal: HTML, CSS, and JavaScript. Each of these languages have their own unique syntax's and uses. They're equally important and it's important to know when to use one over the other.",
     "slides": [
       {
+        "title": "Javascript ES6",
+        "description": "I write modular Javascript ES6 to create interactive and engaging user interfaces. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
+        "imageTitle": "javascript shield",
+        "imagePath": "img/carousel/javascript-shield.svg"
+      },
+      {
         "title": "HTML5",
         "description": "I write W3C compliant, semantic HTML markup that is optimised for search engine indexing, accessible to people using assistive technologies like screen readers, and is easy to maintain and scale for fellow developers. I'm also familiar with SilverStripe template syntax, JSX, and have experience with Shopify Liquid.",
         "imageTitle": "HTML5 shield",
@@ -15,12 +21,6 @@
         "description": "I take a mobile first approach to CSS, utilising the latest CSS layout modules such as grid and flex to create immersive, fully responsive user experiences. Coupled with the BEM (block element modifier) methodology to ensure that there are never any CSS selector conflicts, which makes for scalable, easy to maintain style sheets.",
         "imageTitle": "CSS3 shield",
         "imagePath": "img/carousel/css-3-shield.svg"
-      },
-      {
-        "title": "Javascript",
-        "description": "I write modular Javascript ES6 to create interactive and engaging user interfaces. I use Babel transpiler to convert edge JavaScript to cross browser compatible ES5 Javascript.",
-        "imageTitle": "javascript shield",
-        "imagePath": "img/carousel/javascript-shield.svg"
       }
     ]
   },
