@@ -1,3 +1,4 @@
+import Intro from "./Intro";
 import "../../scss/components/_form.scss"
 
 export default function Form(props) {
@@ -10,13 +11,9 @@ export default function Form(props) {
         <section className={"form"}>
             <div className={"form__container"}>
 
-                <div className={"form__title-wrapper"}>
-                    <h2 className={"form__title"}>Contact form</h2>
-                    <p className={"form__intro"}>Use this form to fire off a message directly to me, I'll get back to you straight away! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsa magnam nemo optio recusandae. Hic id in veniam? Aperiam cupiditate explicabo in maxime nostrum officia perferendis reprehenderit sed veritatis, voluptate?</p>
-                </div>
+                <Intro id={3} />
 
                 <form className="form__form" onSubmit={e => {handleSubmit(e)}}>
-
                     <div className="form__fields-wrapper">
                         <div className="form__field-wrapper">
                             <label htmlFor="firstname">First name</label>

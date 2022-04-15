@@ -1,3 +1,4 @@
+import Intro from "./Intro";
 import { useRef, useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js"
 import { Navigation, EffectFade } from "swiper"
@@ -19,31 +20,20 @@ export default function Carousel(props) {
     ScrollTrigger.defaults({
         toggleActions: 'play none none none',
         start: 'top bottom-=40px',
-        // markers: true,
     })
 
     const el = useRef(null)
     const q = gsap.utils.selector(el)
 
     useEffect(() => {
-        const carouselTitle = q(".carousel__title")
-        const carouselIntro = q(".carousel__intro")
+        const carouselSwiper = q(".carousel__swiper")
 
-        gsap.fromTo(carouselTitle, {
-            clipPath: "inset(100% 0% 0% 0%)"
-        }, {
-            clipPath: "inset(0% 0% 0% 0%)",
-            scrollTrigger: {
-                trigger: carouselTitle,
-            }
-        })
-
-        gsap.fromTo(carouselIntro, {
+        gsap.fromTo(carouselSwiper, {
             autoAlpha: 0
         }, {
             autoAlpha: 1,
             scrollTrigger: {
-                trigger: carouselIntro,
+                trigger: carouselSwiper,
             }
         })
     })
@@ -51,10 +41,9 @@ export default function Carousel(props) {
     return(
         <section className={"carousel"} ref={el}>
             <div className="carousel__container">
-                <div className={"carousel__title-wrapper"}>
-                    <h2 className={"carousel__title"}>{carouselData.[props.id].title}</h2>
-                    <p className={"carousel__intro"}>{carouselData.[props.id].intro}</p>
-                </div>
+
+                <Intro id={props.id}/>
+
                 <Swiper
                     className={"carousel__swiper"}
                     modules={[Navigation, EffectFade]}

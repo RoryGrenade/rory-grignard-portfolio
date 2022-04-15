@@ -1,0 +1,24 @@
+@import "../App";
+@import "../utils/ratio";
+
+.intro {
+  .carousel:nth-child(odd) & {
+    color: color(white);
+    //background-color: color(black);
+  }
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    @extend %ex-gradient-underline-text;
+    @include mx-section-margin-bottom;
+    display: inline-block;
+    &:after {
+      margin: 4px auto 0;
+    }
+  }
+  &__description {
+    @include mx-section-margin-bottom;
+    text-align: left;
+  }
+}

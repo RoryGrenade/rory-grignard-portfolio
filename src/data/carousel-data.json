@@ -1,8 +1,6 @@
 [
   {
     "id": 0,
-    "title": "Coding Languages",
-    "intro": "There are three core coding languages that are an essential part of a web developer's arsenal: HTML, CSS, and JavaScript. Each of these languages have their own unique syntax's and uses. They're equally important and it's important to know when to use one over the other.",
     "slides": [
       {
         "title": "Javascript ES6",
@@ -26,8 +24,6 @@
   },
   {
     "id": 1,
-    "title": "Tech Stack",
-    "intro": "There's no need to reinvent the wheel. Thanks to Node, we can add tried and tested code straight into our projects, which can decrease development time significantly, which is awesome because the time saved can be used for fine tuning the UX so that the end user has the best experience possible. Here are a few of my favourite web technologies.",
     "slides": [
       {
         "title": "React",
@@ -69,8 +65,6 @@
   },
   {
     "id": 2,
-    "title": "Design",
-    "intro": "I've always been a Creative Suite loyalist. So it won't surprise you that my picks for best design apps for frontend developers are all made by Adobe Inc.",
     "slides": [
       {
         "title": "Adobe Photoshop",
