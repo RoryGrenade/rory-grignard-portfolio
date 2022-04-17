@@ -1,7 +1,7 @@
 @import "vars";
 @import "mixins";
 
-body {
+html {
   font-family: font(base);
   font-weight: font-weight(regular);
   font-size: 18px;
@@ -14,7 +14,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0 0 1em;
+  margin: 0 0 1rem;
 }
 
 h3,
@@ -32,28 +32,38 @@ h2 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 2.4rem;
 }
 
 h3 {
-  font-size: 2.2em;
+  font-size: 2.2rem;
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 h5,
 h6 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-p {}
+p {
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea {
+  font-family: font(code);
+  font-weight: font-weight(medium);
+  font-size: 1rem;
+}
 
 hr {
   width: 100%;

@@ -25,13 +25,21 @@
     margin:  0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px 0;
+    @include mq(sm) {
+      gap: 20px 0;
+    }
   }
   &__fields-wrapper {
     display: flex;
-    gap: 0 20px;
+    flex-direction: column;
     &.--btn {
       justify-content: right;
+      flex-direction: row;
+      gap: 0 20px;
+    }
+    @include mq(sm) {
+      flex-direction: row;
+      gap: 0 20px;
     }
   }
   &__field-wrapper {
@@ -46,17 +54,20 @@
   }
   &__field {
     width: 100%;
-    //margin: 0 0 10px;
     border: 2px solid color(black);
     border-radius: 0;
     padding: 10px;
     outline: none;
+    margin: 0 0 20px;
     transition: border-color $tr-base;
     &:hover {
       border-color: color(orange);
     }
     &:focus {
       border-color: color(pink);
+    }
+    @include mq(sm) {
+      margin: initial;
     }
   }
 }
