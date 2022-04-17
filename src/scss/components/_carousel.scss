@@ -14,7 +14,7 @@
     .swiper-button-prev,
     .swiper-button-next {
       top: initial;
-      bottom: 18px;
+      bottom: 101px;
       width: 62px;
       height: 52px;
       &:after {
@@ -48,6 +48,7 @@
   &__grid {
     display: grid;
     height: 100%;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     background-color: color(white);
     .carousel:nth-child(odd) & {
@@ -67,6 +68,12 @@
         display: inline-block;
         align-self: flex-start;
         margin: 0 0 0.5em;
+      }
+      &-picture {
+        height: 248px;
+        @include mq(md) {
+          height: initial;
+        }
       }
       &-img {
         width: 100px;

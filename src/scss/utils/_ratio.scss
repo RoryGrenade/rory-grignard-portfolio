@@ -25,3 +25,9 @@
 .ratio-1x1 {
   padding-top: 100%;
 }
+
+.ratio-1x1-md {
+  @include mq(md) {
+    padding-top: 100%;
+  }
+}

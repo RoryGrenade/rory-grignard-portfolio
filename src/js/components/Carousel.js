@@ -62,7 +62,7 @@ export default function Carousel(props) {
                                     <p>{slide.description}</p>
                                 </div>
                                 <div className="carousel__grid-item --logo">
-                                    <picture className={"ratio-1x1 --contain"}>
+                                    <picture className={"carousel__grid-item-picture ratio-1x1-md --contain"}>
                                         <img className={"carousel__grid-item-img"}
                                              src={slide.imagePath}
                                              alt={slide.imageTitle} />
