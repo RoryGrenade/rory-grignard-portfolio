@@ -23,6 +23,9 @@ footer {
   &:not(.hero):not(.intro) {
     @include mx-section-padding;
   }
+  &.intro {
+    @include mx-section-padding-top;
+  }
 }
 
 [class*="container"] {

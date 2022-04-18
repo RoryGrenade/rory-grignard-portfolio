@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Intro from "./Intro";
 import "../../scss/components/_form.scss"
 
 export default function Form(props) {
@@ -30,8 +29,6 @@ export default function Form(props) {
     return (
         <section className={"form"}>
             <div className={"form__container"}>
-
-                <Intro id={3} />
 
                 <form className="form__form"
                       onReset={(e) => {handleReset(e)}}
