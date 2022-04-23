@@ -13,7 +13,7 @@ export default function HeaderElement() {
             <div className={"header__container"}>
 
                 <div className={"header__wrapper"}>
-                    <Link className={"header__logo-link"} to={"/"} onClick={() => toggleMobileNav(!mobileNavVisible)}>
+                    <Link className={"header__logo-link"} to={"/"} onClick={() => toggleMobileNav(mobileNavVisible === true)}>
                         <h1 className={"header__logo-link-text"}>&#60;RoryGrignard /&#62;</h1>
                     </Link>
                     <button className={"header__burger-btn"} onClick={() => toggleMobileNav(!mobileNavVisible)}>
