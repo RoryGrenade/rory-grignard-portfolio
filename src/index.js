@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter } from "react-router-dom"
+// eslint-disable-next-line
+import Firebase from "./js/utils/Firebase"
 import ScrollToTop from "./js/utils/ScrollToTop"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"

@@ -1,7 +1,23 @@
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 import { useState } from "react"
 import "../../scss/components/_form.scss"
 
 export default function Form(props) {
+    const db = getFirestore()    
+    const colRef = collection(db, 'messages')
+
+    getDocs(colRef)
+    .then(snapshot => {
+        let messages = []
+        snapshot.docs.forEach(doc => {
+            messages.push({ ...doc.data(), id:doc.id })
+        })
+        console.log(messages)
+    })
+    .catch(err => {
+        console.log(err.message)
+    })
+
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
