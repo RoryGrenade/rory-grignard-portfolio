@@ -28,41 +28,41 @@ export default function FooterElement() {
                             </li>
                         </ul>
                     </div>
-                    {/*<div className={"footer__col"}>*/}
-                    {/*    <h3 className={"footer__title"}>Share</h3>*/}
-                    {/*    <ul className={"footer__list"}>*/}
-                    {/*        <li className={"footer__item"}>*/}
-                    {/*            <button className={"footer__btn --linkedin"}>*/}
-                    {/*                <div className={"footer__icon -animated-hover"}/>*/}
-                    {/*                LinkedIn*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*        <li className={"footer__item"}>*/}
-                    {/*            <button className={"footer__btn --gmail"}>*/}
-                    {/*                <div className={"footer__icon -animated-hover"}/>*/}
-                    {/*                Email*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*        <li className={"footer__item"}>*/}
-                    {/*            <button className={"footer__btn --whatsapp"}>*/}
-                    {/*                <div className={"footer__icon -animated-hover"}/>*/}
-                    {/*                WhatsApp*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*        <li className={"footer__item"}>*/}
-                    {/*            <button className={"footer__btn --facebook"}>*/}
-                    {/*                <div className={"footer__icon -animated-hover"}/>*/}
-                    {/*                Facebook*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*        <li className={"footer__item"}>*/}
-                    {/*            <button className={"footer__btn --twitter"}>*/}
-                    {/*                <div className={"footer__icon -animated-hover"}/>*/}
-                    {/*                Twitter*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*    </ul>*/}
-                    {/*</div>*/}
+                    <div className={"footer__col"}>
+                        <h3 className={"footer__title"}>Share</h3>
+                        <ul className={"footer__list"}>
+                            <li className={"footer__item"}>
+                                <button className={"footer__btn --linkedin"}>
+                                    <div className={"footer__icon -animated-hover"}/>
+                                    LinkedIn
+                                </button>
+                            </li>
+                            <li className={"footer__item"}>
+                                <button className={"footer__btn --gmail"}>
+                                    <div className={"footer__icon -animated-hover"}/>
+                                    Email
+                                </button>
+                            </li>
+                            <li className={"footer__item"}>
+                                <button className={"footer__btn --whatsapp"}>
+                                    <div className={"footer__icon -animated-hover"}/>
+                                    WhatsApp
+                                </button>
+                            </li>
+                            <li className={"footer__item"}>
+                                <button className={"footer__btn --facebook"}>
+                                    <div className={"footer__icon -animated-hover"}/>
+                                    Facebook
+                                </button>
+                            </li>
+                            <li className={"footer__item"}>
+                                <button className={"footer__btn --twitter"}>
+                                    <div className={"footer__icon -animated-hover"}/>
+                                    Twitter
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className={"footer__row"}>
                     <div className={"footer__col"}>

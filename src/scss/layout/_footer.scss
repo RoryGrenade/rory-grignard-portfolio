@@ -24,6 +24,7 @@
   }
   &__title {
     color: color(white);
+    margin: 0 0 section-padding(mobile);
   }
   &__list {
     list-style: none;
@@ -90,7 +91,7 @@
     }
     .footer__btn:hover & {
       &:before {
-        animation: key-linear-gradient-btn 600ms linear infinite;
+        animation: key-linear-gradient-btn 700ms linear infinite;
       }
     }
   }
@@ -106,10 +107,9 @@
 
 @keyframes key-linear-gradient-btn {
   0% {
-    //background-position: 1000% 100%;
-    background-position: 200% 100%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 100% 100%;
+    background-position: 200% 100%;
   }
 }
