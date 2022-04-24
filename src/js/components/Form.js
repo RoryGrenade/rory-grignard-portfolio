@@ -1,36 +1,33 @@
-import { getFirestore, collection, getDocs } from "firebase/firestore"
 import { useState } from "react"
+import { getFirestore, collection, addDoc } from "firebase/firestore"
 import "../../scss/components/_form.scss"
 
 export default function Form(props) {
     const db = getFirestore()    
     const colRef = collection(db, 'messages')
 
-    getDocs(colRef)
-    .then(snapshot => {
-        let messages = []
-        snapshot.docs.forEach(doc => {
-            messages.push({ ...doc.data(), id:doc.id })
-        })
-        console.log(messages)
-    })
-    .catch(err => {
-        console.log(err.message)
-    })
-
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
-    const [tel, setTel] = useState("")
+    const [contactNo, setContactNo] = useState("")
     const [message, setMessage] = useState("")
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(firstName)
-        console.log(lastName)
-        console.log(email)
-        console.log(tel)
-        console.log(message)
+
+        addDoc(colRef, {
+            first_name: firstName,
+            last_name: lastName,
+            email_address: email,
+            contact_number: contactNo,
+            message: message
+        })
+
+        setFirstName("")
+        setLastName("")
+        setEmail("")
+        setContactNo("")
+        setMessage("")
     }
 
     const handleReset = e => {
@@ -38,7 +35,7 @@ export default function Form(props) {
         setFirstName("")
         setLastName("")
         setEmail("")
-        setTel("")
+        setContactNo("")
         setMessage("")
     }
 
@@ -96,13 +93,13 @@ export default function Form(props) {
                         <div className="form__field-wrapper">
                             <label
                                 className="form__label"
-                                htmlFor="tel">Contact no</label>
+                                htmlFor="contactNo">Contact number</label>
                             <input
                                 className="form__field"
                                 type="text"
-                                id="tel"
-                                value={tel}
-                                onChange={e => setTel(e.target.value)}
+                                id="contactNo"
+                                value={contactNo}
+                                onChange={e => setContactNo(e.target.value)}
                             />
                         </div>
                     </div>
