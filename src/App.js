@@ -2,8 +2,7 @@ import React, { useEffect } from "react"
 import WebFont from "webfontloader"
 import { Route, Routes } from "react-router-dom"
 import HeaderElement from "./js/layout/HeaderElement"
-import Skills from "./js/routes/Skills"
-// import About from "./js/routes/About"
+import Home from "./js/routes/Home"
 import Contact from "./js/routes/Contact"
 import FooterElement from "./js/layout/FooterElement"
 
@@ -21,8 +20,7 @@ export default function App() {
           <HeaderElement />
           <main className="main">
               <Routes>
-                  <Route index element={<Skills />} />
-                  {/*<Route path={"about"} element={<About />} />*/}
+                  <Route index element={<Home />} />
                   <Route path={"contact"} element={<Contact />} />
               </Routes>
           </main>

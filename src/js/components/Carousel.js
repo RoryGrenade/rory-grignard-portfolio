@@ -1,4 +1,3 @@
-import Intro from "./Intro";
 import { useRef, useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js"
 import { Navigation, EffectFade } from "swiper"
@@ -39,11 +38,8 @@ export default function Carousel(props) {
     })
 
     return(
-        <section className={"carousel"} ref={el}>
+        <section className={"carousel"} ref={el} data-theme={props.theme}>
             <div className="carousel__container">
-
-                <Intro id={props.id}/>
-
                 <Swiper
                     className={"carousel__swiper"}
                     modules={[Navigation, EffectFade]}

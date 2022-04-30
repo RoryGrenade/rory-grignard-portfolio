@@ -44,7 +44,7 @@ export default function Intro(props) {
     })
 
     return(
-        <section className={"intro"} ref={el}>
+        <section className={"intro"} ref={el} data-theme={props.theme}>
             <div className="intro__container">
                 <h2 className={"intro__title"}>{introData.[props.id].title}</h2>
                 <p className={"intro__description"}>{introData.[props.id].description}</p>

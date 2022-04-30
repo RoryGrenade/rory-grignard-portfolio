@@ -32,10 +32,9 @@ footer {
   margin: 0 auto;
   max-width: $ctr-max-width;
   &:not(.header__container) {
-    padding: 0 $gutter-2;
+    padding: 0 $gutter-4;
   }
   @include mq(md) {
-    &:not(.header__container),
     &.header__container {
       padding: 0 $gutter-4;
     }

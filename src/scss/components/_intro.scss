@@ -2,11 +2,9 @@
 @import "../utils/ratio";
 
 .intro {
-  .carousel & {
-    padding: 0;
-  }
-  .carousel:nth-child(odd) & {
+  &[data-theme="dark"] {
     color: color(white);
+    background-color: color(black);
   }
   &__container {
     text-align: center;
@@ -22,8 +20,5 @@
   &__description {
     text-align: left;
     margin: 0;
-    .carousel & {
-      @include mx-section-margin-bottom;
-    }
   }
 }
