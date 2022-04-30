@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import WebFont from "webfontloader"
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Navigate } from "react-router-dom"
 import HeaderElement from "./js/layout/HeaderElement"
 import Home from "./js/routes/Home"
 import Contact from "./js/routes/Contact"
@@ -22,6 +22,9 @@ export default function App() {
               <Routes>
                   <Route index element={<Home />} />
                   <Route path={"contact"} element={<Contact />} />
+                  <Route path="*" element={
+                    <Navigate to="/" replace />
+                  }/>
               </Routes>
           </main>
           <FooterElement />
