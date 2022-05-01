@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import introData from "../../data/intro-data.json"
 import "../../scss/components/_intro.scss"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -41,13 +40,13 @@ export default function Intro(props) {
                 trigger: introDesc,
             }
         })
-    })
+    }, [q])
 
     return(
         <section className={"intro"} ref={el} data-theme={props.theme}>
             <div className="intro__container">
-                <h2 className={"intro__title"}>{introData.[props.id].title}</h2>
-                <p className={"intro__description"}>{introData.[props.id].description}</p>
+                <h2 className={"intro__title"}>{props.id.title}</h2>
+                <p className={"intro__description"}>{props.id.description}</p>
             </div>
         </section>
     )
