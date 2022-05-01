@@ -10,14 +10,6 @@
   {
     "id": 1,
     "imageSrc": "img/hero/background-2.jpg",
-    "imageAltText": "Big wave",
-    "overlineText": "Fun facts",
-    "titleText": "About me",
-    "bodyText": "When I'm deep in the zone sat in front of the computer, I like long walks on the beach - seriously I do!"
-  },
-  {
-    "id": 2,
-    "imageSrc": "img/hero/background-3.jpg",
     "imageAltText": "View of the city",
     "overlineText": "Make",
     "titleText": "Contact",

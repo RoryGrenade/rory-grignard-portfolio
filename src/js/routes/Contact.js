@@ -5,7 +5,7 @@ import Form from "../components/Form";
 export default function Contact() {
     return (
         <>
-            <Hero id={2} />
+            <Hero id={1} />
             <Intro id={3} />
             <Form />
         </>
