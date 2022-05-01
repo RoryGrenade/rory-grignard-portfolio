@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { getFirestore, collection, addDoc } from "firebase/firestore"
+import { db } from "../utils/firebase"
+import { collection, addDoc } from "firebase/firestore"
 import "../../scss/components/_form.scss"
 
 export default function Form(props) {
-    const db = getFirestore()    
     const colRef = collection(db, 'messages')
 
     const [firstName, setFirstName] = useState("")
