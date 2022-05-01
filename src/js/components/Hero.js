@@ -59,7 +59,7 @@ export default function Hero(props) {
     const viewportWidth = useViewportWidth()
 
     function scrollToNextSection() {
-        const scrollToDuration = el.current.offsetHeight / 1000
+        const scrollToDuration = el.current.offsetHeight / 1500
         const nextSection = el.current.nextElementSibling
         let scrollToOffset = (viewportWidth >= 768) ? 59 : 55
         gsap.to(window, {duration: scrollToDuration, scrollTo: {y: nextSection, offsetY: scrollToOffset}})
