@@ -10,7 +10,7 @@ export default function Home() {
     const [techStackIntro, setTechStackIntro] = useState({})
     const [designIntro, setDesignIntro] = useState({})
 
-    const fetchIntros = async () => {
+    const fetchContent = async () => {
         const docRefCodingLanguages = doc(db, "intros", "coding_languages")
         const docRefTechStack = doc(db, "intros", "tech_stack")
         const docRefDesign = doc(db, "intros", "design")
@@ -25,7 +25,7 @@ export default function Home() {
       }
 
       useEffect(() => {
-        fetchIntros()
+        fetchContent()
       }, [])
 
 
