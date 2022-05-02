@@ -6,23 +6,23 @@ import Intro from "../components/Intro";
 import Form from "../components/Form";
 
 export default function Contact() {
-    const [FireOffAMessageIntro, setFireOffAMessageIntro] = useState({})
+    const [messageIntro, setMessageIntro] = useState({})
 
-    const fetchContent = async () => {
-        const docRefFireOffAMessage = doc(db, "intros", "fire_off_a_message")
-        const docSnapFireOffAMessage = await getDoc(docRefFireOffAMessage)
+    const fetchData = async () => {
+        const docRefMessageIntro = doc(db, "intro_data", "message")
+        const docSnapMessageIntro = await getDoc(docRefMessageIntro)
 
-        setFireOffAMessageIntro(docSnapFireOffAMessage.data())
+        setMessageIntro(docSnapMessageIntro.data())
       }
 
       useEffect(() => {
-        fetchContent()
+        fetchData()
       }, [])
 
     return (
         <>
             <Hero id={1} />
-            <Intro id={FireOffAMessageIntro} />
+            <Intro id={messageIntro} />
             <Form />
         </>
     )

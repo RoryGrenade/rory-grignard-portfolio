@@ -10,10 +10,10 @@ export default function Home() {
     const [techStackIntro, setTechStackIntro] = useState({})
     const [designIntro, setDesignIntro] = useState({})
 
-    const fetchContent = async () => {
-        const docRefCodingLanguages = doc(db, "intros", "coding_languages")
-        const docRefTechStack = doc(db, "intros", "tech_stack")
-        const docRefDesign = doc(db, "intros", "design")
+    const fetchData = async () => {
+        const docRefCodingLanguages = doc(db, "intro_data", "coding_languages")
+        const docRefTechStack = doc(db, "intro_data", "tech_stack")
+        const docRefDesign = doc(db, "intro_data", "design")
 
         const docSnapCodingLanguages = await getDoc(docRefCodingLanguages)
         const docSnapTechStack = await getDoc(docRefTechStack)
@@ -25,7 +25,7 @@ export default function Home() {
       }
 
       useEffect(() => {
-        fetchContent()
+        fetchData()
       }, [])
 
 
