@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { FaArrowDown } from "react-icons/fa"
-import heroData from "../../data/hero-data.json"
 import "../../scss/components/_hero.scss"
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -70,18 +69,18 @@ export default function Hero(props) {
             <div className={"hero__img-wrapper"}>
                 <picture className={"hero__picture"}>
                     <img className={"hero__img"}
-                         src={heroData[props.id].imageSrc}
-                         alt={heroData[props.id].imageAltText}
-                         key={heroData[props.id].id}
+                         src={props.id.img_src}
+                         alt={props.id.img_alt_text}
+                         key={props.id}
                     />
                 </picture>
             </div>
             <div className={"hero__content-wrapper"}>
                 <h1 className={"hero__title"}>
-                    <span className={"hero__title-overline"}>{heroData[props.id].overlineText}</span>
-                    {heroData[props.id].titleText}
+                    <span className={"hero__title-overline"}>{props.id.overline_text}</span>
+                    {props.id.title_text}
                 </h1>
-                <p className={"hero__content"}>{heroData[props.id].bodyText}</p>
+                <p className={"hero__content"}>{props.id.body_text}</p>
                 <div className="hero__btn-wrapper">
                     <button className={"hero__btn btn --btn-light"} onClick={() => {
                         scrollToNextSection()

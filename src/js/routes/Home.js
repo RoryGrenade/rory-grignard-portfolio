@@ -6,19 +6,23 @@ import Intro from "../components/Intro";
 import Carousel from "../components/Carousel"
 
 export default function Home() {
+    const [heroContent, setHeroContent] = useState({})
     const [codingLanguagesIntro, setCodingLanguagesIntro] = useState({})
     const [techStackIntro, setTechStackIntro] = useState({})
     const [designIntro, setDesignIntro] = useState({})
 
     const fetchData = async () => {
+        const docRefHeroContent = doc(db, "hero_data", "hello_world")
         const docRefCodingLanguages = doc(db, "intro_data", "coding_languages")
         const docRefTechStack = doc(db, "intro_data", "tech_stack")
         const docRefDesign = doc(db, "intro_data", "design")
 
+        const docSnapHeroContent = await getDoc(docRefHeroContent)
         const docSnapCodingLanguages = await getDoc(docRefCodingLanguages)
         const docSnapTechStack = await getDoc(docRefTechStack)
         const docSnapDesign = await getDoc(docRefDesign)
 
+        setHeroContent(docSnapHeroContent.data())
         setCodingLanguagesIntro(docSnapCodingLanguages.data())
         setTechStackIntro(docSnapTechStack.data())
         setDesignIntro(docSnapDesign.data())
@@ -31,7 +35,7 @@ export default function Home() {
 
     return(
         <>
-            <Hero id={0} />
+            <Hero id={heroContent} />
             <Intro id={codingLanguagesIntro}/>
             <Carousel id={0} />
             <Intro id={techStackIntro} theme={"dark"} />
