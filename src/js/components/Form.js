@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { db } from "../utils/firebase"
+import { db } from "../utils/firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"
 import "../../scss/components/_form.scss"
 

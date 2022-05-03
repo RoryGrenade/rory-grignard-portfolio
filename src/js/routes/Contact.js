@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { db } from "../utils/firebase"
+import { db } from "../utils/firebaseConfig"
 import { doc, getDoc } from "firebase/firestore"
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
