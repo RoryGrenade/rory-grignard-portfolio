@@ -3,7 +3,7 @@ import { db } from "../utils/firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"
 import "../../scss/components/_form.scss"
 
-export default function Form(props) {
+export default function Form({ onChange }) {
     const colRef = collection(db, 'messages')
 
     const [firstName, setFirstName] = useState("")
@@ -23,11 +23,7 @@ export default function Form(props) {
             message: message
         })
 
-        setFirstName("")
-        setLastName("")
-        setEmail("")
-        setContactNo("")
-        setMessage("")
+        onChange(true)
     }
 
     const handleReset = e => {

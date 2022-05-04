@@ -4,8 +4,10 @@ import { doc, getDoc } from "firebase/firestore"
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import Form from "../components/Form";
+import Message from "../components/Message";
 
 export default function Contact() {
+    const [formSubmitted, setFormSubmitted] = useState(false)
     const [heroContent, setHeroContent] = useState({})
     const [messageIntro, setMessageIntro] = useState({})
 
@@ -28,7 +30,7 @@ export default function Contact() {
         <>
             <Hero id={heroContent} />
             <Intro id={messageIntro} />
-            <Form />
+            {formSubmitted ? <Message /> : <Form onChange={setFormSubmitted} />}
         </>
     )
 }
