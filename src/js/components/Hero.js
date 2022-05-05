@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { FaArrowDown } from "react-icons/fa"
 import "../../scss/components/_hero.scss"
 
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollToPlugin)
 
 export default function Hero(props) {
     const el = useRef(null)

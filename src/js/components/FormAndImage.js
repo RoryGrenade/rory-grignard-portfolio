@@ -1,18 +1,41 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
+import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Form from "./Form";
 import FormInfo from "./FormInfo";
 import "../../scss/components/_form-and-image.scss"
 
+gsap.registerPlugin(ScrollToPlugin)
+
 export default function FormAndImage(props) {
     const [formSubmitted, setFormSubmitted] = useState(false)
-
-    const formInfoWrapperRef = useRef()
-    console.log(formInfoWrapperRef)
     
     useEffect(() => {
-        if (formSubmitted) formInfoWrapperRef.current.scrollIntoView()
+        if (formSubmitted) scrollToFormWrapperTop()
         console.log('ran')
-    });
+    })
+
+    function useViewportWidth() {
+        const [width, setWidth] = useState(window.innerWidth)
+        useEffect(() => {
+            const handleResize = () => {
+                setWidth(window.innerWidth)
+            }
+            window.addEventListener("resize", handleResize)
+            return () => {
+                window.removeEventListener("resize", handleResize)
+            }
+        }, [])
+        return width
+    }
+
+    const viewportWidth = useViewportWidth()
+
+    function scrollToFormWrapperTop() {
+        const scrollToDuration = 0.5
+        let scrollToOffset = (viewportWidth >= 768) ? 59 : 55
+        gsap.to(window, {duration: scrollToDuration, scrollTo: {y: '.form-and-image', offsetY: scrollToOffset}})
+    }
 
     return (
         <section className={"form-and-image"}>
@@ -25,7 +48,7 @@ export default function FormAndImage(props) {
                     />
                 </picture>
             </div>
-            <div className={"form-and-image__content-wrapper"} ref={formInfoWrapperRef}>
+            <div className={"form-and-image__content-wrapper"}>
                 <FormInfo id={props} showSubmitted={formSubmitted} />
                 {!formSubmitted && <Form onChange={setFormSubmitted} />}          
             </div>
