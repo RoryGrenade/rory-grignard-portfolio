@@ -32,6 +32,9 @@
       padding: initial;
     }
   }
+  &__img-wrapper {
+    background-color: color(black);
+  }
   &__img {
     position: absolute;
     top: 0;

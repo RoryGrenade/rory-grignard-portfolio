@@ -2,4 +2,7 @@
 
 .form-info {
     margin: 0 0 section-padding(mobile);
+    &__title {
+        @include mx-text-gradient;
+    }
 }

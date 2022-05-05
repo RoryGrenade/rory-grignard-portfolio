@@ -1,20 +1,13 @@
-import { useState, useEffect, useRef } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useState } from "react"
 import Form from "./Form";
 import FormInfo from "./FormInfo";
 import "../../scss/components/_form-and-image.scss"
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function FormAndImage(props) {
-    const [formSubmitted, setFormSubmitted] = useState(false)
-
-    const el = useRef(null)
-    
+    const [formSubmitted, setFormSubmitted] = useState(false)    
 
     return (
-        <section className={"form-and-image"} ref={el}>
+        <section className={"form-and-image"}>
             <div className={"form-and-image__img-wrapper"}>
                 <picture className={"form-and-image__picture"}>
                     <img className={"form-and-image__img"}
