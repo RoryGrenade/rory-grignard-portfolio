@@ -4,4 +4,7 @@
     &__title {
         @include mx-text-gradient;
     }
+    &__content {
+        margin: 0;
+    }
 }
