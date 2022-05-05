@@ -20,7 +20,7 @@ main {
 
 section,
 footer {
-  &:not(.hero):not(.intro) {
+  &:not(.hero):not(.intro):not(.form-and-image) {
     @include mx-section-padding;
   }
   &.intro {

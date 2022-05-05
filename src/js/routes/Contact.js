@@ -2,35 +2,31 @@ import { useState, useEffect } from "react"
 import { db } from "../utils/firebaseConfig"
 import { doc, getDoc } from "firebase/firestore"
 import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-import Form from "../components/Form";
-import Message from "../components/Message";
+import FormAndImage from "../components/FormAndImage";
 
 export default function Contact() {
-    const [formSubmitted, setFormSubmitted] = useState(false)
-    const [heroContent, setHeroContent] = useState({})
-    const [messageIntro, setMessageIntro] = useState({})
+  const [heroContent, setHeroContent] = useState({})
+  const [formAndImageContent, setFormAndImageContent] = useState({})
 
-    const fetchData = async () => {
-        const docRefHeroContent = doc(db, "hero_data", "make_contact")
-        const docRefMessageIntro = doc(db, "intro_data", "message")
+  const fetchData = async () => {
+    const docRefHeroContent = doc(db, "hero_data", "make_contact")
+    const docRefFormAndImageContent = doc(db, "form_and_image_data", "contact")
 
-        const docSnapHeroContent = await getDoc(docRefHeroContent)
-        const docSnapMessageIntro = await getDoc(docRefMessageIntro)
+    const docSnapHeroContent = await getDoc(docRefHeroContent)
+    const docSnapFormAndImageContent = await getDoc(docRefFormAndImageContent)
 
-        setHeroContent(docSnapHeroContent.data())
-        setMessageIntro(docSnapMessageIntro.data())
-      }
+    setHeroContent(docSnapHeroContent.data())
+    setFormAndImageContent(docSnapFormAndImageContent.data())
+  }
 
-      useEffect(() => {
-        fetchData()
-      }, [])
+  useEffect(() => {
+    fetchData()
+  }, [])
 
-    return (
-        <>
-            <Hero id={heroContent} />
-            <Intro id={messageIntro} />
-            {formSubmitted ? <Message /> : <Form onChange={setFormSubmitted} />}
-        </>
-    )
+  return (
+    <>
+      <Hero id={heroContent} />
+      <FormAndImage id={formAndImageContent} />
+    </>
+  )
 }

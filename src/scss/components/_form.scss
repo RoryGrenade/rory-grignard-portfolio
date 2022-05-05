@@ -1,33 +1,13 @@
 @import "../App";
 
 .form {
-  &__container {
-    overflow: hidden;
-  }
-  &__title-wrapper {
-    text-align: center;
-  }
-  &__title {
-    @extend %ex-gradient-underline-text;
-    @include mx-section-margin-bottom;
-    display: inline-block;
-    &:after {
-      margin: 4px auto 0;
-    }
-  }
-  &__intro {
-    @include mx-section-margin-bottom;
-    text-align: left;
-  }
-  &__form {
-    width: 100%;
-    max-width: 600px;
-    margin:  0 auto;
-    display: flex;
-    flex-direction: column;
-    @include mq(sm) {
-      gap: 20px 0;
-    }
+  width: 100%;
+  max-width: 600px;
+  margin:  0 auto;
+  display: flex;
+  flex-direction: column;
+  @include mq(sm) {
+    gap: 20px 0;
   }
   &__fields-wrapper {
     display: flex;
