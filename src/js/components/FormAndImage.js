@@ -1,10 +1,18 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Form from "./Form";
 import FormInfo from "./FormInfo";
 import "../../scss/components/_form-and-image.scss"
 
 export default function FormAndImage(props) {
-    const [formSubmitted, setFormSubmitted] = useState(false)    
+    const [formSubmitted, setFormSubmitted] = useState(false)
+
+    const formInfoWrapperRef = useRef()
+    console.log(formInfoWrapperRef)
+    
+    useEffect(() => {
+        if (formSubmitted) formInfoWrapperRef.current.scrollIntoView()
+        console.log('ran')
+    });
 
     return (
         <section className={"form-and-image"}>
@@ -17,9 +25,9 @@ export default function FormAndImage(props) {
                     />
                 </picture>
             </div>
-            <div className={"form-and-image__content-wrapper"}>
+            <div className={"form-and-image__content-wrapper"} ref={formInfoWrapperRef}>
                 <FormInfo id={props} showSubmitted={formSubmitted} />
-                <Form onChange={setFormSubmitted} />              
+                {!formSubmitted && <Form onChange={setFormSubmitted} />}          
             </div>
         </section>
     )

@@ -1,6 +1,10 @@
 @import "../App";
 
-.form {
+.form {&__title {
+  @include mx-text-gradient;
+  margin: section-padding(mobile) 0 0;
+
+}
   width: 100%;
   max-width: 600px;
   margin:  0 auto;
