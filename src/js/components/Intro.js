@@ -12,7 +12,7 @@ export default function Intro(props) {
 
     ScrollTrigger.defaults({
         toggleActions: 'play none none none',
-        start: 'top bottom-=40px',
+        start: 'top bottom',
         // markers: true,
     })
 
