@@ -13,6 +13,7 @@
     @extend %ex-gradient-underline-text;
     @include mx-section-margin-bottom;
     display: inline-block;
+    clip-path: inset(100% 0% 0% 0%);
     &:after {
       margin: 4px auto 0;
     }
@@ -20,5 +21,7 @@
   &__description {
     text-align: left;
     margin: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 }

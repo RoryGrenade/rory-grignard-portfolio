@@ -23,18 +23,14 @@ export default function Intro(props) {
         const introTitle = q(".intro__title")
         const introDesc = q(".intro__description")
 
-        gsap.fromTo(introTitle, {
-            clipPath: "inset(100% 0% 0% 0%)"
-        }, {
+        gsap.to(introTitle, {
             clipPath: "inset(0% 0% 0% 0%)",
             scrollTrigger: {
                 trigger: introTitle,
             }
         })
 
-        gsap.fromTo(introDesc, {
-            autoAlpha: 0
-        }, {
+        gsap.to(introDesc, {
             autoAlpha: 1,
             scrollTrigger: {
                 trigger: introDesc,
