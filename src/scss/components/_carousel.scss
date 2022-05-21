@@ -60,12 +60,28 @@
       margin: 0 auto;
     }
     &-item {
-      @include mq(md) {
-        &.--typ {
+      &.--typ {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $tr-base, visibility $tr-base;
+        transition-delay: $tr-base-duration;
+        .swiper-slide-active & {
+          opacity: 1;
+          visibility: visible;
+        }
+        @include mq(md) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding: 0 $gutter-2;
+        }
+      }
+      &.--logo {
+        clip-path: inset(100% 0% 0% 0%);
+        transition: clip-path $tr-base;
+        transition-delay: $tr-base-duration;
+        .swiper-slide-active & {
+          clip-path: inset(0%);
         }
       }
       &-title {
