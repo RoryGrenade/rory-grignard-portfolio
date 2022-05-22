@@ -15,7 +15,7 @@ export default function FormAndImage(props) {
     
     useEffect(() => {
         if (readyToAnimate === true) {
-            const imgWrapper = q(".form-and-image__img-wrapper")
+            const formPic = q(".form-and-image__picture")
         
             ScrollTrigger.defaults({
                 toggleActions: 'play none none none',
@@ -23,13 +23,13 @@ export default function FormAndImage(props) {
                 // markers: true,
             })
     
-            gsap.fromTo(imgWrapper, {
+            gsap.fromTo(formPic, {
                 autoAlpha: 0
             }, {
                 autoAlpha: 1,
                 duration: 3,
                 scrollTrigger: {
-                    trigger: imgWrapper,
+                    trigger: formPic,
                 }
             })
         }
