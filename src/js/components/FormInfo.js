@@ -10,7 +10,6 @@ export default function FormInfo(props) {
     const formInfoRef = useRef(null)
     const q = gsap.utils.selector(formInfoRef)
     let readyToAnimate = props.data.recievedData
-    console.log(readyToAnimate)
 
     useEffect(() => {
         if (readyToAnimate === true) {

@@ -1,7 +1,11 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { db } from "../utils/firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"
 import "../../scss/components/_form.scss"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Form({ onChange }) {
     const colRef = collection(db, 'inbox')
@@ -41,8 +45,30 @@ export default function Form({ onChange }) {
         setMessage("")
     }
 
+    const formRef = useRef(null)
+
+    useEffect(() => {
+        const formEl = formRef.current
+        
+        ScrollTrigger.defaults({
+            toggleActions: 'play none none none',
+            start: 'top 90%',
+            // markers: true,
+        })
+    
+        gsap.fromTo(formEl, {
+            autoAlpha: 0
+        }, {
+            autoAlpha: 1,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: formEl,
+            }
+        })
+    })
+
     return (
-        <form className="form" onReset={(e) => {handleReset(e)}} onSubmit={(e) => {handleSubmit(e)}}>
+        <form className="form" ref={formRef} onReset={(e) => {handleReset(e)}} onSubmit={(e) => {handleSubmit(e)}}>
             <div className="form__fields-wrapper">
                 <div className="form__field-wrapper">
                     <label
