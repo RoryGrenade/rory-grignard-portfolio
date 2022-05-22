@@ -13,6 +13,7 @@ export default function Home() {
     const [techStackSlides, setTechStackSlides] = useState([])
     const [designIntro, setDesignIntro] = useState({})
     const [designSlides, setDesignSlides] = useState([])
+    const [recievedData, setRecievedData] = useState(false)
 
 
     const fetchData = async () => {
@@ -46,6 +47,8 @@ export default function Home() {
         setCodingLanguagesSlides(colSnapCodingLanguagesSlides.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         setTechStackSlides(colSnapTechStackSlides.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         setDesignSlides(colSnapDesignSlides.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+
+        setRecievedData(true)
       }
 
       useEffect(() => {
@@ -56,11 +59,11 @@ export default function Home() {
     return(
         <>
             <Hero id={heroContent} />
-            <Intro id={codingLanguagesIntro} />
+            <Intro data={codingLanguagesIntro} recievedData={recievedData} />
             <Carousel id={codingLanguagesSlides} />
-            <Intro id={techStackIntro} theme={"dark"} />
+            <Intro data={techStackIntro} recievedData={recievedData} theme={"dark"} />
             <Carousel id={techStackSlides} theme={"dark"} />
-            <Intro id={designIntro}/>
+            <Intro data={designIntro} recievedData={recievedData} />
             <Carousel id={designSlides} />
         </>
     )
