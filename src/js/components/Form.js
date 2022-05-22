@@ -65,7 +65,7 @@ export default function Form({ onChange }) {
                 trigger: formEl,
             }
         })
-    })
+    }, [])
 
     return (
         <form className="form" ref={formRef} onReset={(e) => {handleReset(e)}} onSubmit={(e) => {handleSubmit(e)}}>
