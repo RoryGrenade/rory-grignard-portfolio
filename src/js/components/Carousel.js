@@ -1,13 +1,48 @@
+import { useRef, useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js"
 import { Navigation, EffectFade } from "swiper"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "swiper/swiper.scss"
 import "swiper/modules/navigation/navigation.scss"
 import "swiper/modules/effect-fade/effect-fade.scss"
 import "../../scss/components/_carousel.scss"
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Carousel(props) {
+
+    const carouselRef = useRef(null)
+    const q = gsap.utils.selector(carouselRef)
+    let readyToAnimate = props.recievedData
+
+    useEffect(() => {
+        if (readyToAnimate === true) {
+            const carouselContainer = q(".carousel__container")
+
+            gsap.defaults({
+                ease: 'none',
+            })
+        
+            ScrollTrigger.defaults({
+                toggleActions: 'play none none none',
+                start: 'top 90%',
+                // markers: true,
+            })
+    
+            gsap.fromTo(carouselContainer, {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 1,
+                scrollTrigger: {
+                    trigger: carouselContainer,
+                }
+            })
+        }
+    }, [q, readyToAnimate])
+
     return(
-        <section className={"carousel"} data-theme={props.theme}>
+        <section className={"carousel"} ref={carouselRef} data-theme={props.theme}>
             <div className="carousel__container">
                 <Swiper
                     className={"carousel__swiper"}

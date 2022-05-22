@@ -60,11 +60,11 @@ export default function Home() {
         <>
             <Hero data={heroContent} />
             <Intro data={codingLanguagesIntro} recievedData={recievedData} />
-            <Carousel data={codingLanguagesSlides} />
+            <Carousel data={codingLanguagesSlides} recievedData={recievedData} />
             <Intro data={techStackIntro} recievedData={recievedData} theme={"dark"} />
-            <Carousel data={techStackSlides} theme={"dark"} />
+            <Carousel data={techStackSlides} recievedData={recievedData} theme={"dark"} />
             <Intro data={designIntro} recievedData={recievedData} />
-            <Carousel data={designSlides} />
+            <Carousel data={designSlides} recievedData={recievedData} />
         </>
     )
 }
