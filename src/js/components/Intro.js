@@ -27,7 +27,7 @@ export default function Intro(props) {
             })
     
             gsap.fromTo(introTitle, {
-                clipPath: "inset(0% 0% 100% 0%)",
+                clipPath: "inset(100% 0% 0% 0%)",
             }, {
                 clipPath: "inset(0% 0% 0% 0%)",
                 scrollTrigger: {

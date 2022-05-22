@@ -18,27 +18,27 @@ export default function Hero(props) {
                 duration: 1
             }
         })
-            .fromTo(q(".hero__img-wrapper"), {
-                autoAlpha: 0
-            }, {
-                autoAlpha: 1,
-                duration: 3
-            })
-            .fromTo(q(".hero__title"), {
-                clipPath: "inset(100% 0% 0% 0%)"
-            }, {
-                clipPath: "inset(0% 0% 0% 0%)"
-            }, 0)
-            .fromTo(q(".hero__content"), {
-                autoAlpha: 0,
-            }, {
-                autoAlpha: 1,
-            }, ">-0.5")
-            .fromTo(q(".hero__btn"), {
-                autoAlpha: 0,
-            }, {
-                autoAlpha: 1
-            }, ">-0.5")
+        .fromTo(q(".hero__img-wrapper"), {
+            autoAlpha: 0
+        }, {
+            autoAlpha: 1,
+            duration: 3
+        })
+        .fromTo(q(".hero__title"), {
+            clipPath: "inset(100% 0% 0% 0%)"
+        }, {
+            clipPath: "inset(0% 0% 0% 0%)"
+        }, 0)
+        .fromTo(q(".hero__content"), {
+            autoAlpha: 0,
+        }, {
+            autoAlpha: 1,
+        }, ">-0.5")
+        .fromTo(q(".hero__btn"), {
+            autoAlpha: 0,
+        }, {
+            autoAlpha: 1
+        }, ">-0.5")
     }, [])
 
     function useViewportWidth() {

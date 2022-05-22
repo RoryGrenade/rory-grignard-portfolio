@@ -7,6 +7,7 @@ import FormAndImage from "../components/FormAndImage";
 export default function Contact() {
   const [heroContent, setHeroContent] = useState({})
   const [formAndImageContent, setFormAndImageContent] = useState({})
+  const [recievedData, setRecievedData] = useState(false)
 
   const fetchData = async () => {
     const docRefHeroContent = doc(db, "hero_data", "make_contact")
@@ -17,6 +18,8 @@ export default function Contact() {
 
     setHeroContent(docSnapHeroContent.data())
     setFormAndImageContent(docSnapFormAndImageContent.data())
+
+    setRecievedData(true)
   }
 
   useEffect(() => {
@@ -26,7 +29,7 @@ export default function Contact() {
   return (
     <>
       <Hero data={heroContent} />
-      <FormAndImage data={formAndImageContent} />
+      <FormAndImage data={formAndImageContent} recievedData={recievedData} />
     </>
   )
 }

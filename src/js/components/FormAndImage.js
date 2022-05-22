@@ -1,16 +1,39 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Form from "./Form";
 import FormInfo from "./FormInfo";
 import "../../scss/components/_form-and-image.scss"
 
-gsap.registerPlugin(ScrollToPlugin)
+gsap.registerPlugin(ScrollTrigger)
 
 export default function FormAndImage(props) {
     const [formSubmitted, setFormSubmitted] = useState(false)
+    const formAndImageRef = useRef(null)
+    const q = gsap.utils.selector(formAndImageRef)
+    let readyToAnimate = props.recievedData
     
     useEffect(() => {
+        if (readyToAnimate === true) {
+            const imgWrapper = q(".form-and-image__img-wrapper")
+        
+            ScrollTrigger.defaults({
+                toggleActions: 'play none none none',
+                start: 'top 90%',
+                // markers: true,
+            })
+    
+            gsap.fromTo(imgWrapper, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                duration: 3,
+                scrollTrigger: {
+                    trigger: imgWrapper,
+                }
+            })
+        }
+
         if (formSubmitted) scrollToFormWrapperTop()
     })
 
@@ -37,7 +60,7 @@ export default function FormAndImage(props) {
     }
 
     return (
-        <section className={"form-and-image"}>
+        <section className={"form-and-image"} ref={formAndImageRef}>
             <div className={"form-and-image__img-wrapper"}>
                 <picture className={"form-and-image__picture"}>
                     <img className={"form-and-image__img"}
