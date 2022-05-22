@@ -58,13 +58,13 @@ export default function Home() {
 
     return(
         <>
-            <Hero id={heroContent} />
+            <Hero data={heroContent} />
             <Intro data={codingLanguagesIntro} recievedData={recievedData} />
-            <Carousel id={codingLanguagesSlides} />
+            <Carousel data={codingLanguagesSlides} />
             <Intro data={techStackIntro} recievedData={recievedData} theme={"dark"} />
-            <Carousel id={techStackSlides} theme={"dark"} />
+            <Carousel data={techStackSlides} theme={"dark"} />
             <Intro data={designIntro} recievedData={recievedData} />
-            <Carousel id={designSlides} />
+            <Carousel data={designSlides} />
         </>
     )
 }

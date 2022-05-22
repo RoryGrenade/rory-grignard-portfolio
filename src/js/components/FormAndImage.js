@@ -12,7 +12,6 @@ export default function FormAndImage(props) {
     
     useEffect(() => {
         if (formSubmitted) scrollToFormWrapperTop()
-        console.log('ran')
     })
 
     function useViewportWidth() {
@@ -42,14 +41,14 @@ export default function FormAndImage(props) {
             <div className={"form-and-image__img-wrapper"}>
                 <picture className={"form-and-image__picture"}>
                     <img className={"form-and-image__img"}
-                         src={props.id.img_src}
-                         alt={props.id.img_alt_text}
-                         key={props.id}
+                         src={props.data.img_src}
+                         alt={props.data.img_alt_text}
+                         key={props.data}
                     />
                 </picture>
             </div>
             <div className={"form-and-image__content-wrapper"}>
-                <FormInfo id={props} showSubmitted={formSubmitted} />
+                <FormInfo data={props} showSubmitted={formSubmitted} />
                 {!formSubmitted && <Form onChange={setFormSubmitted} />}          
             </div>
         </section>

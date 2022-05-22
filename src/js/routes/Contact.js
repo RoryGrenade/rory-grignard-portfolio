@@ -25,8 +25,8 @@ export default function Contact() {
 
   return (
     <>
-      <Hero id={heroContent} />
-      <FormAndImage id={formAndImageContent} />
+      <Hero data={heroContent} />
+      <FormAndImage data={formAndImageContent} />
     </>
   )
 }

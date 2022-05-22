@@ -19,7 +19,7 @@ export default function Carousel(props) {
                     effect={"fade"}
                     loop={true}
                 >
-                    {props.id.map((slide) => {
+                    {props.data.map((slide) => {
                         return <SwiperSlide className={"carousel__slide"} key={slide.id}>
                             <div className="carousel__grid">
                                 <div className="carousel__grid-item --typ">

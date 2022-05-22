@@ -7,11 +7,11 @@ import "../../scss/components/_hero.scss"
 gsap.registerPlugin(ScrollToPlugin)
 
 export default function Hero(props) {
-    const el = useRef(null)
+    const heroRef = useRef(null)
     const tl = useRef(null)
 
     useEffect(() => {
-        const q = gsap.utils.selector(el)
+        const q = gsap.utils.selector(heroRef)
         tl.current = gsap.timeline({
             defaults: {
                 ease: "none",
@@ -58,29 +58,29 @@ export default function Hero(props) {
     const viewportWidth = useViewportWidth()
 
     function scrollToNextSection() {
-        const scrollToDuration = el.current.offsetHeight / 1500
-        const nextSection = el.current.nextElementSibling
+        const scrollToDuration = heroRef.current.offsetHeight / 1500
+        const nextSection = heroRef.current.nextElementSibling
         let scrollToOffset = (viewportWidth >= 768) ? 59 : 55
         gsap.to(window, {duration: scrollToDuration, scrollTo: {y: nextSection, offsetY: scrollToOffset}})
     }
 
     return (
-        <section className={"hero"} ref={el}>
+        <section className={"hero"} ref={heroRef}>
             <div className={"hero__img-wrapper"}>
                 <picture className={"hero__picture"}>
                     <img className={"hero__img"}
-                         src={props.id.img_src}
-                         alt={props.id.img_alt_text}
-                         key={props.id}
+                         src={props.data.img_src}
+                         alt={props.data.img_alt_text}
+                         key={props.data}
                     />
                 </picture>
             </div>
             <div className={"hero__content-wrapper"}>
                 <h1 className={"hero__title"}>
-                    <span className={"hero__title-overline"}>{props.id.overline_text}</span>
-                    {props.id.title_text}
+                    <span className={"hero__title-overline"}>{props.data.overline_text}</span>
+                    {props.data.title_text}
                 </h1>
-                <p className={"hero__content"}>{props.id.body_text}</p>
+                <p className={"hero__content"}>{props.data.body_text}</p>
                 <div className="hero__btn-wrapper">
                     <button className={"hero__btn btn --btn-light"} onClick={() => {
                         scrollToNextSection()
