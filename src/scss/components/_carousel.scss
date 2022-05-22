@@ -79,7 +79,7 @@
       &.--logo {
         clip-path: inset(100% 0% 0% 0%);
         transition: clip-path $tr-base;
-        transition-delay: $tr-base-duration;
+        transition-delay: $tr-base-delay;
         .swiper-slide-active & {
           clip-path: inset(0%);
         }

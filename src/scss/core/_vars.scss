@@ -55,6 +55,8 @@ $ctr-max-width-halved: $ctr-max-width / 2;
 $tr-base-duration: 300ms;
 $tr-base-timing: cubic-bezier(.75,.89,.92,.99);
 $tr-base: $tr-base-duration $tr-base-timing;
+$tr-base-delay: $tr-base-duration * 1.5;
+
 
 //Fonts
 $font: (
