@@ -15,7 +15,8 @@ export default function Hero(props) {
         tl.current = gsap.timeline({
             defaults: {
                 ease: "none",
-                duration: 1
+                duration: 1,
+                delay: 1
             }
         })
         .fromTo(q(".hero__img-wrapper"), {
