@@ -76,6 +76,7 @@ export default function Hero(props) {
         <section className={"hero"} ref={heroRef}>
             <div className={"hero__img-wrapper"}>
                 <picture className={"hero__picture"}>
+                    <source srcSet={props.data.img_src_webp} type="image/webp" />
                     <img className={"hero__img"}
                          src={props.data.img_src}
                          alt={props.data.img_alt_text}
