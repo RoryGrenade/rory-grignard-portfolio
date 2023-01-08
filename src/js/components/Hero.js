@@ -94,11 +94,11 @@ export default function Hero(props) {
                 <p className={"hero__content"}>{props.data.body_text}</p>
                 <div className="hero__btn-wrapper">
                     <button className={"hero__btn btn --btn-light"} 
-                            aria-label="Read more"
+                            aria-label="Scroll"
                             onClick={() => {
                         scrollToNextSection()
                     }}>
-                        Read more 
+                        Scroll
                         <FaArrowDown />
                     </button>
                 </div>

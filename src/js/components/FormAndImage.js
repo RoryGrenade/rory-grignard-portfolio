@@ -63,6 +63,7 @@ export default function FormAndImage(props) {
         <section className={"form-and-image"} ref={formAndImageRef}>
             <div className={"form-and-image__img-wrapper"}>
                 <picture className={"form-and-image__picture"}>
+                <source srcSet={props.data.img_src_webp} type="image/webp" />
                     <img className={"form-and-image__img"}
                          src={props.data.img_src}
                          alt={props.data.img_alt_text}
