@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Open Sans:400,500,600,700', 'Source Code Pro:500,600']
+        families: ['Open Sans:400,500,600,700', 'Source Code Pro:500,600&display=swap']
       }
     })
   }, [])
