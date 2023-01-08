@@ -65,7 +65,9 @@ export default function Carousel(props) {
                                     <picture className={"carousel__grid-item-picture ratio-16x9-md --contain"}>
                                         <img className={"carousel__grid-item-img"}
                                              src={slide.img_src}
-                                             alt={slide.img_alt_text} />
+                                             alt={slide.img_alt_text}
+                                             height="100"
+                                             width="100" />
                                     </picture>
                                 </div>
                             </div>
