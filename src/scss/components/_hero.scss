@@ -67,11 +67,7 @@
   &__content {
     margin: 0 0 section-padding(mobile);
   }
-  &__cv-btn.btn {
-    margin: 0 $gutter-1 0 0;
-    display: none;
-    svg {
-      margin: 0 $gutter-1 0 0;
-    }
+  &__btn {
+    gap: 0 1.4em;
   }
 }

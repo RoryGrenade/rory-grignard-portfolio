@@ -16,7 +16,9 @@ export default function HeaderElement() {
                     <Link className={"header__logo-link"} to={"/"} onClick={() => toggleMobileNav(mobileNavVisible === true)}>
                         <h1 className={"header__logo-link-text"}>&#60;RoryGrignard /&#62;</h1>
                     </Link>
-                    <button className={"header__burger-btn"} onClick={() => toggleMobileNav(!mobileNavVisible)}>
+                    <button className={"header__burger-btn"}
+                            aria-label="Navigation menu"
+                            onClick={() => toggleMobileNav(!mobileNavVisible)}>
                         <RiMenu3Fill className={"header__burger-btn-icon --burger"} />
                         <RiCloseFill className={"header__burger-btn-icon --close"} />
                     </button>
