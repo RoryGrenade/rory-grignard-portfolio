@@ -78,6 +78,8 @@ export default function Hero(props) {
                 <picture className={"hero__picture"}>
                     <source srcSet={props.data.img_src_webp} type="image/webp" />
                     <img className={"hero__img"}
+                         widh="1000"
+                         height="1285"
                          src={props.data.img_src}
                          alt={props.data.img_alt_text}
                          key={props.data}
