@@ -68,6 +68,8 @@ export default function FormAndImage(props) {
                          src={props.data.img_src}
                          alt={props.data.img_alt_text}
                          key={props.data}
+                         width="2000"
+                         height="2667"
                     />
                 </picture>
             </div>
