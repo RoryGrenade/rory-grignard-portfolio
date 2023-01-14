@@ -49,4 +49,46 @@
       margin: initial;
     }
   }
+  &__input-wrapper {
+    min-height: 44px;
+    font-weight: font-weight(semibold);
+    border: 3px solid;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
+    transition: border-color $tr-base; 
+    &:hover {
+      border-color: color(pink);
+    }
+  }
+  &__input {
+    text-transform: uppercase;
+    padding: 0.5em 58px 0.5em 1.4em;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    transition: color $tr-base;
+    .form__input-wrapper:hover & {
+      cursor: pointer;
+      color: color(pink);
+    }
+    &-icon {
+      position: absolute;
+      top: auto;
+      right: 20px;
+      bottom: auto;
+      left: auto;
+      margin: auto 0 auto auto;
+      transition: color $tr-base;
+      .form__input-wrapper:hover & {
+        color: color(pink);
+      }
+    }
+  }
 }

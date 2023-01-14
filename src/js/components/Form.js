@@ -3,6 +3,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { db } from "../utils/firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"
+import { FaPaperPlane } from "react-icons/fa"
 import "../../scss/components/_form.scss"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -141,7 +142,10 @@ export default function Form({ onChange }) {
             </div>
 
             <div className="form__fields-wrapper --btn">
-                <input className={"btn --btn-dark"} type="submit" value="Send"/>
+                <div className={"form__input-wrapper"}>
+                    <input className={"form__input"} type="submit" value="Send" />
+                    <FaPaperPlane className={"form__input-icon"} />
+                </div>
                 <input className={"btn --btn-trans-bdr"} type="reset" value="Reset"/>
             </div>
         </form>
