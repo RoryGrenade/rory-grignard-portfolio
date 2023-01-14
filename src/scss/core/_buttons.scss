@@ -20,11 +20,10 @@
   &.--btn-light,
   &.--btn-dark,
   &.--btn-trans-bdr {
-    padding: 0.5em 1.4em;
-    min-height: 44px;
+    padding: 12px 20px 10px;
     font-weight: font-weight(semibold);
     border: 3px solid;
-    border-radius: 25px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;

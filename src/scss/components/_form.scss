@@ -49,11 +49,10 @@
       margin: initial;
     }
   }
-  &__input-wrapper {
-    min-height: 44px;
+  &__submit-wrapper {
     font-weight: font-weight(semibold);
     border: 3px solid;
-    border-radius: 25px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -64,9 +63,11 @@
       border-color: color(pink);
     }
   }
-  &__input {
+  &__submit {
+    color: color(black);
+    font-size: 1rem;
     text-transform: uppercase;
-    padding: 0.5em 58px 0.5em 1.4em;
+    padding: 7px 58px 8px 20px;
     height: 100%;
     width: 100%;
     border: none;
@@ -86,7 +87,7 @@
       left: auto;
       margin: auto 0 auto auto;
       transition: color $tr-base;
-      .form__input-wrapper:hover & {
+      .form__submit-wrapper:hover & {
         color: color(pink);
       }
     }

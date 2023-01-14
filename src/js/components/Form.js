@@ -141,10 +141,10 @@ export default function Form({ onChange }) {
                 />
             </div>
 
-            <div className="form__fields-wrapper --btn">
-                <div className={"form__input-wrapper"}>
-                    <input className={"form__input"} type="submit" value="Send" />
-                    <FaPaperPlane className={"form__input-icon"} />
+            <div className="form__input-wrapper">
+                <div className={"form__submit-wrapper"}>
+                    <input className={"form__submit"} type="submit" value="Send" />
+                    <FaPaperPlane className={"form__submit-icon"} />
                 </div>
                 <input className={"btn --btn-trans-bdr"} type="reset" value="Reset"/>
             </div>
